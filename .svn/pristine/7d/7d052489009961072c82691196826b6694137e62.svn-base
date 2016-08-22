@@ -1,0 +1,4 @@
+Test Case Id, Test Case Method Name, Test Case Objective, RESULT, Error Message
+11047236|testCreateNewCompanyUsingCopyCompany|Test Case 1.1:  testCreateNewCompanyUsingCopyCompany|FAIL|Error communicating with the remote browser. It may have died.
+Build info: version: '2.53.0'
+null|testLoginIntoCompany|Test Case 1.2:  Verify that users are able to login into the JBilling System using valid credential.|SKIPPED|Method SanityTestScript.testLoginIntoCompany()[pri:0

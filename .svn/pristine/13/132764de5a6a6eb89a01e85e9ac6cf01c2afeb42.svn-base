@@ -1,0 +1,350 @@
+package com.jbilling.test;
+
+import java.util.HashMap;
+
+import org.testng.ITestResult;
+import org.testng.Reporter;
+import org.testng.annotations.Test;
+
+import com.jbilling.framework.globals.GlobalEnumerations.TextComparators;
+import com.jbilling.framework.globals.Logger;
+import com.jbilling.framework.pageclasses.GlobalEnumsPage.PageConfigurationItems;
+import com.jbilling.framework.utilities.browserutils.BrowserApp;
+import com.jbilling.framework.utilities.xmlutils.ConfigPropertiesReader;
+
+public class VerifyUserAbleToAddPaymentMethod extends BrowserApp {
+	private static Logger logger = new Logger().getLogger(Thread.currentThread().getStackTrace()[1].getClassName());
+	ConfigPropertiesReader pr = new ConfigPropertiesReader();
+	String graceId = null;
+	ITestResult result;
+
+	HashMap<String, String> runTimeVariables = new HashMap<String, String>();
+
+	/**
+	 * Current Application Page Stack || LoginPage--> loginPage;
+	 * NavigatorPage--> navPage; HomePage--> homePage; ConfigurationPage-->
+	 * confPage; AgentsPage--> agentsPage; CustomersPage--> customerPage;
+	 * ProductsPage--> productsPage; PlansPage--> plansPage; OrdersPage-->
+	 * ordersPage; InvoicePage--> invoicePage; ReportsPage--> reportsPage;
+	 * DiscountsPage--> discountsPage; FiltersPage--> filtersPage;
+	 * PaymentsPage--> paymentsPage; MessagesPage--> msgsPage;
+	 * 
+	 * @author Aishwarya Dwivedi
+	 * @since 1.0
+	 * @version 1.0
+	 */
+
+	@Test(description = "TC 09 : Verify that user is able to create a payment method using Cheque", groups = { "globalRegressionPack" })
+	public void addPaymentMethod() throws Exception {
+
+		VerifyUserAbleToAddPaymentMethod.logger.enterMethod();
+		Reporter.log("<br> Test Begins");
+
+		this.result = Reporter.getCurrentTestResult();
+		this.result.setAttribute("tcid", "");
+
+		// Login Into Application And Navigate to Configuration Tab
+		this.confPage = this.navPage.navigateToConfigurationPage();
+		VerifyUserAbleToAddPaymentMethod.logger.debug("Login Into Application And Navigate to Configuration Page");
+
+		// Select Payment Method from Configuration list
+		this.confPage = this.confPage.selectConfiguration(PageConfigurationItems.PaymentMethod);
+		VerifyUserAbleToAddPaymentMethod.logger.debug("Select Payment Method from Configuration list");
+
+		// Add Payment Method With Recurring
+		String paymentMethodName = this.confPage.addPaymentMethod("addPaymentMethod", "aedpm");
+		this.runTimeVariables.put("TC_09_PAYMENT_METHOD_NAME", paymentMethodName);
+		VerifyUserAbleToAddPaymentMethod.logger.debug("Add Edit Delete Payment Method With Recurring");
+
+		// Verify Message For Created Account Type
+		this.msgsPage = this.msgsPage.verifyDisplayedMessageText("Payment Method Type", "created successfully", TextComparators.contains);
+		VerifyUserAbleToAddPaymentMethod.logger.debug("Verify Message For Created Account Type");
+
+		// Validate Saved Payment Method Test Data
+		this.confPage = this.confPage.validatePeriodsSavedTestData(paymentMethodName);
+		VerifyUserAbleToAddPaymentMethod.logger.debug("Validate Saved Account Type Test Data");
+
+		Reporter.log("<br> Test Passed");
+		VerifyUserAbleToAddPaymentMethod.logger.exitMethod();
+	}
+
+	@Test(description = "TC 11.1 : Verify that user is able to create account type with credit limit and notification amount configured", dependsOnMethods = "addPaymentMethod")
+	public void createAccountTypeWithCreditLimitAndNotifConfg() throws Exception {
+
+		VerifyUserAbleToAddPaymentMethod.logger.enterMethod();
+		Reporter.log("<br> Test Begins");
+
+		this.result = Reporter.getCurrentTestResult();
+		this.result.setAttribute("tcid", "");
+
+		// Login Into Application And Navigate to Configuration Tab
+		this.confPage = this.navPage.navigateToConfigurationPage();
+		VerifyUserAbleToAddPaymentMethod.logger.debug("Login Into Application And Navigate to Configuration Page");
+
+		// Select Payment Method from Configuration list
+		this.confPage = this.confPage.selectConfiguration(PageConfigurationItems.AccountType);
+		VerifyUserAbleToAddPaymentMethod.logger.debug("Select Payment Method from Configuration list");
+
+		// Add Edit Delete Payment Method With Recurring
+		String TC09_paymentMethodName = this.runTimeVariables.get("TC_09_PAYMENT_METHOD_NAME");
+		String accountName = this.confPage.createAccountTypeWithCreditDetails("creditLimitAccountType", "clat", TC09_paymentMethodName);
+		this.runTimeVariables.put("TC_11.1_ACCOUNT_NAME", accountName);
+		VerifyUserAbleToAddPaymentMethod.logger.debug("Add Edit Delete Payment Method With Recurring");
+
+		// Verify Message For Company Details Changed
+		this.msgsPage = this.msgsPage.verifyDisplayedMessageText("Account Type", "created successfully", TextComparators.contains);
+		VerifyUserAbleToAddPaymentMethod.logger.debug("Verify Message For Account Type Created");
+
+		// Validate Saved Account Type Test Data
+		this.confPage = this.confPage.validatePeriodsSavedTestData(accountName);
+		VerifyUserAbleToAddPaymentMethod.logger.debug("Validate Saved Account Type Test Data");
+
+		Reporter.log("<br> Test Passed");
+		VerifyUserAbleToAddPaymentMethod.logger.exitMethod();
+	}
+
+	@Test(description = "TC 12.0 : Verify that users can login into the JBilling System using valid credential", dependsOnMethods = "createAccountTypeWithCreditLimitAndNotifConfg")
+	public void VerifySearchingAndSortingForAccountType() throws Exception {
+
+		VerifyUserAbleToAddPaymentMethod.logger.enterMethod();
+		Reporter.log("<br> Test Begins");
+
+		this.result = Reporter.getCurrentTestResult();
+		this.result.setAttribute("tcid", "");
+
+		// Login Into Application And Navigate to Configuration Tab
+		this.confPage = this.navPage.navigateToConfigurationPage();
+		VerifyUserAbleToAddPaymentMethod.logger.debug("Login Into Application And Navigate to Configuration Page");
+
+		// Set Preference for ID 63
+		this.confPage = this.confPage.updatePreference("set63Preference", "sp");
+		VerifyUserAbleToAddPaymentMethod.logger.debug("Set Preference for ID 63");
+
+		// Select Payment Method from Configuration list
+		this.confPage = this.confPage.selectConfiguration(PageConfigurationItems.AccountType);
+		VerifyUserAbleToAddPaymentMethod.logger.debug("Select Payment Method from Configuration list");
+
+		// TODO: Search and Sort for Account Name
+		String accountNameToSearch = this.runTimeVariables.get("TC_11.1_ACCOUNT_NAME");
+
+		// Login Into Application And Navigate to Configuration Tab
+		this.confPage = this.navPage.navigateToConfigurationPage();
+		VerifyUserAbleToAddPaymentMethod.logger.debug("Login Into Application And Navigate to Configuration Page");
+
+		// Set Preference for ID 63
+		// TODO : revert the preference
+
+		Reporter.log("<br> Test Passed");
+		VerifyUserAbleToAddPaymentMethod.logger.exitMethod();
+	}
+
+	// TODO: Depends on TC
+	@Test(description = "TC 15 : Verify that user can create a new Account type using the ACH payment method", dependsOnMethods = "TC8")
+	public void addPaymentMethodUsingACH() throws Exception {
+
+		VerifyUserAbleToAddPaymentMethod.logger.enterMethod();
+		Reporter.log("<br> Test Begins");
+
+		this.result = Reporter.getCurrentTestResult();
+		this.result.setAttribute("tcid", "");
+
+		// Login Into Application And Navigate to Configuration Tab
+		this.confPage = this.navPage.navigateToConfigurationPage();
+		VerifyUserAbleToAddPaymentMethod.logger.debug("Login Into Application And Navigate to Configuration Page");
+
+		// Select Payment Method from Configuration list
+		this.confPage = this.confPage.selectConfiguration(PageConfigurationItems.AccountType);
+		VerifyUserAbleToAddPaymentMethod.logger.debug("Select Payment Method from Configuration list");
+
+		// Add Edit Delete Payment Method With Recurring
+		String accountName = this.confPage.createAccountTypeWithCreditDetails("addPaymentMethodwithACH", "apmwach", "");
+		this.runTimeVariables.put("TC_15_ACCOUNT_NAME", accountName);
+		VerifyUserAbleToAddPaymentMethod.logger.debug("Add Edit Delete Payment Method With Recurring");
+
+		// Verify Message For Created Account Type
+		this.msgsPage = this.msgsPage.verifyDisplayedMessageText("Account Type", "created successfully", TextComparators.contains);
+		VerifyUserAbleToAddPaymentMethod.logger.debug("Verify Message For Created Account Type");
+
+		// Validate Saved Account Type Test Data
+		this.confPage = this.confPage.validatePeriodsSavedTestData(accountName);
+		VerifyUserAbleToAddPaymentMethod.logger.debug("Validate Saved Account Type Test Data");
+
+		Reporter.log("<br> Test Passed");
+		VerifyUserAbleToAddPaymentMethod.logger.exitMethod();
+	}
+
+	@Test(description = "TC 16 : Verify that user can create a new Account type using the Cheque payment method", dependsOnMethods = "addPaymentMethod")
+	public void addPaymentMethodUsingCheque() throws Exception {
+
+		VerifyUserAbleToAddPaymentMethod.logger.enterMethod();
+		Reporter.log("<br> Test Begins");
+
+		this.result = Reporter.getCurrentTestResult();
+		this.result.setAttribute("tcid", "");
+
+		// Login Into Application And Navigate to Configuration Tab
+		this.confPage = this.navPage.navigateToConfigurationPage();
+		VerifyUserAbleToAddPaymentMethod.logger.debug("Login Into Application And Navigate to Configuration Page");
+
+		// Select Payment Method from Configuration list
+		this.confPage = this.confPage.selectConfiguration(PageConfigurationItems.AccountType);
+		VerifyUserAbleToAddPaymentMethod.logger.debug("Select Payment Method from Configuration list");
+
+		// Add Edit Delete Payment Method With Recurring
+		String TC09_paymentMethodName = this.runTimeVariables.get("TC_09_PAYMENT_METHOD_NAME");
+		String accountName = this.confPage.createAccountTypeWithCreditDetails("addPaymentMethodwithCheque", "apmwch",
+				TC09_paymentMethodName);
+		this.runTimeVariables.put("TC_16_ACCOUNT_NAME", accountName);
+		VerifyUserAbleToAddPaymentMethod.logger.debug("Add Edit Delete Payment Method With Recurring");
+
+		// Verify Message For Created Account Type
+		this.msgsPage = this.msgsPage.verifyDisplayedMessageText("Account Type", "created successfully", TextComparators.contains);
+		VerifyUserAbleToAddPaymentMethod.logger.debug("Verify Message For Created Account Type");
+
+		// Validate Saved Account Type Test Data
+		this.confPage = this.confPage.validatePeriodsSavedTestData(accountName);
+		VerifyUserAbleToAddPaymentMethod.logger.debug("Validate Saved Account Type Test Data");
+
+		Reporter.log("<br> Test Passed");
+		VerifyUserAbleToAddPaymentMethod.logger.exitMethod();
+	}
+
+	@Test(description = "TC 19 : Verify that, this payment method is default selected for all the account types created in future.", dependsOnMethods = "addPaymentMethodUsingACH")
+	public void VerifyPayMethodIsDefaultSelectedForAllAccType() throws Exception {
+
+		VerifyUserAbleToAddPaymentMethod.logger.enterMethod();
+		Reporter.log("<br> Test Begins");
+
+		this.result = Reporter.getCurrentTestResult();
+		this.result.setAttribute("tcid", "");
+
+		// Login Into Application And Navigate to Configuration Tab
+		this.confPage = this.navPage.navigateToConfigurationPage();
+		VerifyUserAbleToAddPaymentMethod.logger.debug("Login Into Application And Navigate to Configuration Page");
+
+		// Select Payment Method from Configuration list
+		this.confPage = this.confPage.selectConfiguration(PageConfigurationItems.AccountType);
+		VerifyUserAbleToAddPaymentMethod.logger.debug("Select Payment Method from Configuration list");
+
+		// TODO: not done with default value
+		// Add Edit Delete Payment Method With Recurring
+		String accountName = this.confPage.createAccountTypeWithCreditDetails("addPaymentMethodwithACH", "apmwach", "");
+		this.runTimeVariables.put("TC_15_ACCOUNT_NAME", accountName);
+		VerifyUserAbleToAddPaymentMethod.logger.debug("Add Edit Delete Payment Method With Recurring");
+
+		// Verify Message For Created Account Type
+		this.msgsPage = this.msgsPage.verifyDisplayedMessageText("Account Type", "created successfully", TextComparators.contains);
+		VerifyUserAbleToAddPaymentMethod.logger.debug("Verify Message For Created Account Type");
+
+		// Validate Saved Account Type Test Data
+		this.confPage = this.confPage.validatePeriodsSavedTestData(accountName);
+		VerifyUserAbleToAddPaymentMethod.logger.debug("Validate Saved Account Type Test Data");
+
+		Reporter.log("<br> Test Passed");
+		VerifyUserAbleToAddPaymentMethod.logger.exitMethod();
+	}
+
+	@Test(description = "TC 20 : Verify this created payment method works correctly for all the account types created in future.", dependsOnMethods = "addPaymentMethod")
+	public void VerifyPayMethodWorksForAllAccType() throws Exception {
+
+		VerifyUserAbleToAddPaymentMethod.logger.enterMethod();
+		Reporter.log("<br> Test Begins");
+
+		this.result = Reporter.getCurrentTestResult();
+		this.result.setAttribute("tcid", "");
+
+		// Login Into Application And Navigate to Configuration Tab
+		this.confPage = this.navPage.navigateToConfigurationPage();
+		VerifyUserAbleToAddPaymentMethod.logger.debug("Login Into Application And Navigate to Configuration Page");
+
+		// Select Payment Method from Configuration list
+		this.confPage = this.confPage.selectConfiguration(PageConfigurationItems.PaymentMethod);
+		VerifyUserAbleToAddPaymentMethod.logger.debug("Select Payment Method from Configuration list");
+
+		// Edit Payment Method With All Accounts
+		String TC09_paymentMethodName = this.runTimeVariables.get("TC_09_PAYMENT_METHOD_NAME");
+		this.confPage = this.confPage.editPaymentMethodWithAllAccountTypeChecked("editPaymentMethodForAllAcount", "epmaa", "ChequeRSO");
+		// TC09_paymentMethodName);
+		VerifyUserAbleToAddPaymentMethod.logger.debug("Edit Payment Method With All Accounts");
+
+		// Verify Message For Created Account Type
+		this.msgsPage = this.msgsPage.verifyDisplayedMessageText("Payment Method Type", "updated successfully", TextComparators.contains);
+		VerifyUserAbleToAddPaymentMethod.logger.debug("Verify Message For Edit Payment Method Type");
+
+		// Navigate to Customer Tab
+		this.customerPage = this.navPage.navigateToCustomersPage();
+		VerifyUserAbleToAddPaymentMethod.logger.debug("Navigate to Customer Page");
+
+		// Add Customer For Above Created Account Name In TC 15
+		String TC15_AccountName = this.runTimeVariables.get("TC_15_ACCOUNT_NAME");
+		String customerName = this.customerPage.addCustomerWithMakePayment("verifyPayment", "vp", TC15_AccountName);
+		this.runTimeVariables.put("TC_20_CUSTOMER_NAME", customerName);
+
+		// Verify Message For Created Customer
+		this.msgsPage = this.msgsPage.verifyDisplayedMessageText("Saved new customer", "successfully.", TextComparators.contains);
+		VerifyUserAbleToAddPaymentMethod.logger.debug("Verify Message For Created Customer");
+
+		// Validate Saved Account Type Test Data
+		this.customerPage = this.customerPage.validateSavedTestDataInTable(customerName);
+		VerifyUserAbleToAddPaymentMethod.logger.debug("Validate Saved Customer Test Data");
+
+		// Make Payment For Above Created Payment Method in TC09
+		this.customerPage = this.customerPage.MakePayment("verifyPayment", "vp", TC09_paymentMethodName);
+		VerifyUserAbleToAddPaymentMethod.logger.debug("Make Payment For Above Created Payment Method in TC09");
+
+		// Verify Message For Created Payment
+		this.msgsPage = this.msgsPage.verifyDisplayedMessageText("Successfully processed", "new payment", TextComparators.contains);
+		VerifyUserAbleToAddPaymentMethod.logger.debug("Verify Message For Created Payment");
+
+		// Validate Saved Payment Test Data
+		this.customerPage = this.customerPage.validateSavedTestDataInPaymentsTable(customerName);
+		VerifyUserAbleToAddPaymentMethod.logger.debug("Validate Saved Payment Test Data");
+
+		Reporter.log("<br> Test Passed");
+		VerifyUserAbleToAddPaymentMethod.logger.exitMethod();
+	}
+
+	// TODO: IS TO BE IMPLEMENTED
+	// @Test(description =
+	// "TC 22 : Verify this created payment method works correctly for all the account types created in future.",
+	// dependsOnMethods = "addPaymentMethod")
+	public void VerifyPayPalValuesDisplayedOnEditPlugin() throws Exception {
+
+		VerifyUserAbleToAddPaymentMethod.logger.enterMethod();
+		Reporter.log("<br> Test Begins");
+
+		this.result = Reporter.getCurrentTestResult();
+		this.result.setAttribute("tcid", "");
+
+		// Login Into Application And Navigate to Configuration Tab
+		this.confPage = this.navPage.navigateToConfigurationPage();
+		VerifyUserAbleToAddPaymentMethod.logger.debug("Login Into Application And Navigate to Configuration Page");
+
+		// Select Plugins from Configuration list
+		this.confPage = this.confPage.selectConfiguration(PageConfigurationItems.Plugins);
+		VerifyUserAbleToAddPaymentMethod.logger.debug("Select Plugins from Configuration list");
+
+		// Edit Payment Method With All Accounts
+		String TC09_paymentMethodName = this.runTimeVariables.get("TC_09_PAYMENT_METHOD_NAME");
+		this.confPage = this.confPage.editPaymentMethodWithAllAccountTypeChecked("editPaymentMethodForAllAcount", "epmaa",
+				TC09_paymentMethodName);
+		VerifyUserAbleToAddPaymentMethod.logger.debug("Edit Payment Method With All Accounts");
+
+		// Verify Message For Created Account Type
+		this.msgsPage = this.msgsPage.verifyDisplayedMessageText("Payment Method Type", "updated successfully", TextComparators.contains);
+		VerifyUserAbleToAddPaymentMethod.logger.debug("Verify Message For Edit Payment Method Type");
+
+		// Login Into Application And Navigate to Customer Tab
+		this.customerPage = this.navPage.navigateToCustomersPage();
+		VerifyUserAbleToAddPaymentMethod.logger.debug("Login Into Application And Navigate to Customer Page");
+
+		// Validate Saved Account Type Test Data
+		// this.confPage =
+		// this.confPage.validatePeriodsSavedTestData(accountName);
+		VerifyUserAbleToAddPaymentMethod.logger.debug("Validate Saved Account Type Test Data");
+
+		Reporter.log("<br> Test Passed");
+		VerifyUserAbleToAddPaymentMethod.logger.exitMethod();
+	}
+
+}

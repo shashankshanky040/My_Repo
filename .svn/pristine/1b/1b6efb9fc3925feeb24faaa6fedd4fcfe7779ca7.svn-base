@@ -1,0 +1,2 @@
+Test Case Id, Test Case Method Name, Test Case Objective, RESULT, Error Message
+null|testAddInfoToAccountType|Test Case 2.2 : Verify ability to successfully add an Information Type to an Account Type|SKIPPED|Method SanityTestScript.testAddInfoToAccountType()[pri:0

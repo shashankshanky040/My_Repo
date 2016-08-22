@@ -1,0 +1,2 @@
+Test Case Id, Test Case Method Name, Test Case Objective, RESULT, Error Message
+11047237|testLoginIntoCompany|Test Case 1.2:  Verify that users are able to login into the JBilling System using valid credential.|FAIL|null value in entry: url=nul

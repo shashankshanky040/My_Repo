@@ -1,0 +1,70 @@
+package com.jbilling.test;
+
+import java.util.HashMap;
+
+import org.testng.ITestResult;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+
+import com.jbilling.framework.globals.Logger;
+import com.jbilling.framework.testrails.TestRailsListener;
+import com.jbilling.framework.utilities.browserutils.BrowserApp;
+import com.jbilling.framework.utilities.xmlutils.ConfigPropertiesReader;
+
+@Listeners({ TestRailsListener.class })
+@Test(groups = { "automation" })
+/**
+ * Current Application Page Stack || LoginPage--> loginPage; NavigatorPage-->
+ * navPage; HomePage--> homePage; ConfigurationPage--> confPage; AgentsPage-->
+ * agentsPage; CustomersPage--> customerPage; ProductsPage--> productsPage;
+ * PlansPage--> plansPage; OrdersPage--> ordersPage; InvoicePage--> invoicePage;
+ * ReportsPage--> reportsPage; DiscountsPage--> discountsPage; FiltersPage-->
+ * filtersPage; PaymentsPage--> paymentsPage; MessagesPage--> msgsPage;
+ * 
+ * @author Aishwarya Dwivedi
+ * @since 1.0
+ * @version 1.0
+ */
+public class VerifyMetaFieldTypeSelectionISNotAvailableWhileAddingNewMetaFieldExceptAccountType extends BrowserApp {
+
+	private static Logger logger = new Logger().getLogger(Thread.currentThread().getStackTrace()[1].getClassName());
+	ConfigPropertiesReader pr = new ConfigPropertiesReader();
+	String graceId = null;
+	ITestResult result;
+	static String category = "";
+
+	HashMap<String, String> runTimeVariables = new HashMap<String, String>();
+
+	@Test(description = "TC 343 : Meta field type select is not available while adding the new meta field in expected Account type")
+	public void validateMetaFiledtypeSelction() throws Exception {
+
+		// // Click on Configuration Page
+		this.confPage = this.navPage.navigateToConfigurationPage();
+		VerifyMetaFieldTypeSelectionISNotAvailableWhileAddingNewMetaFieldExceptAccountType.logger.debug("Click on Configuration page");
+
+		// Go to Meta field category and validate the meta field type
+		this.confPage = this.confPage.validateMetaFieldSelectionForOrder();
+		VerifyMetaFieldTypeSelectionISNotAvailableWhileAddingNewMetaFieldExceptAccountType.logger
+				.debug("Validate the Meta filed by default rule value");
+
+		// // Click on Configuration Page
+		this.confPage = this.navPage.navigateToConfigurationPage();
+		VerifyMetaFieldTypeSelectionISNotAvailableWhileAddingNewMetaFieldExceptAccountType.logger.debug("Click on Configuration page");
+
+		// Go to Meta field category and validate the meta field type
+		this.confPage = this.confPage.validateMetaFieldSelectionForCustomer();
+		VerifyMetaFieldTypeSelectionISNotAvailableWhileAddingNewMetaFieldExceptAccountType.logger
+				.debug("Validate the Meta filed by default rule value");
+
+		// // Click on Configuration Page
+		this.confPage = this.navPage.navigateToConfigurationPage();
+		VerifyMetaFieldTypeSelectionISNotAvailableWhileAddingNewMetaFieldExceptAccountType.logger.debug("Click on Configuration page");
+
+		// Go to Meta field category and validate the meta field type
+		this.confPage = this.confPage.validateMetaFieldSelectionForPayment();
+		VerifyMetaFieldTypeSelectionISNotAvailableWhileAddingNewMetaFieldExceptAccountType.logger
+				.debug("Validate the Meta filed by default rule value");
+
+	}
+
+}

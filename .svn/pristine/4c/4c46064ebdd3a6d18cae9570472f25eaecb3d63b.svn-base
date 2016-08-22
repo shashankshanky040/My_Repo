@@ -1,0 +1,2 @@
+Test Case Id, Test Case Method Name, Test Case Objective, RESULT, Error Message
+10909928|testCreateProductWithCommissions|Test Case 16.2 : Verify that products with commisions can be made|FAIL|Element not found for provided element fiel

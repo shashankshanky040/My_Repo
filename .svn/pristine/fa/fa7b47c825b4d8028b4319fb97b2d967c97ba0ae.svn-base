@@ -1,0 +1,3 @@
+Test Case Id, Test Case Method Name, Test Case Objective, RESULT, Error Message
+10909932|testUserTearDownCreatedData|Test Case 18.1 : Verify user tear down the created data.|FAIL|Timed out after 30 seconds waiting for visibility of element located by By.xpath: //button/span[text()='Yes']
+Build info: version: '2.53.0'

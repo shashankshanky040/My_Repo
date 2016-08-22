@@ -1,0 +1,9 @@
+<h2>Methods that were not run</h2><table>
+<tr><td>com.jbilling.test.VerifyUserAbleToAddPaymentMethod.addPaymentMethodUsingACH<br/>&nbsp;&nbsp;&nbsp;&nbsp;<i>TC 15 : Verify that user can create a new Account type using the ACH payment method</i></td></tr>
+<tr><td>com.jbilling.test.VerifyUserAbleToLoginUsingValidCred.loginWithValidCredentials<br/>&nbsp;&nbsp;&nbsp;&nbsp;<i>Test Case 1.2: Verify that users can login into the JBilling System using valid credential</i></td></tr>
+<tr><td>com.jbilling.test.VerifyUserAbleToAddPaymentMethod.VerifyPayMethodWorksForAllAccType<br/>&nbsp;&nbsp;&nbsp;&nbsp;<i>TC 20 : Verify this created payment method works correctly for all the account types created in future.</i></td></tr>
+<tr><td>com.jbilling.test.VerifyUserAbleToAddPaymentMethod.VerifySearchingAndSortingForAccountType<br/>&nbsp;&nbsp;&nbsp;&nbsp;<i>TC 12.0 : Verify that users can login into the JBilling System using valid credential</i></td></tr>
+<tr><td>com.jbilling.test.VerifyUserAbleToAddPaymentMethod.VerifyPayMethodIsDefaultSelectedForAllAccType<br/>&nbsp;&nbsp;&nbsp;&nbsp;<i>TC 19 : Verify that, this payment method is default selected for all the account types created in future.</i></td></tr>
+<tr><td>com.jbilling.test.VerifyUserAbleToAddPaymentMethod.addPaymentMethodUsingCheque<br/>&nbsp;&nbsp;&nbsp;&nbsp;<i>TC 16 : Verify that user can create a new Account type using the Cheque payment method</i></td></tr>
+<tr><td>com.jbilling.test.VerifyUserAbleToAddPaymentMethod.createAccountTypeWithCreditLimitAndNotifConfg<br/>&nbsp;&nbsp;&nbsp;&nbsp;<i>TC 11.1 : Verify that user is able to create account type with credit limit and notification amount configured</i></td></tr>
+</table>

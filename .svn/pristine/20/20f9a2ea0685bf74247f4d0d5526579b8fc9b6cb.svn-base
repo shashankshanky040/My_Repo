@@ -1,0 +1,18 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite thread-count="5" verbose="1" name="SanityTestScript"
+	annotations="JDK">
+	
+	<test name="debug" junit="false" preserve-order="true">
+		<classes>
+			<class name="com.jbilling.test.VerifyUserAbleToCreateInvoiceTemplates"/>
+			<class name="com.jbilling.test.VerifyUserAbleToConfigureOrderChangeStatuses"/>	
+			<class name="com.jbilling.test.VerifyUserAbleGetMandatoryFieldMessageForAccountType"/>
+			<class name="com.jbilling.test.VerifyStatusofPreExistingandNewOrder"/>		
+			<class name="com.jbilling.test.VerifyAddProductwithDifferentPricingModel"/>				
+			<class name="com.jbilling.test.VerifyUserAbleToCreateMetafields"/>	
+			<class name="com.jbilling.test.VerifyUserAbleToCreateOrderChangesStatusesAndOrderChangeTypePlugins"/>	
+			<class name="com.jbilling.test.VerifyUserIsAbleToSetUpFeeProductAndRelatedPlugInToBeUsedAsCancellationFee"/>		
+		</classes>
+	</test>
+</suite>

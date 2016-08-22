@@ -1,0 +1,36 @@
+<h2>Methods that were not run</h2><table>
+<tr><td>com.jbilling.test.SanityTestScript.testCreateProductWithAsset<br/>&nbsp;&nbsp;&nbsp;&nbsp;<i>Test Case 3.4 : Verify that a user can create a product with an asset</i></td></tr>
+<tr><td>com.jbilling.test.SanityTestScript.testConfigureBillingProcess<br/>&nbsp;&nbsp;&nbsp;&nbsp;<i>Test Case 2.7 : Test Data Preparation for Billing Process</i></td></tr>
+<tr><td>com.jbilling.test.SanityTestScript.testMediationRunSuccessfully<br/>&nbsp;&nbsp;&nbsp;&nbsp;<i>Test Case 9.1:  Verify that mediation 3.0 runs successfully.</i></td></tr>
+<tr><td>com.jbilling.test.SanityTestScript.testCreateAndEditPlan<br/>&nbsp;&nbsp;&nbsp;&nbsp;<i>Test Case 4.1 : Verify that user is able to create and edit a plan.</i></td></tr>
+<tr><td>com.jbilling.test.SanityTestScript.testConfigureCollectionPlugins<br/>&nbsp;&nbsp;&nbsp;&nbsp;<i>Test Case 2.6 : Verify ability to configure Collections Plugins</i></td></tr>
+<tr><td>com.jbilling.test.SanityTestScript.testConfigureCollection<br/>&nbsp;&nbsp;&nbsp;&nbsp;<i>Test Case 2.5 : Verify ability to configure Collections</i></td></tr>
+<tr><td>com.jbilling.test.SanityTestScript.testAssignAccountToProduct<br/>&nbsp;&nbsp;&nbsp;&nbsp;<i>Test Case 3.5 : Verify user can assign an Account Type price to a Product and edit it</i></td></tr>
+<tr><td>com.jbilling.test.SanityTestScript.testVerifyInvoiceGeneration<br/>&nbsp;&nbsp;&nbsp;&nbsp;<i>Test Case 10.1 : Generating an Invoice (Manually) </i></td></tr>
+<tr><td>com.jbilling.test.SanityTestScript.testCreateNewCompanyUsingCopyCompany<br/>&nbsp;&nbsp;&nbsp;&nbsp;<i>Test Case 1.1:  testCreateNewCompanyUsingCopyCompany</i></td></tr>
+<tr><td>com.jbilling.test.SanityTestScript.testAgentsLinkedToCustomer<br/>&nbsp;&nbsp;&nbsp;&nbsp;<i>Test Case 16.1 : Verify that Agents can be made and linked to a customer</i></td></tr>
+<tr><td>com.jbilling.test.SanityTestScript.testCreateProductCategory<br/>&nbsp;&nbsp;&nbsp;&nbsp;<i>Test Case 3.1 : Verify user is able to create/edit a Category 'New Test Category' is only available to Root Company (jBilling).</i></td></tr>
+<tr><td>com.jbilling.test.SanityTestScript.testCreateProductWithCommissions<br/>&nbsp;&nbsp;&nbsp;&nbsp;<i>Test Case 16.2 : Verify that products with commisions can be made</i></td></tr>
+<tr><td>com.jbilling.test.SanityTestScript.testConfigurePluginPreferencesForCommission<br/>&nbsp;&nbsp;&nbsp;&nbsp;<i>Test Case 16.3 : Verify that user can configure the plug-in and preference required for running a comission process</i></td></tr>
+<tr><td>com.jbilling.test.SanityTestScript.testConfigurePaymentMethod<br/>&nbsp;&nbsp;&nbsp;&nbsp;<i>Test Case 2.3 : Verify ability to configure a Payment Method Configure 'Credit Card' payment method for Account Type: Direct Customer</i></td></tr>
+<tr><td>com.jbilling.test.SanityTestScript.testCreateDiscount<br/>&nbsp;&nbsp;&nbsp;&nbsp;<i>Test Case 6.3 : Verify user is able to create discounts to be availed while making purchase.</i></td></tr>
+<tr><td>com.jbilling.test.SanityTestScript.testCreateAndEditCustomer<br/>&nbsp;&nbsp;&nbsp;&nbsp;<i>Test Case 6.1 : Verify if user is able to create/Edit a new customer into the system.</i></td></tr>
+<tr><td>com.jbilling.test.SanityTestScript.testUserCanPayInvoiceOnGeneratedInvoice<br/>&nbsp;&nbsp;&nbsp;&nbsp;<i>Test Case 13.1 : Verify user can pay invoice on a billing process generated invoice</i></td></tr>
+<tr><td>com.jbilling.test.SanityTestScript.testGeneratedCommissionPostInvoiceGeneration<br/>&nbsp;&nbsp;&nbsp;&nbsp;<i>Test Case 16.4 : Verify that correct commission is generated for the Agent after order invoice is generated</i></td></tr>
+<tr><td>com.jbilling.test.SanityTestScript.testCreationOfChildCompanyInvoiceAsReseller<br/>&nbsp;&nbsp;&nbsp;&nbsp;<i>Test Case 1.4: Verify ability to create Child Company (Invoice as Reseller) within Root Company</i></td></tr>
+<tr><td>com.jbilling.test.SanityTestScript.testVerifyOrderProvisioningTaskTriggersEvent<br/>&nbsp;&nbsp;&nbsp;&nbsp;<i>Test Case 8.1 : Verify Order Provisioning Task Triggers Event</i></td></tr>
+<tr><td>com.jbilling.test.SanityTestScript.testAddAndEditProduct<br/>&nbsp;&nbsp;&nbsp;&nbsp;<i>Test Case 3.3 : Verify user is able to add and edit a Product.</i></td></tr>
+<tr><td>com.jbilling.test.SanityTestScript.testConfigureOrderPeriod<br/>&nbsp;&nbsp;&nbsp;&nbsp;<i>Test Case 2.4 : Verify ability to configure Order Periods</i></td></tr>
+<tr><td>com.jbilling.test.SanityTestScript.testCreateProductWithDependencyOnOther<br/>&nbsp;&nbsp;&nbsp;&nbsp;<i>Test Case 15.1 :  Verify that Products with dependencies on other products can be created.</i></td></tr>
+<tr><td>com.jbilling.test.SanityTestScript.testCustomerStatusChangeAsCollection<br/>&nbsp;&nbsp;&nbsp;&nbsp;<i>Test Case 12.1: Verify customer status changed as per the collection</i></td></tr>
+<tr><td>com.jbilling.test.SanityTestScript.testCreateCategoryWithAssetManagement<br/>&nbsp;&nbsp;&nbsp;&nbsp;<i>Test Case 3.2 : Verify user is able to create a Category that uses Asset Management (and meta fields) 'Asset Category 1' is available to all Companies</i></td></tr>
+<tr><td>com.jbilling.test.SanityTestScript.testCreateParentChildRelationInCustomersTab<br/>&nbsp;&nbsp;&nbsp;&nbsp;<i>Test Case 6.2 : Verify user can create a Parent/Child relationship	within the Customer tab</i></td></tr>
+<tr><td>com.jbilling.test.SanityTestScript.testChangeOrderFeature<br/>&nbsp;&nbsp;&nbsp;&nbsp;<i>Test Case 7.1 : Verify Order Changes feature works correctly</i></td></tr>
+<tr><td>com.jbilling.test.SanityTestScript.testRootCompanyImpersonationOnChildCompany<br/>&nbsp;&nbsp;&nbsp;&nbsp;<i>Test Case 5.1: Verify that Root Company has ability to impersonate Child Company and view all & only information assigned to Child Company.</i></td></tr>
+<tr><td>com.jbilling.test.SanityTestScript.testOrderProductWithDependencyOnOther<br/>&nbsp;&nbsp;&nbsp;&nbsp;<i>Test Case 15.2 :  Verify that Products with dependencies on other products can be ordered.</i></td></tr>
+<tr><td>com.jbilling.test.SanityTestScript.testUserTearDownCreatedData<br/>&nbsp;&nbsp;&nbsp;&nbsp;<i>Test Case 18.1 : Verify user tear down the created data.</i></td></tr>
+<tr><td>com.jbilling.test.SanityTestScript.testCreateOrderWithDifferentTypedandPeriods<br/>&nbsp;&nbsp;&nbsp;&nbsp;<i>Test Case 11.1 :  Verify user is able to create orders belonging to different periods/type to be processed in billing process later.</i></td></tr>
+<tr><td>com.jbilling.test.SanityTestScript.testReportForInvoice<br/>&nbsp;&nbsp;&nbsp;&nbsp;<i>Test Case 14.1 : Verify correct report is displayed.</i></td></tr>
+<tr><td>com.jbilling.test.SanityTestScript.testCreationOfChildCompany<br/>&nbsp;&nbsp;&nbsp;&nbsp;<i>Test Case 1.3: Verify ability to create a Child Company within Root Company</i></td></tr>
+<tr><td>com.jbilling.test.SanityTestScript.testLoginIntoCompany<br/>&nbsp;&nbsp;&nbsp;&nbsp;<i>Test Case 1.2:  Verify that users are able to login into the JBilling System using valid credential.</i></td></tr>
+</table>

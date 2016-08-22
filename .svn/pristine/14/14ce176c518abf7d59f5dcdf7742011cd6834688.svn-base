@@ -1,0 +1,6 @@
+Test Case Id, Test Case Method Name, Test Case Objective, RESULT, Error Message
+11047241|testAddAccountType|Test Case 2.1 : Verify ability to successfully configure and edit Account Types "Direct Customer" & "Distributor Account" >> Verify the ability to set Jasper invoice design as default for invoice download|PASS
+11047242|testAttachPaymentType|Test Case 2.1.1 : Verify ability to attach a Payment Method to an Account Type|PASS
+10909907|testCreateAndEditCustomer|Test Case 6.1 : Verify if user is able to create/Edit a new customer into the system.|PASS
+10909908|testCreateParentChildRelationInCustomersTab|Test Case 6.2 : Verify user can create a Parent/Child relationship	within the Customer tab|PASS
+10909924|testReportForInvoice|Test Case 14.1 : Verify correct report is displayed.|PASS

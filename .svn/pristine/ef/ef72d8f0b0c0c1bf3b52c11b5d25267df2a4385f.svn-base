@@ -1,0 +1,2 @@
+Test Case Id, Test Case Method Name, Test Case Objective, RESULT, Error Message
+null|testConfigureCollectionPlugins|Test Case 2.6 : Verify ability to configure Collections Plugins|SKIPPED|Method SanityTestScript.testConfigureCollectionPlugins()[pri:0

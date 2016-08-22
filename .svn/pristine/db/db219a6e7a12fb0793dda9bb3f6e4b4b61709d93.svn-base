@@ -1,0 +1,1491 @@
+package com.jbilling.framework.pageclasses;
+
+import java.util.HashMap;
+
+import com.jbilling.framework.globals.GlobalController;
+import com.jbilling.framework.globals.GlobalEnumerations.TextComparators;
+import com.jbilling.framework.globals.Logger;
+import com.jbilling.framework.interfaces.ElementField;
+import com.jbilling.framework.interfaces.LocateBy;
+import com.jbilling.framework.utilities.textutilities.TextUtilities;
+import com.jbilling.framework.utilities.xmlutils.TestData;
+
+public class CustomersPage {
+	// Initialize private logger object
+	private static Logger logger = new Logger().getLogger(Thread.currentThread().getStackTrace()[1].getClassName());
+
+	@LocateBy(xpath = "//select[@name='mainSubscription.periodId']")
+	private ElementField BT_BILLING_CYCLE_UNIT;
+
+	@LocateBy(xpath = "//a[@id='companyBillingCycle']/span")
+	private ElementField BT_BILLINGCYCLE;
+
+	@LocateBy(xpath = "//select[@name='mainSubscription.nextInvoiceDayOfPeriod']")
+	private ElementField BT_BILLINGCYCLEDAY;
+
+	@LocateBy(xpath = "//strong[contains(text(), 'Bill 2')]")
+	private ElementField BT_INVOICE;
+
+	@LocateBy(xpath = "//span[text()= 'Generate Invoice']")
+	private ElementField GT_INVOICE;
+
+	@LocateBy(css = ".submit.payment>span")
+	private ElementField BT_MAKE;
+
+	@LocateBy(xpath = "//label[text()='Allow Sub-Accounts']/preceding-sibling::input[@type='checkbox']")
+	private ElementField CB_ALLOWSUBACCOUNT;
+
+	@LocateBy(xpath = "//li[@aria-controls='ui-tabs-products']/a")
+	private ElementField LT_PRODUCTS;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//input[@name='user.accountExpired']")
+	private ElementField CHB_AccountInactive;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//input[@name='user.isAccountLocked']")
+	private ElementField CHB_AccountLocked;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//input[@name='user.isParent']")
+	private ElementField CHB_Allow_Sub_Accounts;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//label[contains(text(),'Blacklisted')]/preceding-sibling::input[contains(@id,'metaField_')]")
+	private ElementField CHB_Blacklist;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//input[@name='user.createCredentials']")
+	private ElementField CHB_CreateCredentials;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//form[@id='order-details-form']/div[2]/div[2]/input[2]")
+	private ElementField CHB_CreateOrderDetailsIncludeNotes;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//form[@id='order-details-form']/div/div[11]/input[2]")
+	private ElementField CHB_CreateOrderDetailsNotifyUser;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//form[@id='order-details-form']/div/div[12]/div/input[2]")
+	private ElementField CHB_CreateOrderDetailsProRate;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//input[@name='user.excludeAgeing']")
+	private ElementField CHB_ExcludeCollection;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//input[@name='user.invoiceChild']")
+	private ElementField CHB_InvoiceIfChild;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//input[@name='user.useParentPricing']")
+	private ElementField CHB_UseParentPricing;
+
+	@LocateBy(name = "asset.select.0")
+	private ElementField CHK_SIM;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//select[@name='mainSubscription.nextInvoiceDayOfPeriod']")
+	private ElementField Customers_BillingCycleDay;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//select[@name='mainSubscription.periodId']")
+	private ElementField Customers_BillingCycleUnit;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "(//div[@class='box-cards box-cards-open'])[2]/div[2]/div[2]/div[1]/div[3]/div/input")
+	private ElementField Customers_BusinessInfo_Address1;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "(//div[@class='box-cards box-cards-open'])[2]/div[2]/div[2]/div[1]/div[4]/div/input")
+	private ElementField Customers_BusinessInfo_Address2;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "(//div[@class='box-cards box-cards-open'])[2]/div[2]/div[2]/div[1]/div/select")
+	private ElementField Customers_BusinessInfo_Division;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "(//div[@class='box-cards box-cards-open'])[2]/div[2]/div[2]/div[1]/div[2]/div/input")
+	private ElementField Customers_BusinessInfo_Name;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//span[contains(text(),'Business Information')]")
+	private ElementField Customers_BusinessInfo_Section;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "(//div[@class='box-cards box-cards-open'])[2]/div[2]/div[2]/div[2]/div/select")
+	private ElementField Customers_BusinessInfo_State;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//a[@class='btn-open']/span")
+	private ElementField Customers_ContactInfoSection;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "(//div[@class='box-cards box-cards-open'])[1]/div[2]/div[2]/div[1]/div[4]/div/input[@class='field text field_usage']")
+	private ElementField Customers_ContactInfoSection_City;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//form[@id='order-details-form']/div[2]/div[1]/textarea")
+	private ElementField Customers_CreateOrderDetails_NotesText;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//select[@name='user.dueDateUnitId']")
+	private ElementField Customers_DueDateUnit;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "(//div[@class='box-cards-title'])[3]/a/span/label")
+	private ElementField Customers_EditCustomers_PaymentMethod;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//textarea[@id='noteContent']")
+	private ElementField Customers_Notes_NotesContent;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//a[@class='btn-open']/span[contains(text(),'Notes')]")
+	private ElementField Customers_NotesSection;
+
+	@LocateBy(xpath = "//select[@id='accountTypeId']")
+	private ElementField DD_ACCOUNTTYPE;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//select[@name='mainSubscription.periodId']")
+	private ElementField DD_BILLING_CYCLE_UNIT;
+
+	@LocateBy(xpath = "//select[@id='discountableItem.0.lineLevelDetails']")
+	private ElementField DD_DISCOUNTABLEITEM;
+
+	@LocateBy(xpath = "//select[@id='discount.0.id']")
+	private ElementField DD_DISCOUNTS;
+
+	@LocateBy(xpath = "//select[@id = 'billingTypeId']")
+	private ElementField DD_ORDER;
+
+	@LocateBy(xpath = "//select[@id='paymentMethod_0.paymentMethodTypeId']")
+	private ElementField DD_PAYMENTMETHOD;
+
+	@LocateBy(xpath = "//select[@id='user.automaticPaymentType']")
+	private ElementField DD_PREFRDPAYMENT;
+
+	@LocateBy(xpath = "//select[@id = 'orderPeriod']")
+	private ElementField DD_PERIOD;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//select[@name='accountTypeId']")
+	private ElementField Dropdown_AddCustomer_AccountType;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//form[@id='order-details-form']/div/div[6]/span/div[2]/select")
+	private ElementField Dropdown_CreateOrderDetails_DueDateUnit;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//form[@id='order-details-form']/div/div[8]/select")
+	private ElementField Dropdown_CreateOrderDetailsCancellationFees;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//form[@id='order-details-form']/div/div[3]/select")
+	private ElementField Dropdown_CreateOrderDetailsStatus;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//form[@id='order-details-form']/div/div[2]/select")
+	private ElementField Dropdown_CreateOrderDetailsType;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//select[@name='user.currencyId']")
+	private ElementField Dropdown_Currency;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//form[@id='order-details-form']/div[1]/div/select")
+	private ElementField Dropdown_CustomersCreateOrderDetailsPeriod;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//select[@id='filters.CUSTOMER-EQ_Deleted.integerValue']")
+	private ElementField Dropdown_Deleted;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//div[@id='payment-methods']/div[2]/div/div/div/div/select")
+	private ElementField Dropdown_EditCustomersPaymentType;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//select[@name='user.invoiceDeliveryMethodId']")
+	private ElementField Dropdown_InvoiceDeliveryMethod;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//select[@name='user.invoiceTemplateId']")
+	private ElementField Dropdown_InvoiceTemplate;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//select[@name='user.languageId']")
+	private ElementField Dropdown_Language;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//select[@name='user.automaticPaymentType']")
+	private ElementField Dropdown_PaymentType;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "(//div[@class='box-cards box-cards-open'])[1]/div[2]/div[2]/div[2]/div/select")
+	private ElementField Dropdown_State;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//select[@name='user.statusId']")
+	private ElementField Dropdown_Status;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//div[@class='select-bg']/select")
+	private ElementField DropDown_Status;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//select[@name='user.subscriberStatusId']")
+	private ElementField Dropdown_SubscriberStatus;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//span[text()='Confirm']")
+	private ElementField Header_DeleteCustomerPopupConfirm;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//span[text()='Select']")
+	private ElementField LT_AddCustomer;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//div[@class='dropdown']/a/span")
+	private ElementField LT_AddFilters;
+
+	@LocateBy(xpath = "//div[@class='btn-box']/a/span")
+	private ElementField LT_ADDNEW;
+
+	@LocateBy(name = "//a[text()='Add to Order']")
+	private ElementField LT_ADDORDER;
+
+	@LocateBy(name = "//a[text()='Add Selected']")
+	private ElementField LT_ADDSELECTED;
+
+	@LocateBy(xpath = "//span[text() = 'Add Sub-Account']")
+	private ElementField LT_ALLOWSUBACCOUNT;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//div[@class='btn-hold']/a/span")
+	private ElementField LT_ApplyFilters;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//div[@class='ui-dialog-content ui-widget-content']/div/div/fieldset/div")
+	private ElementField LT_BusinessInfoPopUpDate;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//div[@class='ui-dialog-buttonset']//button/span[contains(text(),'Save')]")
+	private ElementField LT_BusinessInfoPopupSave;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "(//div[@class='box-cards box-cards-open'])[2]/div[2]/div/div[1]/div/ul/li[2]/a")
+	private ElementField LT_BusinessInfoSection;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//span[text()='Cancel']")
+	private ElementField LT_Cancel;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//div[@class='ui-dialog-buttonset']//button/span[contains(text(),'Cancel')]")
+	private ElementField LT_ContactInfoSection_Popup;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//div[@id='timeline']/div/ul/li[2]/a")
+	private ElementField LT_ContactInfoSectionAddDate;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//div[@class='ui-dialog-buttonset']//button/span[contains(text(),'Save')]")
+	private ElementField LT_ContactInfoSectionPopupSave;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//span[text()='Create Order']")
+	private ElementField LT_CreateOrder;
+
+	@LocateBy(xpath = "//span[text()= 'Create Order']")
+	private ElementField LT_CREATEORDER;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//span[text()='Cancel']")
+	private ElementField LT_CreateOrderCancel;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//span[text()='Save Changes']")
+	private ElementField LT_CreateOrderSaveChanges;
+
+	@LocateBy(xpath = "//span[text()='Current order']")
+	private ElementField LT_CURRENT_ORDER;
+
+	@LocateBy(xpath = "//strong[contains(text(), 'Customer A')]")
+	private ElementField LT_CUSTOMER;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//span[text()='Delete']")
+	private ElementField LT_DeleteCustomer;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//span[text()='No']")
+	private ElementField LT_DeleteCustomerPopupNo;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//span[text()='Yes']")
+	private ElementField LT_DeleteCustomerPopupYes;
+
+	@LocateBy(xpath = "//span[text()='Dependency']")
+	private ElementField LT_DEPENDENCY_BUTTON;
+
+	@LocateBy(xpath = "//li[@aria-controls='ui-tabs-discounts']/a")
+	private ElementField LT_DISCOUNTS;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//div[@class='download']/a")
+	private ElementField LT_DownloadCSV;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//span[text()='Edit']")
+	private ElementField LT_EditCustomer;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//span[text()='Add Instrument']")
+	private ElementField LT_EditCustomers_AddInstrument;
+
+	@LocateBy(xpath = "//table[@id='products']/tbody//td/a/strong")
+	private ElementField LT_htmlWebTableRow;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//span[text()='Load']")
+	private ElementField LT_Load;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//span[text()='Make Payment']")
+	private ElementField LT_MakePayment;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//a[@class='submit add']/span")
+	private ElementField LT_Notes_AddNotes;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//div[@class='ui-dialog-buttonset']/button[2]/span")
+	private ElementField LT_Notes_Cancel;
+
+	@LocateBy(xpath = "//strong[contains(text(), 'Bill 2')]")
+	private ElementField LT_PRODUCT;
+
+	@LocateBy(xpath = "")
+	private ElementField LT_RECENTCUSTOMER;
+
+	@LocateBy(xpath = "//a[text()='Review']")
+	private ElementField LT_REVIEW;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//div[@class='btn-hold']/a[2]/span")
+	private ElementField LT_Save;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//div[@class='buttons']/ul/li/a/span")
+	private ElementField LT_SaveChanges;
+
+	@LocateBy(xpath = "//span[text()='Save Changes']")
+	private ElementField LT_SAVECHANGES;
+
+	@LocateBy(xpath = "//span[text()='Select']")
+	private ElementField LT_SELECT;
+
+	@LocateBy(xpath = "//span[text()='Update']")
+	private ElementField LT_UPDATE;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//div[@class='ui-dialog-buttonset']//button/span[contains(text(),'Cancel')]")
+	private ElementField LTBusinessInfoPopupCancel;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//ul[@role='tablist']")
+	private ElementField Tab_CreateOrderInnerLeft;
+
+	@LocateBy(xpath = "//strong[text()='Installation Fee']")
+	private ElementField TAB_DEPENDENT_PRODUCT;
+
+	@LocateBy(xpath = "//table[@id='products']")
+	private ElementField TAB_PRODUCTS;
+
+	@LocateBy(xpath = "//table[@id='products']/tbody//td/a/strong")
+	private ElementField TAB_LIST_PRODUCT;
+
+	@LocateBy(xpath = "")
+	private ElementField TAB_USERS;
+
+	@LocateBy(xpath = "//label[text()='Active Since']/../div/input")
+	private ElementField TB_ACTIVEDATE;
+
+	@LocateBy(xpath = "//input[@id = 'user.partnerIdList']")
+	private ElementField TB_AGENT;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//input[@name='user.partnerIdList']")
+	private ElementField TB_AgentId;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//input[@name='user.autoRechargeAsDecimal']")
+	private ElementField TB_AutoRechargeAmount;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//input[@name='user.monthlyLimit']")
+	private ElementField TB_AutoRechargeMonthlyLimit;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//input[@name='user.rechargeThreshold']")
+	private ElementField TB_AutoRechargeThreshold;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "(//div[@class='box-cards box-cards-open'])[2]/div[2]/div[2]/div[1]/div[5]/div/input")
+	private ElementField TB_BusinessInfo;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "(//div[@class='box-cards box-cards-open'])[2]/div[2]/div[2]/div[2]/div[4]/div/input")
+	private ElementField TB_BusinessInfoEmail;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "(//div[@class='box-cards box-cards-open'])[2]/div[2]/div[2]/div[2]/div[3]/div/input")
+	private ElementField TB_BusinessInfoTelephone;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "(//div[@class='box-cards box-cards-open'])[2]/div[2]/div[2]/div[2]/div[2]/div/input")
+	private ElementField TB_BusinessInfoZipCode;
+
+	@LocateBy(xpath = "//div[@id = 'payment-method-fields-0']/div[3]/div/input")
+	private ElementField TB_CARDEXPIRYDATE;
+
+	@LocateBy(xpath = "//div[@id = 'payment-method-fields-0']/div/div/input")
+	private ElementField TB_CARDHOLDERNAME;
+
+	@LocateBy(xpath = "//div[@id = 'payment-method-fields-0']/div[2]/div/input")
+	private ElementField TB_CARDNUMBER;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//input[contains(@class,'field text field_usage')]")
+	private ElementField TB_ContactInfoSection;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "(//div[@class='box-cards box-cards-open'])[1]/div[2]/div[2]/div[1]/div[3]/div/input")
+	private ElementField TB_ContactInfoSection_Address2;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "(//div[@class='box-cards box-cards-open'])[1]/div[2]/div[2]/div[1]/div[2]/div/input")
+	private ElementField TB_ContactInfoSectionAddress1;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "(//input[@class='field hasDatepicker'])[1]")
+	private ElementField TB_ContactInfoSectionPopUpDate;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "(//div[@class='box-cards box-cards-open'])[1]/div[2]/div[2]/div[2]/div[3]/div/input")
+	private ElementField TB_ContactInfoSectionTelephone;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "(//div[@class='box-cards box-cards-open'])[1]/div[2]/div[2]/div[2]/div[2]/div/input")
+	private ElementField TB_ContactInfoSectionZipCode;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//form[@id='order-details-form']/div/div[4]/div/input")
+	private ElementField TB_CreateOrderDetailsActiveSinceDate;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//form[@id='order-details-form']/div/div[5]/div/input")
+	private ElementField TB_CreateOrderDetailsActiveUntillDate;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//form[@id='order-details-form']/div/div[6]/span/div/input")
+	private ElementField TB_CreateOrderDetailsDueDate;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//form[@id='order-details-form']/div/div[7]/span/div/input")
+	private ElementField TB_CreateOrderDetailsMinimumPeriod;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//form[@id='order-details-form']/div/div[14]/span/div/input")
+	private ElementField TB_CreateOrderDetailsUserCode;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//input[@name='user.creditLimitAsDecimal']")
+	private ElementField TB_CreditLimit;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//input[@id='filters.CUSTOMER-DATE_BETWEEN_Customer_nextInvoiceDate.startDateValue']")
+	private ElementField TB_DateFrom;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//input[@id='filters.CUSTOMER-DATE_BETWEEN_Customer_nextInvoiceDate.endDateValue']")
+	private ElementField TB_DateTo;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//input[@name='user.dueDateValue']")
+	private ElementField TB_DueDate;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//div[@id='payment-methods']/div[2]/div/div/div[2]/div/div/input")
+	private ElementField TB_EditCustomersCardHolderName;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//div[@id='payment-methods']/div[2]/div/div/div[2]/div[2]/div/input")
+	private ElementField TB_EditCustomersccNumber;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//div[@id='payment-methods']/div[2]/div/div/div[2]/div[3]/div/input")
+	private ElementField TB_EditCustomersExpireDate;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//div[@id='payment-methods']/div[2]/div/div/div/div[2]/div/input")
+	private ElementField TB_EditCustomersProcessingOrder;
+
+	@LocateBy(xpath = "//label[text()='Effective Date']/../div/input")
+	private ElementField TB_EFFECTIVE_DATE;
+
+	@LocateBy(xpath = "//label[contains(text(),'Email')]/../div/input")
+	private ElementField TB_EMAIL;
+
+	@LocateBy(xpath = "//input[@id='filterBy']")
+	private ElementField TB_FILTER_PRODUCTS_BY;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//input[@class='{validate:{ digits: true }}']")
+	private ElementField TB_IDField;
+
+	@LocateBy(xpath = "//input[@id='user.userName']")
+	private ElementField TB_LOGINNAME;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//input[@name='user.userName']")
+	private ElementField TB_LoginUserName;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//input[@id='filters.CUSTOMER-LIKE_UserName.stringValue']")
+	private ElementField TB_Name;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//input[@id='noteTitle']")
+	private ElementField TB_NotesTitle;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//input[@name='user.parentId']")
+	private ElementField TB_ParentId;
+
+	@LocateBy(xpath = "//input[@id = 'change--3.quantityAsDecimal']")
+	private ElementField TB_QUANTITY;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//span[text()='Use Company Billing Cycle']")
+	private ElementField TB_UseBillingCycle;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//input[@name='user.userCodeLink']")
+	private ElementField TB_UserCode;
+
+	@LocateBy(xpath = "")
+	private ElementField TXT_CUSTOMER_STATUS;
+
+	@LocateBy(xpath = "//table[@id='users']")
+	private ElementField TAB_SAVED_CUSTOMER_NAME;
+
+	@LocateBy(xpath = "//table[@id='users']/tbody//td/a/strong")
+	private ElementField TAB_LIST_CUSTOMER_NAME;
+
+	@LocateBy(xpath = "//div[@id='breadcrumbs']")
+	private ElementField BREADCRUMBS;
+
+	@LocateBy(id = "payment_amountAsDecimal")
+	private ElementField TB_PAYMENT_AMOUNT;
+
+	@LocateBy(xpath = "//label[text()='cheque.bank.name']/../../div[1]/div/input")
+	private ElementField TB_CHEQUE_NAME;
+
+	@LocateBy(xpath = "//label[text()='cheque.bank.name']/../../div[2]/div/input")
+	private ElementField TB_CHEQUE_NUMBER;
+
+	@LocateBy(xpath = "//label[text()='cheque.bank.name']/../../div[3]/div/input")
+	private ElementField TB_CHEQUE_DATE;
+
+	@LocateBy(xpath = "//a[@class='submit payment']")
+	private ElementField LT_REVIEW_PAYMENT;
+
+	@LocateBy(xpath = "//label[text()='Processing Order']/../div/input")
+	private ElementField TB_PAYMENT_ORDER;
+
+	@LocateBy(xpath = "//table[@id='payments']")
+	private ElementField TAB_PAYMENTS;
+
+	public OrdersPage addAndEditCustomerWithSIM(String testDataSetName, String category, String product) throws Exception {
+		String rowText = TestData.read("PageCustomers.xml", testDataSetName, "rowText", category);
+		String period = TestData.read("PageCustomers.xml", testDataSetName, "period", category);
+		String order = TestData.read("PageCustomers.xml", testDataSetName, "order", category);
+		boolean sim = TextUtilities.compareValue(TestData.read("PageCustomers.xml", testDataSetName, "sim", category), "true", true,
+				TextComparators.equals);
+		// this.selectRowItem(rowText);
+		// this.clickCreateOrderButton();
+		this.setCurrentActiveSinceDate();
+		this.selectPeriod(period);
+		this.selectOrderType(order);
+		this.clickProductsTabinOrdersForm();
+		this.selectProduct(product);
+		this.checkSIM(sim);
+		this.clickAddSelectedButton();
+		this.clickAddToOrderButton();
+		this.clickUpdate();
+		this.clickProductsTabinOrdersForm();
+		this.selectProduct(product);
+		this.checkSIM(sim);
+		this.clickAddSelectedButton();
+		this.clickAddToOrderButton();
+		this.clickUpdate();
+		this.clickSaveChanges();
+
+		return GlobalController.brw.initElements(OrdersPage.class);
+	}
+
+	public String addChildCustomer(String accountType, String attachedPaymentMethod, String testDataSetName, String category)
+			throws Exception {
+		String billingCycleDay = TestData.read("PageCustomers.xml", testDataSetName, "billingCycleDay", category);
+		String cardHolderName = TestData.read("PageCustomers.xml", testDataSetName, "cardHolderName", category);
+		String cardNumber = TestData.read("PageCustomers.xml", testDataSetName, "cardNumber", category);
+		String expiryDate = TestData.read("PageCustomers.xml", testDataSetName, "expiryDate", category);
+		String login = TestData.read("PageCustomers.xml", testDataSetName, "loginName", category);
+		String agent = TestData.read("PageCustomers.xml", testDataSetName, "agent", category);
+		String email = TestData.read("PageCustomers.xml", testDataSetName, "email", category);
+		String billingCycleUnit = TestData.read("PageCustomers.xml", testDataSetName, "billingCycleUnit", category);
+
+		boolean allowSubAccount = TextUtilities.compareValue(
+				TestData.read("PageCustomers.xml", testDataSetName, "allowSubAccount", category), "true", true, TextComparators.equals);
+		this.clickAllowSubAccount();
+		this.selectAccountType(accountType);
+		this.clickSelectButton();
+		this.setLoginName(login);
+		this.checkAllowSubAccount(allowSubAccount);
+		this.setaAgentID(agent);
+
+		this.clickCompanyBillingCycle();
+		this.selectBillingDay(billingCycleDay);
+		this.selectBillingUnit(billingCycleUnit);
+		this.selectPaymentType(attachedPaymentMethod);
+		this.cardHolderName(cardHolderName);
+		this.cardNumber(cardNumber);
+		this.cardExpiryDate(expiryDate);
+
+		this.clickSaveChangesbutton();
+		return login;
+	}
+
+	public String addCustomer(String accountType, String attachedPaymentMethod, String testDataSetName, String category) throws Exception {
+
+		String billingCycleDay = TestData.read("PageCustomers.xml", testDataSetName, "billingCycleDay", category);
+		String paymentMethod = TestData.read("PageCustomers.xml", testDataSetName, "paymentMethod2", category);
+		String cardHolderName = TestData.read("PageCustomers.xml", testDataSetName, "cardHolderName", category);
+		String cardNumber = TestData.read("PageCustomers.xml", testDataSetName, "cardNumber", category);
+		String expiryDate = TestData.read("PageCustomers.xml", testDataSetName, "expiryDate", category);
+		String login = TestData.read("PageCustomers.xml", testDataSetName, "loginName", category);
+		String agent = TestData.read("PageCustomers.xml", testDataSetName, "agent", category);
+		String email = TestData.read("PageCustomers.xml", testDataSetName, "email", category);
+		String billingCycleUnit = TestData.read("PageCustomers.xml", testDataSetName, "billingCycleUnit", category);
+		boolean allowSubAccount = TextUtilities.compareValue(
+				TestData.read("PageCustomers.xml", testDataSetName, "allowSubAccount", category), "true", true, TextComparators.equals);
+		this.clickAddNewButton();
+		this.selectAccountType(accountType);
+		this.clickSelectButton();
+		this.setLoginName(login);
+		this.checkAllowSubAccount(allowSubAccount);
+		// this.setEmail(email);
+		// this.setaAgentID(agent);
+
+		this.clickCompanyBillingCycle();
+		this.selectBillingDay(billingCycleDay);
+		this.selectBillingUnit(billingCycleUnit);
+		this.selectPaymentType(attachedPaymentMethod);
+		this.cardHolderName(cardHolderName);
+		this.cardNumber(cardNumber);
+		this.cardExpiryDate(expiryDate);
+
+		this.clickSaveChangesbutton();
+		return login;
+	}
+
+	/**
+	 * This method will set Card Expiry Date for Payment
+	 * 
+	 * @param expiryDate
+	 * @throws Exception
+	 */
+	protected CustomersPage cardExpiryDate(String expiryDate) throws Exception {
+		CustomersPage.logger.enterMethod();
+
+		GlobalController.brw.setText(this.TB_CARDEXPIRYDATE, expiryDate);
+		CustomersPage.logger.exitMethod();
+		return GlobalController.brw.initElements(CustomersPage.class);
+	}
+
+	/**
+	 * This method will set Card Holder name for payment
+	 * 
+	 * @param cardHolderName
+	 * @throws Exception
+	 */
+	protected CustomersPage cardHolderName(String cardHolderName) throws Exception {
+		CustomersPage.logger.enterMethod();
+
+		GlobalController.brw.setText(this.TB_CARDHOLDERNAME, cardHolderName);
+		CustomersPage.logger.exitMethod();
+		return GlobalController.brw.initElements(CustomersPage.class);
+	}
+
+	/**
+	 * This method will set Card Number for Payment
+	 * 
+	 * @param cardNumber
+	 * @throws Exception
+	 */
+	protected CustomersPage cardNumber(String cardNumber) throws Exception {
+		CustomersPage.logger.enterMethod();
+
+		GlobalController.brw.setText(this.TB_CARDNUMBER, cardNumber);
+		CustomersPage.logger.exitMethod();
+		return GlobalController.brw.initElements(CustomersPage.class);
+	}
+
+	/**
+	 * This method will check/uncheck Allow sub Account checkbox
+	 * 
+	 * @param allowSubAccount
+	 * @throws Exception
+	 */
+	protected CustomersPage checkAllowSubAccount(Boolean allowSubAccount) throws Exception {
+		if (allowSubAccount) {
+			GlobalController.brw.check(this.CB_ALLOWSUBACCOUNT);
+		} else {
+			GlobalController.brw.uncheck(this.CB_ALLOWSUBACCOUNT);
+		}
+		return GlobalController.brw.initElements(CustomersPage.class);
+	}
+
+	protected String checkCustomerStatus() throws Exception {
+		String status = GlobalController.brw.getText(this.TXT_CUSTOMER_STATUS);
+		return status;
+	}
+
+	/**
+	 * This method will check SIM checkbox
+	 * 
+	 * @param rememberMe
+	 * @throws Exception
+	 */
+	protected OrdersPage checkSIM(Boolean SIM) throws Exception {
+		if (SIM) {
+			GlobalController.brw.check(this.CHK_SIM);
+		} else {
+			GlobalController.brw.uncheck(this.CHK_SIM);
+		}
+		return GlobalController.brw.initElements(OrdersPage.class);
+	}
+
+	protected CustomersPage clickAddNewButton() throws Exception {
+		GlobalController.brw.clickLinkText(this.LT_ADDNEW);
+		return GlobalController.brw.initElements(CustomersPage.class);
+	}
+
+	/**
+	 * This method will click on Add Selected button
+	 * 
+	 * @throws Exception
+	 */
+	protected OrdersPage clickAddSelectedButton() throws Exception {
+		GlobalController.brw.clickLinkText(this.LT_ADDSELECTED);
+		return GlobalController.brw.initElements(OrdersPage.class);
+	}
+
+	/**
+	 * This method will click on Add to order button
+	 * 
+	 * @throws Exception
+	 */
+	protected OrdersPage clickAddToOrderButton() throws Exception {
+		GlobalController.brw.clickLinkText(this.LT_ADDORDER);
+		return GlobalController.brw.initElements(OrdersPage.class);
+	}
+
+	/**
+	 * This method will click on Allow Sub Account Button
+	 * 
+	 * @throws Exception
+	 */
+	protected CustomersPage clickAllowSubAccount() throws Exception {
+		GlobalController.brw.clickLinkText(this.LT_ALLOWSUBACCOUNT);
+		return GlobalController.brw.initElements(CustomersPage.class);
+	}
+
+	/**
+	 * This method will click Company Billing Cycle button
+	 * 
+	 * @throws Exception
+	 */
+
+	protected CustomersPage clickCompanyBillingCycle() throws Exception {
+		CustomersPage.logger.enterMethod();
+
+		GlobalController.brw.click(this.BT_BILLINGCYCLE);
+		CustomersPage.logger.exitMethod();
+		return GlobalController.brw.initElements(CustomersPage.class);
+	}
+
+	/**
+	 * This method will click on Create Order Button
+	 * 
+	 * @throws Exception
+	 */
+	protected CustomersPage clickCreateOrder() throws Exception {
+		GlobalController.brw.clickLinkText(this.LT_CREATEORDER);
+		return GlobalController.brw.initElements(CustomersPage.class);
+	}
+
+	/**
+	 * This method will click create order button
+	 * 
+	 * @throws Exception
+	 */
+	protected CustomersPage clickCreateOrderButton() throws Exception {
+		CustomersPage.logger.enterMethod();
+
+		GlobalController.brw.clickLinkText(this.LT_CREATEORDER);
+
+		CustomersPage.logger.exitMethod();
+		return GlobalController.brw.initElements(CustomersPage.class);
+	}
+
+	/**
+	 * This method will click on current Order button
+	 * 
+	 * @throws Exception
+	 */
+	protected OrdersPage clickCurrentOrder() throws Exception {
+		GlobalController.brw.clickLinkText(this.LT_CURRENT_ORDER);
+		return GlobalController.brw.initElements(OrdersPage.class);
+	}
+
+	/**
+	 * This method will click on Customer
+	 * 
+	 * @throws Exception
+	 */
+
+	protected CustomersPage clickCustomeritem() throws Exception {
+		GlobalController.brw.clickLinkText(this.LT_CUSTOMER);
+		return GlobalController.brw.initElements(CustomersPage.class);
+	}
+
+	protected OrdersPage clickDependencyButton() throws Exception {
+		GlobalController.brw.clickLinkText(this.LT_DEPENDENCY_BUTTON);
+		return GlobalController.brw.initElements(OrdersPage.class);
+
+	}
+
+	/**
+	 * This method will click on Discounts Tab
+	 * 
+	 * @throws Exception
+	 */
+	protected OrdersPage clickDiscountsTabinOrdersForm() throws Exception {
+		GlobalController.brw.clickLinkText(this.LT_DISCOUNTS);
+		return GlobalController.brw.initElements(OrdersPage.class);
+	}
+
+	/**
+	 * This method clicks on Make Payment
+	 * 
+	 * @throws Exception
+	 */
+	public CustomersPage clickMakePayment() throws Exception {
+		GlobalController.brw.clickLinkText(this.BT_MAKE);
+		return GlobalController.brw.initElements(CustomersPage.class);
+	}
+
+	/**
+	 * This method will click on Product Item
+	 * 
+	 * @throws Exception
+	 */
+
+	protected CustomersPage clickProductItem() throws Exception {
+		GlobalController.brw.clickLinkText(this.LT_PRODUCT);
+		return GlobalController.brw.initElements(CustomersPage.class);
+	}
+
+	/**
+	 * This method will click products tab within orders form
+	 * 
+	 * @throws Exception
+	 */
+	protected CustomersPage clickProductsTabinOrdersForm() throws Exception {
+		GlobalController.brw.clickLinkText(this.LT_PRODUCTS);
+		return GlobalController.brw.initElements(CustomersPage.class);
+	}
+
+	/**
+	 * This method will click on recent customer
+	 * 
+	 * @throws Exception
+	 */
+	protected CustomersPage clickRecentCustomer() throws Exception {
+		GlobalController.brw.clickLinkText(this.LT_RECENTCUSTOMER);
+		return GlobalController.brw.initElements(CustomersPage.class);
+	}
+
+	/**
+	 * This method will click on Review Tab
+	 * 
+	 * @throws Exception
+	 */
+	protected OrdersPage clickReviewTab() throws Exception {
+		GlobalController.brw.clickLinkText(this.LT_REVIEW);
+		return GlobalController.brw.initElements(OrdersPage.class);
+	}
+
+	/**
+	 * This method will click on Save Changes Button
+	 * 
+	 * @throws Exception
+	 */
+	protected CustomersPage clickSaveChanges() throws Exception {
+		GlobalController.brw.clickLinkText(this.LT_SAVECHANGES);
+		return GlobalController.brw.initElements(CustomersPage.class);
+	}
+
+	/**
+	 * This method will click Save Changes Button
+	 * 
+	 * @throws Exception
+	 */
+
+	protected CustomersPage clickSaveChangesbutton() throws Exception {
+		CustomersPage.logger.enterMethod();
+
+		GlobalController.brw.clickLinkText(this.LT_SAVECHANGES);
+		CustomersPage.logger.exitMethod();
+		return GlobalController.brw.initElements(CustomersPage.class);
+	}
+
+	/**
+	 * This method will click Select Button
+	 * 
+	 * @throws Exception
+	 */
+	protected CustomersPage clickSelectButton() throws Exception {
+		GlobalController.brw.clickLinkText(this.LT_SELECT);
+		return GlobalController.brw.initElements(CustomersPage.class);
+	}
+
+	/**
+	 * This method will click on Update Button
+	 * 
+	 * @throws Exception
+	 */
+	protected CustomersPage clickUpdate() throws Exception {
+		GlobalController.brw.clickLinkText(this.LT_UPDATE);
+		return GlobalController.brw.initElements(CustomersPage.class);
+	}
+
+	public OrdersPage createOrderForCustomer(String testDataSetName, String category) throws Exception {
+		CustomersPage.logger.enterMethod();
+		String rowText = TestData.read("PageCustomers.xml", testDataSetName, "rowText", category);
+		String period = TestData.read("PageCustomers.xml", testDataSetName, "period", category);
+		String product = TestData.read("PageCustomers.xml", testDataSetName, "product", category);
+		String effectiveDate = TestData.read("PageCustomers.xml", testDataSetName, "effectiveDate", category);
+		String quantity = TestData.read("PageCustomers.xml", testDataSetName, "quantity", category);
+		this.setCurrentActiveSinceDate();
+		this.selectPeriod(period);
+		this.clickProductsTabinOrdersForm();
+		this.selectProduct(product);
+		this.setEffectiveDatDefault(effectiveDate);
+		// this.setQuantity(quantity);
+		this.clickUpdate();
+		this.clickSaveChanges();
+		CustomersPage.logger.exitMethod();
+		return GlobalController.brw.initElements(OrdersPage.class);
+	}
+
+	public CustomersPage editCustomer(String testDataSetName, String category) throws Exception {
+		String rowText = TestData.read("PageCustomers.xml", testDataSetName, "rowText", category);
+		String period = TestData.read("PageCustomers.xml", testDataSetName, "period", category);
+		String order = TestData.read("PageCustomers.xml", testDataSetName, "order", category);
+		String product = TestData.read("PageCustomers.xml", testDataSetName, "product", category);
+		String effectiveDate = TestData.read("PageCustomers.xml", testDataSetName, "effectiveDate", category);
+		String quantity = TestData.read("PageCustomers.xml", testDataSetName, "quantity", category);
+
+		this.selectRowItem(rowText);
+
+		this.clickCreateOrderButton();
+		this.setCurrentActiveSinceDate();
+
+		this.selectPeriod(period);
+
+		this.selectOrderType(order);
+
+		this.clickProductsTabinOrdersForm();
+
+		this.selectRowItem(product);
+
+		this.setEffectiveDatDefault(effectiveDate);
+		this.setQuantity(quantity);
+		this.clickUpdate();
+		this.clickSaveChanges();
+		return GlobalController.brw.initElements(CustomersPage.class);
+	}
+
+	protected OrdersPage filterProducts(String textForProductFiltering) throws Exception {
+		ElementField efTbForFiltering = this.TB_FILTER_PRODUCTS_BY;
+		GlobalController.brw.setText(efTbForFiltering, textForProductFiltering);
+		GlobalController.brw.pressTab(efTbForFiltering);
+		return GlobalController.brw.initElements(OrdersPage.class);
+	}
+
+	/**
+	 * This method will generate invoice
+	 * 
+	 * @throws Exception
+	 */
+
+	protected CustomersPage generateInvoice() throws Exception {
+		GlobalController.brw.clickLinkText(this.GT_INVOICE);
+		return GlobalController.brw.initElements(CustomersPage.class);
+	}
+
+	public OrdersPage generateInvoice(String testDataSetName, String category) throws Exception {
+		String rowText = TestData.read("PageCustomers.xml", testDataSetName, "rowText", category);
+		String period = TestData.read("PageCustomers.xml", testDataSetName, "period", category);
+		String type = TestData.read("PageCustomers.xml", testDataSetName, "type", category);
+		String product = TestData.read("PageCustomers.xml", testDataSetName, "product", category);
+		this.setCurrentActiveSinceDate();
+		this.selectPeriod(period);
+		this.selectOrderType(type);
+		this.clickSaveChanges();
+		this.clickProductsTabinOrdersForm();
+		this.selectRowItem(product);
+		this.clickSaveChanges();
+		this.generateInvoice();
+		this.verifyGeneratedInvoice();
+		return GlobalController.brw.initElements(OrdersPage.class);
+	}
+
+	public OrdersPage orderProductHavingDependency(String testDataSetName, String category) throws Exception {
+		String customerName = TestData.read("PageCustomers.xml", testDataSetName, "customerName", category);
+		String period = TestData.read("PageCustomers.xml", testDataSetName, "period", category);
+		String type = TestData.read("PageCustomers.xml", testDataSetName, "type", category);
+		String product2 = TestData.read("PageCustomers.xml", testDataSetName, "product2", category);
+		String depandentProduct = TestData.read("PageCustomers.xml", testDataSetName, "depandentProduct", category);
+		@SuppressWarnings("unused")
+		String message = TestData.read("PageCustomers.xml", testDataSetName, "message", category);
+		String effectiveDate = TestData.read("PageCustomers.xml", testDataSetName, "effectiveDate", category);
+		String quantity = TestData.read("PageCustomers.xml", testDataSetName, "quantity", category);
+
+		this.selectPeriod(period);
+		this.selectOrderType(type);
+
+		this.clickProductsTabinOrdersForm();
+		this.selectProduct(product2);
+		this.setEffectiveDatDefault(effectiveDate);
+		this.setQuantity(quantity);
+		this.clickUpdate();
+		this.clickSaveChanges();
+
+		return GlobalController.brw.initElements(OrdersPage.class);
+	}
+
+	/**
+	 * This method will select Account type in account type dropdown
+	 * 
+	 * @param AccountType
+	 * @throws Exception
+	 */
+	protected CustomersPage selectAccountType(String AccountType) throws Exception {
+		CustomersPage.logger.enterMethod();
+
+		GlobalController.brw.selectDropDown(this.DD_ACCOUNTTYPE, AccountType);
+		CustomersPage.logger.exitMethod();
+		return GlobalController.brw.initElements(CustomersPage.class);
+	}
+
+	/**
+	 * This method will select Account Type Dropdown for new Customer
+	 * 
+	 * @param AccountType
+	 * @throws Exception
+	 */
+	protected CustomersPage selectAccountTypeDropDownToAddNewCustomer(String AccountType) throws Exception {
+		GlobalController.brw.selectDropDown(this.DD_ACCOUNTTYPE, AccountType);
+		return GlobalController.brw.initElements(CustomersPage.class);
+	}
+
+	/**
+	 * This method will select Billing day from Dropdown
+	 * 
+	 * @param billingCycleDay
+	 * @throws Exception
+	 */
+
+	protected CustomersPage selectBillingDay(String billingCycleDay) throws Exception {
+		CustomersPage.logger.enterMethod();
+
+		GlobalController.brw.selectDropDown(this.BT_BILLINGCYCLEDAY, billingCycleDay);
+		CustomersPage.logger.exitMethod();
+		return GlobalController.brw.initElements(CustomersPage.class);
+	}
+
+	/**
+	 * This method will select Billing day from Dropdown
+	 * 
+	 * @param billingCycleDay
+	 * @throws Exception
+	 */
+
+	protected CustomersPage selectBillingUnit(String billingCycleUnit) throws Exception {
+		CustomersPage.logger.enterMethod();
+
+		GlobalController.brw.selectDropDown(this.BT_BILLING_CYCLE_UNIT, billingCycleUnit);
+
+		CustomersPage.logger.exitMethod();
+		return GlobalController.brw.initElements(CustomersPage.class);
+	}
+
+	/**
+	 * This method will click on customer
+	 * 
+	 * @throws Exception
+	 */
+	protected CustomersPage selectcustomer(String user) throws Exception {
+		GlobalController.brw.selectListItem(this.TAB_LIST_CUSTOMER_NAME, user);
+		return GlobalController.brw.initElements(CustomersPage.class);
+	}
+
+	/**
+	 * This method will select customer from customer table
+	 * 
+	 * @param customer
+	 * @throws Exception
+	 */
+	protected CustomersPage selectCustomer(String customer) throws Exception {
+		GlobalController.brw.clickTableCellWithText(this.TAB_USERS, customer);
+		return GlobalController.brw.initElements(CustomersPage.class);
+	}
+
+	public OrdersPage selectCustomerAndClickCreateOrder(String testDataSetName, String category, HashMap<String, String> runTimeVariables)
+			throws Exception {
+		String customerName = TestData.read("PageCustomers.xml", testDataSetName, "customerName", category);
+
+		this.selectcustomer(runTimeVariables.get("TC_6.2_CHILD_CUSTOMER_NAME"));
+
+		this.clickCreateOrder();
+
+		return GlobalController.brw.initElements(OrdersPage.class);
+	}
+
+	public InvoicePage selectCustomerAndClickMakePayment(String testDataSetName, String category, HashMap<String, String> runTimeVariables)
+			throws Exception {
+		String customerName = TestData.read("PageCustomers.xml", testDataSetName, "customerName", category);
+
+		this.selectcustomer(runTimeVariables.get("TC_6.2_CHILD_CUSTOMER_NAME"));
+
+		this.clickMakePayment();
+
+		return GlobalController.brw.initElements(InvoicePage.class);
+	}
+
+	public OrdersPage selectCustomerToAddOrder(String customer) throws Exception {
+		this.selectcustomer(customer);
+		this.clickCreateOrder();
+		return GlobalController.brw.initElements(OrdersPage.class);
+	}
+
+	/**
+	 * This method will select dependent Product
+	 * 
+	 * @param depandentProduct
+	 * @throws Exception
+	 */
+	protected OrdersPage selectDependentProduct(String depandentProduct) throws Exception {
+		GlobalController.brw.clickLinkText(this.TAB_DEPENDENT_PRODUCT);
+		return GlobalController.brw.initElements(OrdersPage.class);
+	}
+
+	/**
+	 * This method will select Discount
+	 * 
+	 * @throws Exception
+	 */
+	protected OrdersPage selectDiscount(String discount) throws Exception {
+		GlobalController.brw.selectDropDown(this.DD_DISCOUNTS, discount);
+		return GlobalController.brw.initElements(OrdersPage.class);
+	}
+
+	/**
+	 * This method will select Discountable Item
+	 * 
+	 * @throws Exception
+	 */
+	protected OrdersPage selectDiscountableItem(String discountItem) throws Exception {
+		GlobalController.brw.selectDropDown(this.DD_DISCOUNTABLEITEM, discountItem);
+		return GlobalController.brw.initElements(OrdersPage.class);
+	}
+
+	/**
+	 * This method will select period
+	 * 
+	 * @throws Exception
+	 */
+	protected CustomersPage selectOrderType(String order) throws Exception {
+		GlobalController.brw.selectDropDown(this.DD_ORDER, order);
+		return GlobalController.brw.initElements(CustomersPage.class);
+	}
+
+	/**
+	 * This method will select Payment Type Dropdown
+	 * 
+	 * @param paymentMethod
+	 * @throws Exception
+	 */
+	protected CustomersPage selectPaymentType(String paymentMethod) throws Exception {
+		CustomersPage.logger.enterMethod();
+
+		GlobalController.brw.selectDropDown(this.DD_PAYMENTMETHOD, paymentMethod);
+		CustomersPage.logger.exitMethod();
+		return GlobalController.brw.initElements(CustomersPage.class);
+	}
+
+	/**
+	 * This method will select period
+	 * 
+	 * @throws Exception
+	 */
+	protected CustomersPage selectPeriod(String period) throws Exception {
+		GlobalController.brw.selectDropDown(this.DD_PERIOD, period);
+		return GlobalController.brw.initElements(CustomersPage.class);
+	}
+
+	/**
+	 * This method will click on product
+	 * 
+	 * @throws Exception
+	 */
+	protected OrdersPage selectProduct(String product) throws Exception {
+		this.filterProducts(product);
+		GlobalController.brw.selectListItem(this.TAB_LIST_PRODUCT, product);
+		return GlobalController.brw.initElements(OrdersPage.class);
+	}
+
+	/**
+	 * This method selects row item from the web table
+	 * 
+	 * @throws Exception
+	 */
+	protected CustomersPage selectRowItem(String rowText) throws Exception {
+		CustomersPage.logger.enterMethod();
+
+		GlobalController.brw.selectListItem(this.LT_htmlWebTableRow, rowText);
+		CustomersPage.logger.exitMethod();
+		return GlobalController.brw.initElements(CustomersPage.class);
+	}
+
+	/**
+	 * This method will Enter Agent ID for new customer
+	 * 
+	 * @param name
+	 * @throws Exception
+	 */
+	protected CustomersPage setaAgentID(String text) throws Exception {
+		CustomersPage.logger.enterMethod();
+
+		GlobalController.brw.setText(this.TB_AGENT, text);
+		CustomersPage.logger.exitMethod();
+		return GlobalController.brw.initElements(CustomersPage.class);
+	}
+
+	/**
+	 * This method will click Add New button
+	 */
+	protected CustomersPage setCurrentActiveSinceDate() throws Exception {
+		GlobalController.brw.setcurrentDate(this.TB_ACTIVEDATE);
+		return GlobalController.brw.initElements(CustomersPage.class);
+	}
+
+	/**
+	 * This method will set Default Date
+	 * 
+	 * @throws Exception
+	 */
+	protected CustomersPage setEffectiveDatDefault(String effectiveDate) throws Exception {
+		GlobalController.brw.setText(this.TB_EFFECTIVE_DATE, effectiveDate);
+		return GlobalController.brw.initElements(CustomersPage.class);
+	}
+
+	/**
+	 * This method will Enter Email for new customer
+	 * 
+	 * @param name
+	 * @throws Exception
+	 */
+	protected CustomersPage setEmail(String email) throws Exception {
+		CustomersPage.logger.enterMethod();
+
+		GlobalController.brw.setText(this.TB_EMAIL, email);
+		CustomersPage.logger.exitMethod();
+		return GlobalController.brw.initElements(CustomersPage.class);
+	}
+
+	/**
+	 * This method will Enter Login name for new customer
+	 * 
+	 * @param name
+	 * @throws Exception
+	 */
+	protected CustomersPage setLoginName(String name) throws Exception {
+		CustomersPage.logger.enterMethod();
+
+		GlobalController.brw.setText(this.TB_LOGINNAME, name);
+		CustomersPage.logger.exitMethod();
+		return GlobalController.brw.initElements(CustomersPage.class);
+	}
+
+	/**
+	 * This method will set quantity
+	 * 
+	 * @param rate
+	 * @throws Exception
+	 */
+	protected CustomersPage setQuantity(String quantity) throws Exception {
+		GlobalController.brw.setText(this.TB_QUANTITY, quantity);
+		return GlobalController.brw.initElements(CustomersPage.class);
+	}
+
+	public CustomersPage statusCycle(String testDataSetNameForCustomerOne, String testDataSetNameForCustomerTwo, String category)
+			throws Exception {
+		return GlobalController.brw.initElements(CustomersPage.class);
+	}
+
+	/**
+	 * This method will verify generated invoice
+	 * 
+	 * @throws Exception
+	 */
+	protected OrdersPage verifyGeneratedInvoice() throws Exception {
+		MessagesPage.isIntermediateSuccessMessageAppeared();
+		return GlobalController.brw.initElements(OrdersPage.class);
+	}
+
+	/**
+	 * This method will validate user table saved test data
+	 * 
+	 * @throws Exception
+	 */
+	public CustomersPage validateSavedTestDataInTable(String data) throws Exception {
+		GlobalController.brw.validateSavedTestData(this.TAB_SAVED_CUSTOMER_NAME, data);
+		return GlobalController.brw.initElements(CustomersPage.class);
+	}
+
+	/**
+	 * This method will verify breadcrumbs ui component
+	 * 
+	 * @throws Exception
+	 */
+	public CustomersPage verifyUIComponent() throws Exception {
+		GlobalController.brw.verifyUIComponent(this.BREADCRUMBS);
+		return GlobalController.brw.initElements(CustomersPage.class);
+	}
+
+	/**
+	 * This method will validate payments table saved test data
+	 * 
+	 * @throws Exception
+	 */
+	public CustomersPage validateSavedTestDataInPaymentsTable(String data) throws Exception {
+		GlobalController.brw.validateSavedTestData(this.TAB_PAYMENTS, data);
+		return GlobalController.brw.initElements(CustomersPage.class);
+	}
+
+	/**
+	 * This method will set Cheque Holder name for payment
+	 * 
+	 * @param cardHolderName
+	 * @throws Exception
+	 */
+	protected CustomersPage ChequeHolderName(String chequeHolderName) throws Exception {
+		CustomersPage.logger.enterMethod();
+
+		GlobalController.brw.setText(this.TB_CHEQUE_NAME, chequeHolderName);
+		CustomersPage.logger.exitMethod();
+		return GlobalController.brw.initElements(CustomersPage.class);
+	}
+
+	/**
+	 * This method will set Cheque Number for Payment
+	 * 
+	 * @param cardNumber
+	 * @throws Exception
+	 */
+	protected CustomersPage ChequeNumber(String chequeNumber) throws Exception {
+		CustomersPage.logger.enterMethod();
+
+		GlobalController.brw.setText(this.TB_CHEQUE_NUMBER, chequeNumber);
+		CustomersPage.logger.exitMethod();
+		return GlobalController.brw.initElements(CustomersPage.class);
+	}
+
+	/**
+	 * This method will set Cheque Number for Payment
+	 * 
+	 * @param cardNumber
+	 * @throws Exception
+	 */
+	protected CustomersPage ChequeDate(String chequeDate) throws Exception {
+		CustomersPage.logger.enterMethod();
+
+		GlobalController.brw.setText(this.TB_CHEQUE_DATE, chequeDate);
+		CustomersPage.logger.exitMethod();
+		return GlobalController.brw.initElements(CustomersPage.class);
+	}
+
+	/**
+	 * @author shashank
+	 * 
+	 * 
+	 *         This method will set payment amount for making payment
+	 * @param paymentAmount
+	 * @return
+	 * @throws Exception
+	 */
+	protected CustomersPage setPaymentAmount(String paymentAmount) throws Exception {
+		GlobalController.brw.setText(this.TB_PAYMENT_AMOUNT, paymentAmount);
+		return GlobalController.brw.initElements(CustomersPage.class);
+	}
+
+	protected CustomersPage clickReviewPayment() throws Exception {
+		GlobalController.brw.clickLinkText(this.LT_REVIEW_PAYMENT);
+		return GlobalController.brw.initElements(CustomersPage.class);
+	}
+
+	protected CustomersPage setPaymentOrder(String PaymentOrder) throws Exception {
+		GlobalController.brw.setText(this.TB_PAYMENT_ORDER, PaymentOrder);
+		return GlobalController.brw.initElements(CustomersPage.class);
+	}
+
+	public String addCustomerWithMakePayment(String testDataSetName, String category, String accountName) throws Exception {
+		String name = TestData.read("PageCustomers.xml", testDataSetName, "name", category);
+
+		this.clickAddNewButton();
+		this.selectAccountType(accountName);
+		this.clickSelectButton();
+		this.setLoginName(name);
+		// this.setEmail(email);
+		this.clickSaveChangesbutton();
+		return name;
+	}
+
+	public CustomersPage verifyPaymentAvailableForCustomer(String accName, String paymentMethod) throws Exception {
+
+		this.clickAddNewButton();
+		this.selectAccountType(accName);
+		this.clickSelectButton();
+		this.selectPaymentType(paymentMethod);
+
+		return GlobalController.brw.initElements(CustomersPage.class);
+	}
+
+}

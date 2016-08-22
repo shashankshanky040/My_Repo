@@ -1,0 +1,43 @@
+Test Case Id, Test Case Method Name, Test Case Objective, RESULT, Error Message
+11047241|testAddAccountType|Test Case 2.1 : Verify ability to successfully configure and edit Account Types "Direct Customer" & "Distributor Account" >> Verify the ability to set Jasper invoice design as default for invoice download|PASS
+11047251|testAddAndEditProduct|Test Case 3.3 : Verify user is able to add and edit a Product.|PASS
+11047242|testAttachPaymentType|Test Case 2.1.1 : Verify ability to attach a Payment Method to an Account Type|PASS
+11047248|testConfigureBillingProcess|Test Case 2.7 : Test Data Preparation for Billing Process|PASS
+11047246|testConfigureCollection|Test Case 2.5 : Verify ability to configure Collections|PASS
+11047245|testConfigureOrderPeriod|Test Case 2.4 : Verify ability to configure Order Periods|PASS
+11047244|testConfigurePaymentMethod|Test Case 2.3 : Verify ability to configure a Payment Method Configure 'Credit Card' payment method for Account Type: Direct Customer|PASS
+10909929|testConfigurePluginPreferencesForCommission|Test Case 16.3 : Verify that user can configure the plug-in and preference required for running a comission process|PASS
+11047250|testCreateCategoryWithAssetManagement|Test Case 3.2 : Verify user is able to create a Category that uses Asset Management (and meta fields) 'Asset Category 1' is available to all Companies|PASS
+11047236|testCreateNewCompanyUsingCopyCompany|Test Case 1.1:  testCreateNewCompanyUsingCopyCompany|PASS
+11047249|testCreateProductCategory|Test Case 3.1 : Verify user is able to create/edit a Category 'New Test Category' is only available to Root Company (jBilling).|PASS
+11047252|testCreateProductWithAsset|Test Case 3.4 : Verify that a user can create a product with an asset|PASS
+10909928|testCreateProductWithCommissions|Test Case 16.2 : Verify that products with commisions can be made|PASS
+11047239|testCreationOfChildCompanyInvoiceAsReseller|Test Case 1.4: Verify ability to create Child Company (Invoice as Reseller) within Root Company|PASS
+10909922|testCustomerStatusChangeAsCollection|Test Case 12.1: Verify customer status changed as per the collection|FAIL|Element not found in the cache - perhaps the page has changed since it was looked up
+Command duration or timeout: 30.10 seconds
+For documentation on this error
+10909906|testRootCompanyImpersonationOnChildCompany|Test Case 5.1: Verify that Root Company has ability to impersonate Child Company and view all & only information assigned to Child Company.|FAIL|Cannot locate element with text: LDC Akhilesh copy 1464272867900
+For documentation on this error
+10909923|testUserCanPayInvoiceOnGeneratedInvoice|Test Case 13.1 : Verify user can pay invoice on a billing process generated invoice|FAIL|Element not found for provided element fiel
+10909932|testUserTearDownCreatedData|Test Case 18.1 : Verify user tear down the created data.|FAIL|Element not found for provided element fiel
+10909915|testVerifyInvoiceGeneration|Test Case 10.1 : Generating an Invoice (Manually) |FAIL|No field information provide
+11047238|testCreationOfChildCompany|Test Case 1.3: Verify ability to create a Child Company within Root Company|PASS
+10909913|testMediationRunSuccessfully|Test Case 9.1:  Verify that mediation 3.0 runs successfully.|FAIL|Element not found for provided element fiel
+10909904|testAssignAccountToProduct|Test Case 3.5 : Verify user can assign an Account Type price to a Product and edit it|PASS
+11047243|testAddInfoToAccountType|Test Case 2.2 : Verify ability to successfully add an Information Type to an Account Type|PASS
+10909927|testAgentsLinkedToCustomer|Test Case 16.1 : Verify that Agents can be made and linked to a customer|PASS
+10909907|testCreateAndEditCustomer|Test Case 6.1 : Verify if user is able to create/Edit a new customer into the system.|PASS
+11047246|testConfigureCollectionPlugins|Test Case 2.6 : Verify ability to configure Collections Plugins|PASS
+10909905|testCreateAndEditPlan|Test Case 4.1 : Verify that user is able to create and edit a plan.|FAIL|Cannot locate element with text: 
+For documentation on this error
+10909925|testCreateProductWithDependencyOnOther|Test Case 15.1 :  Verify that Products with dependencies on other products can be created.|FAIL|Cannot locate element with text: 
+For documentation on this error
+11047237|testLoginIntoCompany|Test Case 1.2:  Verify that users are able to login into the JBilling System using valid credential.|PASS
+10909908|testCreateParentChildRelationInCustomersTab|Test Case 6.2 : Verify user can create a Parent/Child relationship	within the Customer tab|FAIL|Element not found for provided element fiel
+null|testCreateDiscount|Test Case 6.3 : Verify user is able to create discounts to be availed while making purchase.|SKIPPED|Method SanityTestScript.testCreateDiscount()[pri:0
+null|testCreateOrderWithDifferentTypedandPeriods|Test Case 11.1 :  Verify user is able to create orders belonging to different periods/type to be processed in billing process later.|SKIPPED|Method SanityTestScript.testCreateOrderWithDifferentTypedandPeriods()[pri:0
+null|testGeneratedCommissionPostInvoiceGeneration|Test Case 16.4 : Verify that correct commission is generated for the Agent after order invoice is generated|SKIPPED|Method SanityTestScript.testGeneratedCommissionPostInvoiceGeneration()[pri:0
+null|testOrderProductWithDependencyOnOther|Test Case 15.2 :  Verify that Products with dependencies on other products can be ordered.|SKIPPED|Method SanityTestScript.testOrderProductWithDependencyOnOther()[pri:0
+null|testReportForInvoice|Test Case 14.1 : Verify correct report is displayed.|SKIPPED|Method SanityTestScript.testReportForInvoice()[pri:0
+null|testVerifyOrderProvisioningTaskTriggersEvent|Test Case 8.1 : Verify Order Provisioning Task Triggers Event|SKIPPED|Method SanityTestScript.testVerifyOrderProvisioningTaskTriggersEvent()[pri:0
+null|testChangeOrderFeature|Test Case 7.1 : Verify Order Changes feature works correctly|SKIPPED|Method SanityTestScript.testChangeOrderFeature()[pri:0

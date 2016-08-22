@@ -1,0 +1,2 @@
+Test Case Id, Test Case Method Name, Test Case Objective, RESULT, Error Message
+10909923|testUserCanPayInvoiceOnGeneratedInvoice|Test Case 13.1 : Verify user can pay invoice on a billing process generated invoice|FAIL|Element not found for provided element fiel

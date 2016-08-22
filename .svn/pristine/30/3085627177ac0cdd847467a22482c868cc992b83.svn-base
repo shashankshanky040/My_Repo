@@ -1,0 +1,14 @@
+Test Case Id, Test Case Method Name, Test Case Objective, RESULT, Error Message
+11047236|testCreateNewCompanyUsingCopyCompany|Test Case 1.1:  testCreateNewCompanyUsingCopyCompany|PASS
+11047238|testCreationOfChildCompany|Test Case 1.3: Verify ability to create a Child Company within Root Company|PASS
+11047239|testCreationOfChildCompanyInvoiceAsReseller|Test Case 1.4: Verify ability to create Child Company (Invoice as Reseller) within Root Company|PASS
+11047241|testAddAccountType|Test Case 2.1 : Verify ability to successfully configure and edit Account Types "Direct Customer" & "Distributor Account" >> Verify the ability to set Jasper invoice design as default for invoice download|PASS
+11047242|testAttachPaymentType|Test Case 2.1.1 : Verify ability to attach a Payment Method to an Account Type|PASS
+11047244|testConfigurePaymentMethod|Test Case 2.3 : Verify ability to configure a Payment Method Configure 'Credit Card' payment method for Account Type: Direct Customer|PASS
+11047245|testConfigureOrderPeriod|Test Case 2.4 : Verify ability to configure Order Periods|PASS
+11047246|testConfigureCollection|Test Case 2.5 : Verify ability to configure Collections|PASS
+11047248|testConfigureBillingProcess|Test Case 2.7 : Test Data Preparation for Billing Process|PASS
+11047249|testCreateProductCategory|Test Case 3.1 : Verify user is able to create/edit a Category 'New Test Category' is only available to Root Company (jBilling).|PASS
+11047250|testCreateCategoryWithAssetManagement|Test Case 3.2 : Verify user is able to create a Category that uses Asset Management (and meta fields) 'Asset Category 1' is available to all Companies|PASS
+11047251|testAddAndEditProduct|Test Case 3.3 : Verify user is able to add and edit a Product.|FAIL|Element not found for provided element fiel
+11047252|testCreateProductWithAsset|Test Case 3.4 : Verify that a user can create a product with an asset|FAIL|No list item found with value "Plug-ins" in its list elemen

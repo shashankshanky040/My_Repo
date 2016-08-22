@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="1" total="1" passed="0">
+  <reporter-output>
+    <line>
+      <![CDATA[<br> BeforeClass Begins]]>
+    </line>
+    <line>
+      <![CDATA[<br> BeforeClass Ends]]>
+    </line>
+    <line>
+      <![CDATA[<br> Test Begins]]>
+    </line>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="59837" started-at="2016-08-08T10:48:06Z" finished-at="2016-08-08T10:49:06Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="59837" started-at="2016-08-08T10:48:06Z" finished-at="2016-08-08T10:49:06Z">
+      <class name="com.jbilling.test.TestUserCanPayInvoiceOnGeneratedInvoice">
+        <test-method status="PASS" signature="Starter()[pri:0, instance:com.jbilling.test.TestUserCanPayInvoiceOnGeneratedInvoice@7e0b0338]" name="Starter" is-config="true" duration-ms="13337" started-at="2016-08-08T16:18:06Z" finished-at="2016-08-08T16:18:19Z">
+          <reporter-output>
+            <line>
+              <![CDATA[<br> BeforeClass Begins]]>
+            </line>
+            <line>
+              <![CDATA[<br> BeforeClass Ends]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- Starter -->
+        <test-method status="FAIL" signature="testUserCanPayInvoiceOnGeneratedInvoice()[pri:0, instance:com.jbilling.test.TestUserCanPayInvoiceOnGeneratedInvoice@7e0b0338]" name="testUserCanPayInvoiceOnGeneratedInvoice" duration-ms="46389" started-at="2016-08-08T16:18:19Z" description="Test Case 13.1 : Verify user can pay invoice on a billing process generated invoice" finished-at="2016-08-08T16:19:06Z">
+          <exception class="java.lang.Exception">
+            <message>
+              <![CDATA[Element not found for provided element field]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Exception: Element not found for provided element field
+	at com.jbilling.framework.interfaces.impl.selenium.BrowserSelenium._findElement(BrowserSelenium.java:124)
+	at com.jbilling.framework.interfaces.impl.selenium.BrowserSelenium.waitForElement(BrowserSelenium.java:962)
+	at com.jbilling.framework.interfaces.impl.selenium.BrowserSelenium._waitForElement(BrowserSelenium.java:430)
+	at com.jbilling.framework.interfaces.impl.selenium.BrowserSelenium.clickLinkText(BrowserSelenium.java:577)
+	at com.jbilling.framework.interfaces.impl.selenium.BrowserSelenium.clickLinkText(BrowserSelenium.java:565)
+	at com.jbilling.framework.pageclasses.InvoicePage.verifyRadioButtonSelection(InvoicePage.java:146)
+	at com.jbilling.framework.pageclasses.InvoicePage.payInvoice(InvoicePage.java:288)
+	at com.jbilling.test.TestUserCanPayInvoiceOnGeneratedInvoice.testUserCanPayInvoiceOnGeneratedInvoice(TestUserCanPayInvoiceOnGeneratedInvoice.java:38)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Exception -->
+          <reporter-output>
+            <line>
+              <![CDATA[<br> Test Begins]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testUserCanPayInvoiceOnGeneratedInvoice -->
+        <test-method status="PASS" signature="tearDownPrintRunTimeValues()[pri:0, instance:com.jbilling.test.TestUserCanPayInvoiceOnGeneratedInvoice@7e0b0338]" name="tearDownPrintRunTimeValues" is-config="true" duration-ms="91" started-at="2016-08-08T16:19:06Z" finished-at="2016-08-08T16:19:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownPrintRunTimeValues -->
+      </class> <!-- com.jbilling.test.TestUserCanPayInvoiceOnGeneratedInvoice -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

@@ -1,0 +1,111 @@
+package com.jbilling.test;
+
+import java.util.HashMap;
+
+import org.testng.ITestResult;
+import org.testng.Reporter;
+import org.testng.annotations.Test;
+
+import com.jbilling.framework.globals.GlobalEnumerations.TextComparators;
+import com.jbilling.framework.globals.Logger;
+import com.jbilling.framework.pageclasses.GlobalEnumsPage.PageConfigurationItems;
+import com.jbilling.framework.utilities.browserutils.BrowserApp;
+import com.jbilling.framework.utilities.xmlutils.ConfigPropertiesReader;
+
+public class VerifyUserAbleToCreateFUP extends BrowserApp {
+
+	private static Logger logger = new Logger().getLogger(Thread.currentThread().getStackTrace()[1].getClassName());
+	ConfigPropertiesReader pr = new ConfigPropertiesReader();
+	String graceId = null;
+	static String category = "";
+	String ProductID = "null";
+	ITestResult result;
+
+	HashMap<String, String> runTimeVariables = new HashMap<String, String>();
+
+	/**
+	 * Current Application Page Stack || LoginPage--> loginPage;
+	 * NavigatorPage--> navPage; HomePage--> homePage; ConfigurationPage-->
+	 * confPage; AgentsPage--> agentsPage; CustomersPage--> customerPage;
+	 * ProductsPage--> productsPage; PlansPage--> plansPage; OrdersPage-->
+	 * ordersPage; InvoicePage--> invoicePage; ReportsPage--> reportsPage;
+	 * DiscountsPage--> discountsPage; FiltersPage--> filtersPage;
+	 * PaymentsPage--> paymentsPage; MessagesPage--> msgsPage;
+	 *
+	 * @author Aishwarya Dwivedi
+	 * @since 1.0
+	 * @version 1.0
+	 */
+
+	@Test(description = "TC 113: Verify user is able to create FUP.", groups = { "globalRegressionPack" })
+
+	public void TC113_VerifyCreateFUP() throws Exception {
+
+		VerifyUserAbleToCreateFUP.logger.enterMethod();
+		Reporter.log("<br> Test Begins");
+
+		this.result = Reporter.getCurrentTestResult();
+		this.result.setAttribute("tcid", "");
+
+		// Login Into Application And Navigate to Product Tab
+		this.productsPage = this.navPage.navigateToProductsPage();
+		VerifyUserAbleToCreateFUP.logger.debug("Login Into Application And Navigate to Product Page");
+
+		// Initiate And Complete The Process To Create A Product Category
+		// 'National Mobile Calls'
+		String productCategory = this.productsPage.addCategoryNationalMobileCalls("productCategoryNationMobileCalls", "pnmc");
+		this.runTimeVariables.put("TC_113_CATEGORY_NAME", productCategory);
+		VerifyUserAbleToCreateFUP.logger.debug("Create A Product Category");
+
+		// Validate Saved New Product successfully
+		this.productsPage = this.productsPage.validateCategoriesSavedTestData(this.runTimeVariables.get("TC_113_CATEGORY_NAME"));
+		VerifyUserAbleToCreateFUP.logger.debug("Validate Saved New Product category successfully");
+
+		// Initiate And Complete The Process To Add The Product "Roming Call
+		// Rates"
+
+		String products = this.productsPage.addProductNationalRomingcall("addProductRomingCallRates", "aprcr");
+		this.runTimeVariables.put("TC_113_PRODUCT_NAME", products);
+		VerifyUserAbleToCreateFUP.logger.debug("Add The Product");
+
+		// Validate Saved New Product successfully
+		this.productsPage = this.productsPage.validateProductSavedTestData(this.runTimeVariables.get("TC_113_PRODUCT_NAME"));
+		VerifyUserAbleToCreateFUP.logger.debug("Validate Saved New Product  successfully");
+
+		// Get Product ID
+		String id = this.productsPage.getIDOfAddedProduct();
+		VerifyUserAbleToCreateFUP.logger.debug("Get Product ID");
+
+		// Navigate to Configuration Tab
+		this.confPage = this.navPage.navigateToConfigurationPage();
+		VerifyUserAbleToCreateFUP.logger.debug("Navigate to Configuration Page");
+
+		// Select Free Usage Pool from Configuration list
+		this.confPage = this.confPage.selectConfiguration(PageConfigurationItems.FreeUsagePools);
+		VerifyUserAbleToCreateFUP.logger.debug("Select Free Usage Pool from Configuration list");
+
+		// Add free usage Pool "100 National Call Minutes Free"
+		String freeUsagePoolName = this.confPage.AddFreeUsagePool("addFreeUsagePool", "afup", id, productCategory, products);
+		this.runTimeVariables.put("TC_113_CATEGORY_NAME", freeUsagePoolName);
+		VerifyUserAbleToCreateFUP.logger.debug("add FreeUsagePool");
+
+		// Navigate to Plan Tab
+		this.plansPage = this.navPage.navigateToPlanPage();
+		VerifyUserAbleToCreateFUP.logger.debug("Navigate to Plan Page");
+
+		// Initiate And Complete The Process To Add New Plan
+		String addPlan = this.plansPage.addPlanForMobileCalls(freeUsagePoolName, productCategory, products, "addPlanForMobileCall",
+				"apfmc");
+		this.runTimeVariables.put("TC_113_PlAN_NAME", addPlan);
+		VerifyUserAbleToCreateFUP.logger.debug("Add The Plan");
+
+		// Verify Message for plan saved successfully
+		this.msgsPage = this.msgsPage.verifyDisplayedMessageText("Saved New plan", "successfully", TextComparators.contains);
+		VerifyUserAbleToCreateFUP.logger.debug("Verify Message For plan saved successfully");
+
+		Reporter.log("<br> Test Passed");
+		VerifyUserAbleToCreateFUP.logger.exitMethod();
+
+	}
+
+}

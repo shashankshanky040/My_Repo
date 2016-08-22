@@ -1,0 +1,7 @@
+Test Case Id, Test Case Method Name, Test Case Objective, RESULT, Error Message
+11047252|testCreateProductWithAsset|Test Case 3.4 : Verify that a user can create a product with an asset|PASS
+11047242|testAttachPaymentType|Test Case 2.1.1 : Verify ability to attach a Payment Method to an Account Type|PASS
+11047241|testAddAccountType|Test Case 2.1 : Verify ability to successfully configure and edit Account Types "Direct Customer" & "Distributor Account" >> Verify the ability to set Jasper invoice design as default for invoice download|PASS
+10909907|testCreateAndEditCustomer|Test Case 6.1 : Verify if user is able to create/Edit a new customer into the system.|PASS
+10909908|testCreateParentChildRelationInCustomersTab|Test Case 6.2 : Verify user can create a Parent/Child relationship	within the Customer tab|PASS
+10909911|testVerifyOrderProvisioningTaskTriggersEvent|Test Case 8.1 : Verify Order Provisioning Task Triggers Event|FAIL|No list item found with value "SIM CardsNCN" in its list elemen

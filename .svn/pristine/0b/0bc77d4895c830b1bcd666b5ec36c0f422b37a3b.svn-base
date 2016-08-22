@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="3" passed="3">
+  <reporter-output>
+    <line>
+      <![CDATA[<br> BeforeClass Begins]]>
+    </line>
+    <line>
+      <![CDATA[<br> BeforeClass Ends]]>
+    </line>
+    <line>
+      <![CDATA[<br> Test Begins]]>
+    </line>
+    <line>
+      <![CDATA[<br> Test Passed]]>
+    </line>
+    <line>
+      <![CDATA[<br> Test Begins]]>
+    </line>
+    <line>
+      <![CDATA[<br> Test Passed]]>
+    </line>
+    <line>
+      <![CDATA[<br>Test Begins]]>
+    </line>
+    <line>
+      <![CDATA[<br> Enter information type name for account type Direct CustomerLHXYE]]>
+    </line>
+    <line>
+      <![CDATA[<br> Test Passed]]>
+    </line>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="295693" started-at="2016-07-13T10:13:11Z" finished-at="2016-07-13T10:18:07Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="295693" started-at="2016-07-13T10:13:11Z" finished-at="2016-07-13T10:18:07Z">
+      <class name="com.jbilling.test.SanityTestScript">
+        <test-method status="PASS" signature="Starter()[pri:0, instance:com.jbilling.test.SanityTestScript@64c60547]" name="Starter" is-config="true" duration-ms="12244" started-at="2016-07-13T15:43:11Z" finished-at="2016-07-13T15:43:23Z">
+          <reporter-output>
+            <line>
+              <![CDATA[<br> BeforeClass Begins]]>
+            </line>
+            <line>
+              <![CDATA[<br> BeforeClass Ends]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- Starter -->
+        <test-method status="PASS" signature="testAddAccountType()[pri:0, instance:com.jbilling.test.SanityTestScript@64c60547]" name="testAddAccountType" duration-ms="98496" started-at="2016-07-13T15:43:23Z" description="Test Case 2.1 : Verify ability to successfully configure and edit Account Types &quot;Direct Customer&quot; &amp; &quot;Distributor Account&quot; &gt;&gt; Verify the ability to set Jasper invoice design as default for invoice download" finished-at="2016-07-13T15:45:02Z">
+          <reporter-output>
+            <line>
+              <![CDATA[<br> Test Begins]]>
+            </line>
+            <line>
+              <![CDATA[<br> Test Passed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testAddAccountType -->
+        <test-method status="PASS" signature="testAttachPaymentType()[pri:0, instance:com.jbilling.test.SanityTestScript@64c60547]" name="testAttachPaymentType" duration-ms="101626" started-at="2016-07-13T15:45:02Z" description="Test Case 2.1.1 : Verify ability to attach a Payment Method to an Account Type" finished-at="2016-07-13T15:46:44Z">
+          <reporter-output>
+            <line>
+              <![CDATA[<br> Test Begins]]>
+            </line>
+            <line>
+              <![CDATA[<br> Test Passed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testAttachPaymentType -->
+        <test-method status="PASS" signature="testAddInfoToAccountType()[pri:0, instance:com.jbilling.test.SanityTestScript@64c60547]" name="testAddInfoToAccountType" duration-ms="83166" started-at="2016-07-13T15:46:44Z" description="Test Case 2.2 : Verify ability to successfully add an Information Type to an Account Type" depends-on-methods="com.jbilling.test.SanityTestScript.testAttachPaymentType, com.jbilling.test.SanityTestScript.testAddAccountType" finished-at="2016-07-13T15:48:07Z">
+          <reporter-output>
+            <line>
+              <![CDATA[<br>Test Begins]]>
+            </line>
+            <line>
+              <![CDATA[<br> Enter information type name for account type Direct CustomerLHXYE]]>
+            </line>
+            <line>
+              <![CDATA[<br> Test Passed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testAddInfoToAccountType -->
+        <test-method status="PASS" signature="tearDownPrintRunTimeValues()[pri:0, instance:com.jbilling.test.SanityTestScript@64c60547]" name="tearDownPrintRunTimeValues" is-config="true" duration-ms="120" started-at="2016-07-13T15:48:07Z" finished-at="2016-07-13T15:48:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownPrintRunTimeValues -->
+      </class> <!-- com.jbilling.test.SanityTestScript -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

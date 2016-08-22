@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class com.jbilling.test.TestVerifyInvoiceGeneration</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class com.jbilling.test.TestVerifyInvoiceGeneration</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.jbilling.test.html">com.jbilling.test</a> &gt; TestVerifyInvoiceGeneration</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">1</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">16.640s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox failures" id="successRate">
+<div class="percent">0%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Failed tests</a>
+</li>
+<li>
+<a href="#tab1">Tests</a>
+</li>
+<li>
+<a href="#tab2">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="testVerifyInvoiceGeneration"></a>
+<h3 class="failures">testVerifyInvoiceGeneration</h3>
+<span class="code">
+<pre>java.lang.Exception: Invoice has not been generated successfully. Message: An Invoice could not be generated. The purchase order does not have any applicable periods to be invoiced.
+Verify the data of the purchase order or contact customer service to review your business rules.
+	at com.jbilling.framework.pageclasses.OrdersPage.verifyInvoiceGenerationForChoosenCustomer(OrdersPage.java:701)
+	at com.jbilling.test.TestVerifyInvoiceGeneration.testVerifyInvoiceGeneration(TestVerifyInvoiceGeneration.java:40)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:133)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:83)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.messaging.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.messaging.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy2.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.stop(TestWorker.java:120)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.messaging.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:364)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:54)
+	at org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:40)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="failures">testVerifyInvoiceGeneration</td>
+<td>16.640s</td>
+<td class="failures">failed</td>
+</tr>
+</table>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>15:04:46,821 INFO  [TestVerifyInvoiceGeneration] ENTER --&gt; (testVerifyInvoiceGeneration)
+15:04:46,821 INFO  [BrowserSelenium] ENTER --&gt; (clickLinkText)
+15:04:46,821 INFO  [BrowserSelenium] ENTER --&gt; (_waitForElement) --&gt; Waiting for element: null
+15:04:46,821 INFO  [BrowserSelenium] ENTER --&gt; (waitForElement)
+15:04:51,639 INFO  [BrowserSelenium] ENTER --&gt; (_getByLocator)
+15:04:51,639 INFO  [BrowserSelenium] (_getByLocator) -&gt; Getting locator for null
+15:04:51,639 INFO  [BrowserSelenium] (_getByLocator) -&gt; Locator info found for XPATH attribute as: //span[text()='Orders']
+15:04:51,639 INFO  [BrowserSelenium] ENTER --&gt; (_parseElementOnXpath)
+15:04:51,639 INFO  [BrowserSelenium] (_parseElementOnXpath) -&gt; //span[text()='Orders'] is used
+15:04:51,639 INFO  [BrowserSelenium] EXIT --&gt; (_parseElementOnXpath)
+15:04:51,639 INFO  [BrowserSelenium] EXIT --&gt; (_getByLocator)
+15:04:51,659 INFO  [BrowserSelenium] ENTER --&gt; (_getByLocator)
+15:04:51,659 INFO  [BrowserSelenium] (_getByLocator) -&gt; Getting locator for null
+15:04:51,659 INFO  [BrowserSelenium] (_getByLocator) -&gt; Locator info found for XPATH attribute as: //span[text()='Orders']
+15:04:51,659 INFO  [BrowserSelenium] ENTER --&gt; (_parseElementOnXpath)
+15:04:51,659 INFO  [BrowserSelenium] (_parseElementOnXpath) -&gt; //span[text()='Orders'] is used
+15:04:51,659 INFO  [BrowserSelenium] EXIT --&gt; (_parseElementOnXpath)
+15:04:51,669 INFO  [BrowserSelenium] EXIT --&gt; (_getByLocator)
+15:04:51,709 INFO  [BrowserSelenium] (waitForElement) -&gt; element wait eligibility found: true
+15:04:51,709 INFO  [BrowserSelenium] ENTER --&gt; (_waitForJStoLoad)
+15:04:51,769 INFO  [BrowserSelenium] EXIT --&gt; (_waitForJStoLoad) --&gt; DOM load wait done: true
+15:04:51,769 INFO  [BrowserSelenium] (waitForElement) -&gt; element wait eligibility set: true
+15:04:51,769 INFO  [BrowserSelenium] EXIT --&gt; (waitForElement)
+15:04:51,769 INFO  [BrowserSelenium] EXIT --&gt; (_waitForElement)
+15:04:51,769 INFO  [BrowserSelenium] ENTER --&gt; (_getByLocator)
+15:04:51,769 INFO  [BrowserSelenium] (_getByLocator) -&gt; Getting locator for null
+15:04:51,779 INFO  [BrowserSelenium] (_getByLocator) -&gt; Locator info found for XPATH attribute as: //span[text()='Orders']
+15:04:51,779 INFO  [BrowserSelenium] ENTER --&gt; (_parseElementOnXpath)
+15:04:51,779 INFO  [BrowserSelenium] (_parseElementOnXpath) -&gt; //span[text()='Orders'] is used
+15:04:51,779 INFO  [BrowserSelenium] EXIT --&gt; (_parseElementOnXpath)
+15:04:51,779 INFO  [BrowserSelenium] EXIT --&gt; (_getByLocator)
+15:04:51,799 INFO  [BrowserSelenium] ENTER --&gt; (_clickUsingJavaScript)
+15:04:51,829 INFO  [BrowserSelenium] EXIT --&gt; (_clickUsingJavaScript)
+15:04:51,829 INFO  [BrowserSelenium] EXIT --&gt; (clickLinkText)
+15:04:51,829 INFO  [BrowserSelenium] ENTER --&gt; (initElements)
+15:04:51,829 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:51,829 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:51,829 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:51,829 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //table[@id='orders']//strong[contains(text(),'customera')]
+15:04:51,839 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:51,839 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:51,839 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:51,839 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //span[text()='Delete']
+15:04:51,839 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:51,839 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:51,839 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:51,839 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //span[text()='Yes']
+15:04:51,839 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:51,839 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:51,839 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:51,839 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //table[@id='orders']/tbody/tr
+15:04:51,839 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:51,839 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:51,839 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:51,839 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //a[@class='submit order']/span[text()='Generate Invoice']
+15:04:51,839 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:51,839 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:51,839 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:51,839 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //label[text()='Active Since']/../div/input
+15:04:51,839 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:51,839 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:51,839 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:51,839 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //div[@class = 'btn-box']/div/a/span
+15:04:51,839 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:51,839 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:51,839 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:51,839 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //label[text()='Effective Date']/../div/input
+15:04:51,839 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:51,839 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:51,839 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:51,839 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //select[@id='orderPeriod']
+15:04:51,839 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:51,839 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:51,839 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:51,839 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //select[@id='billingTypeId']
+15:04:51,839 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:51,839 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:51,839 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:51,839 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //li[@aria-controls='ui-tabs-products']/a
+15:04:51,839 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:51,839 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:51,839 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:51,839 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //input[@id='filterBy']
+15:04:51,839 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:51,839 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:51,839 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:51,839 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //table[@id='products']
+15:04:51,839 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:51,839 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:51,839 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:51,839 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //table[@id='products']/tbody//td/a/strong
+15:04:51,839 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:51,849 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:51,849 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:51,849 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //table[@id='orders']/tbody//td/a/strong
+15:04:51,849 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:51,849 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:51,849 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:51,849 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //strong[text()='Billing Graduated']
+15:04:51,849 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:51,849 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:51,849 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:51,849 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //strong[text()='Billing Flat']
+15:04:51,849 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:51,849 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:51,849 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:51,849 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //label[text()='Quantity']/../div/input
+15:04:51,849 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:51,849 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:51,849 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:51,849 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //div[@id='messages']/div/ul/li
+15:04:51,849 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:51,849 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:51,849 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:51,849 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //span[text()='Dependency']
+15:04:51,849 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:51,849 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:51,849 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:51,849 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //div[@id='breadcrumbs']
+15:04:51,849 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:51,849 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:51,849 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:51,849 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //strong[text()='Installation Fee']
+15:04:51,849 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:51,849 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:51,849 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:51,849 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //span[text()='Current order']
+15:04:51,849 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:51,849 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:51,849 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:51,849 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //span[text()='Update']
+15:04:51,849 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:51,849 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:51,849 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:51,849 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //li[@aria-controls='ui-tabs-discounts']/a
+15:04:51,849 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:51,859 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:51,859 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:51,859 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //select[@id='discount.0.id']
+15:04:51,859 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:51,859 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:51,859 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:51,859 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //select[@id='discountableItem.0.lineLevelDetails']
+15:04:51,859 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:51,859 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:51,859 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:51,859 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //a[text()='Review']
+15:04:51,859 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:51,859 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:51,859 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:51,859 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //span[text()='Save Changes']
+15:04:51,859 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:51,859 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:51,859 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:51,859 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //select[@id = 'billingTypeId']
+15:04:51,859 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:51,859 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: asset.select.0
+15:04:51,859 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:51,859 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: 
+15:04:51,859 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:51,859 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: //a[text()='Add Selected']
+15:04:51,859 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:51,859 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: 
+15:04:51,859 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:51,859 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: //a[text()='Add to Order']
+15:04:51,859 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:51,859 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: 
+15:04:51,859 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:51,859 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: //li[@aria-controls='ui-tabs-Provisioning']/a
+15:04:51,859 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:51,859 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: 
+15:04:51,859 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:51,859 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: //a[text()='Provisioning']
+15:04:51,859 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:51,859 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: 
+15:04:51,859 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:51,859 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: //span[text()='Generate Invoice']
+15:04:51,859 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:51,859 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: 
+15:04:51,859 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:51,859 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:51,859 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:51,859 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //table[@id='orders']/tbody/tr//td[2]/a/strong
+15:04:51,859 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:51,859 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:51,859 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:51,859 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //div[@class='row']/a[contains(@href,'downloadPdf')]
+15:04:51,859 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:51,869 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:51,869 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:51,869 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //table[@id='orders']/tbody/tr/td/a/strong
+15:04:51,869 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:51,869 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:51,869 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:51,869 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //span[text()='Edit this Order']
+15:04:51,869 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:51,869 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:51,869 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:51,869 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //ul[@id='review-lines']/form
+15:04:51,869 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:51,869 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:51,869 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:51,869 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //span[text()='Change']
+15:04:51,869 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:51,869 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:51,869 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:51,869 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //span[text()='Add Asset']
+15:04:51,869 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:51,869 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:51,869 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:51,869 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //input[@id='identifier']
+15:04:51,869 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:51,869 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:51,869 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:51,869 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //span[text()='Create Asset']
+15:04:51,869 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:51,869 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:51,869 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:51,869 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //ul[@class='top-nav']/li[1]
+15:04:51,869 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:51,869 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:51,869 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:51,869 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //select[@id='company-select']
+15:04:51,869 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:51,869 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:51,869 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:51,869 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //form[@id='save-asset-form']/fieldset//div[@class='buttons']/ul/li//a[@class='submit save']
+15:04:51,869 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:51,869 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: //span[text()='Add to Order']
+15:04:51,869 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:51,869 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: 
+15:04:51,869 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:51,869 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:51,869 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:51,869 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //div[@id = 'review-messages']/div/ul/li
+15:04:51,869 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:51,869 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:51,869 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:51,869 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //a[text()='Line Changes']
+15:04:51,869 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:51,869 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:51,869 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:51,869 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //table[contains(@id,'dependencies-products-change')']/tbody//td/a/strong
+15:04:51,879 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:51,879 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: //span[text()='New SubOrder']
+15:04:51,879 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:51,879 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: 
+15:04:51,879 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:51,879 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:51,879 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:51,879 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //input[@id = 'change--3.appliedManually']
+15:04:51,879 INFO  [BrowserSelenium] EXIT --&gt; (initElements)
+15:04:51,899 INFO  [DomParser] (&lt;init&gt;) -&gt; Root element :testdata
+15:04:51,899 INFO  [DomParser] ENTER --&gt; (getTestDataSetNodesWithValues)
+15:04:51,899 INFO  [DomParser] (getNodes) -&gt; Nodes found with testdataset = 1
+15:04:51,899 INFO  [DomParser] (getTestDataSetNodesList) -&gt; Checking node [testdataset] at index 0
+15:04:51,899 INFO  [DomParser] (getTestDataSetNodesList) -&gt; develop|lab -- testVerifyInvoiceGeneration -- tvig
+15:04:51,899 INFO  [DomParser] (getTestDataSetNodesWithValues) -&gt; 17
+15:04:51,899 INFO  [DomParser] (getTestDataSetNodesWithValues) -&gt; text node found; skipping this node
+15:04:51,909 INFO  [DomParser] (getTestDataSetNodesWithValues) -&gt; changeStatus &lt;&lt;----&gt;&gt;   &lt;&lt;----&gt;&gt; 1
+15:04:51,909 INFO  [DomParser] (getTestDataSetNodesWithValues) -&gt; text node found; skipping this node
+15:04:51,909 INFO  [DomParser] (getTestDataSetNodesWithValues) -&gt; createdDateFrom &lt;&lt;----&gt;&gt;   &lt;&lt;----&gt;&gt; 1
+15:04:51,909 INFO  [DomParser] (getTestDataSetNodesWithValues) -&gt; text node found; skipping this node
+15:04:51,909 INFO  [DomParser] (getTestDataSetNodesWithValues) -&gt; createdDateTo &lt;&lt;----&gt;&gt;   &lt;&lt;----&gt;&gt; 1
+15:04:51,909 INFO  [DomParser] (getTestDataSetNodesWithValues) -&gt; text node found; skipping this node
+15:04:51,909 INFO  [DomParser] (getTestDataSetNodesWithValues) -&gt; id &lt;&lt;----&gt;&gt;   &lt;&lt;----&gt;&gt; 1
+15:04:51,909 INFO  [DomParser] (getTestDataSetNodesWithValues) -&gt; text node found; skipping this node
+15:04:51,909 INFO  [DomParser] (getTestDataSetNodesWithValues) -&gt; orderType &lt;&lt;----&gt;&gt;   &lt;&lt;----&gt;&gt; 1
+15:04:51,909 INFO  [DomParser] (getTestDataSetNodesWithValues) -&gt; text node found; skipping this node
+15:04:51,909 INFO  [DomParser] (getTestDataSetNodesWithValues) -&gt; tariffType &lt;&lt;----&gt;&gt;   &lt;&lt;----&gt;&gt; 1
+15:04:51,909 INFO  [DomParser] (getTestDataSetNodesWithValues) -&gt; text node found; skipping this node
+15:04:51,909 INFO  [DomParser] (getTestDataSetNodesWithValues) -&gt; userId &lt;&lt;----&gt;&gt;   &lt;&lt;----&gt;&gt; 1
+15:04:51,909 INFO  [DomParser] (getTestDataSetNodesWithValues) -&gt; text node found; skipping this node
+15:04:51,909 INFO  [DomParser] (getTestDataSetNodesWithValues) -&gt; loginName &lt;&lt;----&gt;&gt;  Sarah WilsonXYZXQPOF &lt;&lt;----&gt;&gt; 1
+15:04:51,909 INFO  [DomParser] (getTestDataSetNodesWithValues) -&gt; text node found; skipping this node
+15:04:51,909 INFO  [DomParser] EXIT --&gt; (getTestDataSetNodesWithValues)
+15:04:51,909 INFO  [BrowserSelenium] ENTER --&gt; (clickLinkText)
+15:04:51,909 INFO  [BrowserSelenium] ENTER --&gt; (_waitForElement) --&gt; Waiting for element: null
+15:04:51,909 INFO  [BrowserSelenium] ENTER --&gt; (waitForElement)
+15:04:53,898 INFO  [BrowserSelenium] ENTER --&gt; (_getByLocator)
+15:04:53,898 INFO  [BrowserSelenium] (_getByLocator) -&gt; Getting locator for null
+15:04:53,898 INFO  [BrowserSelenium] (_getByLocator) -&gt; Locator info found for XPATH attribute as: //div[@id='filters']//div[@class='dropdown']/a[@class='submit add open']/span
+15:04:53,898 INFO  [BrowserSelenium] ENTER --&gt; (_parseElementOnXpath)
+15:04:53,898 INFO  [BrowserSelenium] (_parseElementOnXpath) -&gt; //div[@id='filters']//div[@class='dropdown']/a[@class='submit add open']/span is used
+15:04:53,898 INFO  [BrowserSelenium] EXIT --&gt; (_parseElementOnXpath)
+15:04:53,898 INFO  [BrowserSelenium] EXIT --&gt; (_getByLocator)
+15:04:53,938 INFO  [BrowserSelenium] ENTER --&gt; (_getByLocator)
+15:04:53,938 INFO  [BrowserSelenium] (_getByLocator) -&gt; Getting locator for null
+15:04:53,938 INFO  [BrowserSelenium] (_getByLocator) -&gt; Locator info found for XPATH attribute as: //div[@id='filters']//div[@class='dropdown']/a[@class='submit add open']/span
+15:04:53,938 INFO  [BrowserSelenium] ENTER --&gt; (_parseElementOnXpath)
+15:04:53,948 INFO  [BrowserSelenium] (_parseElementOnXpath) -&gt; //div[@id='filters']//div[@class='dropdown']/a[@class='submit add open']/span is used
+15:04:53,948 INFO  [BrowserSelenium] EXIT --&gt; (_parseElementOnXpath)
+15:04:53,948 INFO  [BrowserSelenium] EXIT --&gt; (_getByLocator)
+15:04:53,988 INFO  [BrowserSelenium] (waitForElement) -&gt; element wait eligibility found: true
+15:04:53,988 INFO  [BrowserSelenium] ENTER --&gt; (_waitForJStoLoad)
+15:04:54,558 INFO  [BrowserSelenium] EXIT --&gt; (_waitForJStoLoad) --&gt; DOM load wait done: true
+15:04:54,558 INFO  [BrowserSelenium] (waitForElement) -&gt; element wait eligibility set: true
+15:04:54,558 INFO  [BrowserSelenium] EXIT --&gt; (waitForElement)
+15:04:54,558 INFO  [BrowserSelenium] EXIT --&gt; (_waitForElement)
+15:04:54,568 INFO  [BrowserSelenium] ENTER --&gt; (_getByLocator)
+15:04:54,568 INFO  [BrowserSelenium] (_getByLocator) -&gt; Getting locator for null
+15:04:54,568 INFO  [BrowserSelenium] (_getByLocator) -&gt; Locator info found for XPATH attribute as: //div[@id='filters']//div[@class='dropdown']/a[@class='submit add open']/span
+15:04:54,568 INFO  [BrowserSelenium] ENTER --&gt; (_parseElementOnXpath)
+15:04:54,568 INFO  [BrowserSelenium] (_parseElementOnXpath) -&gt; //div[@id='filters']//div[@class='dropdown']/a[@class='submit add open']/span is used
+15:04:54,568 INFO  [BrowserSelenium] EXIT --&gt; (_parseElementOnXpath)
+15:04:54,568 INFO  [BrowserSelenium] EXIT --&gt; (_getByLocator)
+15:04:54,578 INFO  [BrowserSelenium] ENTER --&gt; (_clickUsingJavaScript)
+15:04:54,598 INFO  [BrowserSelenium] EXIT --&gt; (_clickUsingJavaScript)
+15:04:54,598 INFO  [BrowserSelenium] EXIT --&gt; (clickLinkText)
+15:04:54,598 INFO  [FiltersPage] ENTER --&gt; (selectFilterToAdd)
+15:04:54,598 INFO  [BrowserSelenium] ENTER --&gt; (_waitForElement) --&gt; Waiting for element: null
+15:04:54,598 INFO  [BrowserSelenium] ENTER --&gt; (waitForElement)
+15:04:54,608 INFO  [BrowserSelenium] ENTER --&gt; (_getByLocator)
+15:04:54,608 INFO  [BrowserSelenium] (_getByLocator) -&gt; Getting locator for null
+15:04:54,608 INFO  [BrowserSelenium] (_getByLocator) -&gt; Locator info found for XPATH attribute as: //div[@id='filters']//div[@class='dropdown active']/div[@class='drop']/ul/li
+15:04:54,608 INFO  [BrowserSelenium] ENTER --&gt; (_parseElementOnXpath)
+15:04:54,608 INFO  [BrowserSelenium] (_parseElementOnXpath) -&gt; //div[@id='filters']//div[@class='dropdown active']/div[@class='drop']/ul/li is used
+15:04:54,608 INFO  [BrowserSelenium] EXIT --&gt; (_parseElementOnXpath)
+15:04:54,608 INFO  [BrowserSelenium] EXIT --&gt; (_getByLocator)
+15:04:54,628 INFO  [BrowserSelenium] ENTER --&gt; (_getByLocator)
+15:04:54,628 INFO  [BrowserSelenium] (_getByLocator) -&gt; Getting locator for null
+15:04:54,628 INFO  [BrowserSelenium] (_getByLocator) -&gt; Locator info found for XPATH attribute as: //div[@id='filters']//div[@class='dropdown active']/div[@class='drop']/ul/li
+15:04:54,628 INFO  [BrowserSelenium] ENTER --&gt; (_parseElementOnXpath)
+15:04:54,628 INFO  [BrowserSelenium] (_parseElementOnXpath) -&gt; //div[@id='filters']//div[@class='dropdown active']/div[@class='drop']/ul/li is used
+15:04:54,628 INFO  [BrowserSelenium] EXIT --&gt; (_parseElementOnXpath)
+15:04:54,628 INFO  [BrowserSelenium] EXIT --&gt; (_getByLocator)
+15:04:54,668 INFO  [BrowserSelenium] (waitForElement) -&gt; element wait eligibility found: true
+15:04:54,668 INFO  [BrowserSelenium] ENTER --&gt; (_waitForJStoLoad)
+15:04:54,698 INFO  [BrowserSelenium] EXIT --&gt; (_waitForJStoLoad) --&gt; DOM load wait done: true
+15:04:54,698 INFO  [BrowserSelenium] (waitForElement) -&gt; element wait eligibility set: true
+15:04:54,698 INFO  [BrowserSelenium] EXIT --&gt; (waitForElement)
+15:04:54,698 INFO  [BrowserSelenium] EXIT --&gt; (_waitForElement)
+15:04:54,698 INFO  [BrowserSelenium] ENTER --&gt; (getListItem)
+15:04:54,698 INFO  [BrowserSelenium] (_setExtendedTextToXPath) -&gt;  value set
+15:04:54,698 INFO  [BrowserSelenium] ENTER --&gt; (_getListItem)
+15:04:54,698 INFO  [BrowserSelenium] (_setExtendedTextToXPath) -&gt;  value set
+15:04:54,708 INFO  [BrowserSelenium] ENTER --&gt; (_getByLocator)
+15:04:54,708 INFO  [BrowserSelenium] (_getByLocator) -&gt; Getting locator for null
+15:04:54,708 INFO  [BrowserSelenium] (_getByLocator) -&gt; Locator info found for XPATH attribute as: //div[@id='filters']//div[@class='dropdown active']/div[@class='drop']/ul/li
+15:04:54,708 INFO  [BrowserSelenium] ENTER --&gt; (_parseElementOnXpath)
+15:04:54,708 INFO  [BrowserSelenium] (_parseElementOnXpath) -&gt; //div[@id='filters']//div[@class='dropdown active']/div[@class='drop']/ul/li is used
+15:04:54,708 INFO  [BrowserSelenium] EXIT --&gt; (_parseElementOnXpath)
+15:04:54,708 INFO  [BrowserSelenium] EXIT --&gt; (_getByLocator)
+15:04:54,728 INFO  [BrowserSelenium] (_getListItem) -&gt; targetValue to find in listbox: &quot;Login Name&quot;
+15:04:54,738 INFO  [BrowserSelenium] (_getListItem) -&gt; current element text by we.getText(): &quot;Active Since&quot;
+15:04:54,748 INFO  [BrowserSelenium] (_getListItem) -&gt; targetValue to find in listbox: &quot;Login Name&quot;
+15:04:54,768 INFO  [BrowserSelenium] (_getListItem) -&gt; current element text by we.getText(): &quot;Active Until&quot;
+15:04:54,778 INFO  [BrowserSelenium] (_getListItem) -&gt; targetValue to find in listbox: &quot;Login Name&quot;
+15:04:54,788 INFO  [BrowserSelenium] (_getListItem) -&gt; current element text by we.getText(): &quot;Custom Fields&quot;
+15:04:54,798 INFO  [BrowserSelenium] (_getListItem) -&gt; targetValue to find in listbox: &quot;Login Name&quot;
+15:04:54,818 INFO  [BrowserSelenium] (_getListItem) -&gt; current element text by we.getText(): &quot;Next Billable Day&quot;
+15:04:54,828 INFO  [BrowserSelenium] (_getListItem) -&gt; targetValue to find in listbox: &quot;Login Name&quot;
+15:04:54,838 INFO  [BrowserSelenium] (_getListItem) -&gt; current element text by we.getText(): &quot;Order Status&quot;
+15:04:54,848 INFO  [BrowserSelenium] (_getListItem) -&gt; targetValue to find in listbox: &quot;Login Name&quot;
+15:04:54,868 INFO  [BrowserSelenium] (_getListItem) -&gt; current element text by we.getText(): &quot;Login Name&quot;
+15:04:54,878 INFO  [BrowserSelenium] (_getListItem) -&gt; targetValue found at index: 5
+15:04:54,888 INFO  [BrowserSelenium] (_getListItem) -&gt; Login Name
+15:04:54,888 INFO  [BrowserSelenium] EXIT --&gt; (_getListItem)
+15:04:54,888 INFO  [BrowserSelenium] EXIT --&gt; (getListItem)
+15:04:55,008 INFO  [FiltersPage] EXIT --&gt; (selectFilterToAdd)
+15:04:55,008 INFO  [BrowserSelenium] ENTER --&gt; (_waitForElement) --&gt; Waiting for element: null
+15:04:55,008 INFO  [BrowserSelenium] ENTER --&gt; (waitForElement)
+15:04:55,018 INFO  [BrowserSelenium] ENTER --&gt; (_getByLocator)
+15:04:55,018 INFO  [BrowserSelenium] (_getByLocator) -&gt; Getting locator for null
+15:04:55,018 INFO  [BrowserSelenium] (_getByLocator) -&gt; Locator info found for ID attribute as: filters.ORDER-LIKE_U_userName.stringValue
+15:04:55,018 INFO  [BrowserSelenium] EXIT --&gt; (_getByLocator)
+15:04:55,828 INFO  [BrowserSelenium] ENTER --&gt; (_getByLocator)
+15:04:55,828 INFO  [BrowserSelenium] (_getByLocator) -&gt; Getting locator for null
+15:04:55,828 INFO  [BrowserSelenium] (_getByLocator) -&gt; Locator info found for ID attribute as: filters.ORDER-LIKE_U_userName.stringValue
+15:04:55,828 INFO  [BrowserSelenium] EXIT --&gt; (_getByLocator)
+15:04:55,868 INFO  [BrowserSelenium] (waitForElement) -&gt; element wait eligibility found: true
+15:04:55,868 INFO  [BrowserSelenium] ENTER --&gt; (_waitForJStoLoad)
+15:04:56,428 INFO  [BrowserSelenium] EXIT --&gt; (_waitForJStoLoad) --&gt; DOM load wait done: true
+15:04:56,428 INFO  [BrowserSelenium] (waitForElement) -&gt; element wait eligibility set: true
+15:04:56,428 INFO  [BrowserSelenium] EXIT --&gt; (waitForElement)
+15:04:56,428 INFO  [BrowserSelenium] EXIT --&gt; (_waitForElement)
+15:04:56,428 INFO  [BrowserSelenium] ENTER --&gt; (_waitForElement) --&gt; Waiting for element: null
+15:04:56,428 INFO  [BrowserSelenium] ENTER --&gt; (waitForElement)
+15:04:56,448 INFO  [BrowserSelenium] ENTER --&gt; (_getByLocator)
+15:04:56,448 INFO  [BrowserSelenium] (_getByLocator) -&gt; Getting locator for null
+15:04:56,448 INFO  [BrowserSelenium] (_getByLocator) -&gt; Locator info found for ID attribute as: filters.ORDER-LIKE_U_userName.stringValue
+15:04:56,448 INFO  [BrowserSelenium] EXIT --&gt; (_getByLocator)
+15:04:56,488 INFO  [BrowserSelenium] ENTER --&gt; (_getByLocator)
+15:04:56,488 INFO  [BrowserSelenium] (_getByLocator) -&gt; Getting locator for null
+15:04:56,488 INFO  [BrowserSelenium] (_getByLocator) -&gt; Locator info found for ID attribute as: filters.ORDER-LIKE_U_userName.stringValue
+15:04:56,488 INFO  [BrowserSelenium] EXIT --&gt; (_getByLocator)
+15:04:56,528 INFO  [BrowserSelenium] (waitForElement) -&gt; element wait eligibility found: true
+15:04:56,528 INFO  [BrowserSelenium] ENTER --&gt; (_waitForJStoLoad)
+15:04:56,578 INFO  [BrowserSelenium] EXIT --&gt; (_waitForJStoLoad) --&gt; DOM load wait done: true
+15:04:56,578 INFO  [BrowserSelenium] (waitForElement) -&gt; element wait eligibility set: true
+15:04:56,578 INFO  [BrowserSelenium] EXIT --&gt; (waitForElement)
+15:04:56,578 INFO  [BrowserSelenium] EXIT --&gt; (_waitForElement)
+15:04:56,578 INFO  [BrowserSelenium] ENTER --&gt; (_waitForElement) --&gt; Waiting for element: null
+15:04:56,578 INFO  [BrowserSelenium] ENTER --&gt; (waitForElement)
+15:04:56,588 INFO  [BrowserSelenium] ENTER --&gt; (_getByLocator)
+15:04:56,588 INFO  [BrowserSelenium] (_getByLocator) -&gt; Getting locator for null
+15:04:56,588 INFO  [BrowserSelenium] (_getByLocator) -&gt; Locator info found for ID attribute as: filters.ORDER-LIKE_U_userName.stringValue
+15:04:56,588 INFO  [BrowserSelenium] EXIT --&gt; (_getByLocator)
+15:04:56,608 INFO  [BrowserSelenium] ENTER --&gt; (_getByLocator)
+15:04:56,608 INFO  [BrowserSelenium] (_getByLocator) -&gt; Getting locator for null
+15:04:56,608 INFO  [BrowserSelenium] (_getByLocator) -&gt; Locator info found for ID attribute as: filters.ORDER-LIKE_U_userName.stringValue
+15:04:56,608 INFO  [BrowserSelenium] EXIT --&gt; (_getByLocator)
+15:04:56,648 INFO  [BrowserSelenium] (waitForElement) -&gt; element wait eligibility found: true
+15:04:56,648 INFO  [BrowserSelenium] ENTER --&gt; (_waitForJStoLoad)
+15:04:56,688 INFO  [BrowserSelenium] EXIT --&gt; (_waitForJStoLoad) --&gt; DOM load wait done: true
+15:04:56,688 INFO  [BrowserSelenium] (waitForElement) -&gt; element wait eligibility set: true
+15:04:56,688 INFO  [BrowserSelenium] EXIT --&gt; (waitForElement)
+15:04:56,688 INFO  [BrowserSelenium] EXIT --&gt; (_waitForElement)
+15:04:56,688 INFO  [BrowserSelenium] ENTER --&gt; (_waitForElement) --&gt; Waiting for element: null
+15:04:56,688 INFO  [BrowserSelenium] ENTER --&gt; (waitForElement)
+15:04:56,698 INFO  [BrowserSelenium] ENTER --&gt; (_getByLocator)
+15:04:56,698 INFO  [BrowserSelenium] (_getByLocator) -&gt; Getting locator for null
+15:04:56,698 INFO  [BrowserSelenium] (_getByLocator) -&gt; Locator info found for ID attribute as: filters.ORDER-LIKE_U_userName.stringValue
+15:04:56,698 INFO  [BrowserSelenium] EXIT --&gt; (_getByLocator)
+15:04:56,718 INFO  [BrowserSelenium] ENTER --&gt; (_getByLocator)
+15:04:56,718 INFO  [BrowserSelenium] (_getByLocator) -&gt; Getting locator for null
+15:04:56,718 INFO  [BrowserSelenium] (_getByLocator) -&gt; Locator info found for ID attribute as: filters.ORDER-LIKE_U_userName.stringValue
+15:04:56,718 INFO  [BrowserSelenium] EXIT --&gt; (_getByLocator)
+15:04:56,758 INFO  [BrowserSelenium] (waitForElement) -&gt; element wait eligibility found: true
+15:04:56,758 INFO  [BrowserSelenium] ENTER --&gt; (_waitForJStoLoad)
+15:04:56,798 INFO  [BrowserSelenium] EXIT --&gt; (_waitForJStoLoad) --&gt; DOM load wait done: true
+15:04:56,798 INFO  [BrowserSelenium] (waitForElement) -&gt; element wait eligibility set: true
+15:04:56,798 INFO  [BrowserSelenium] EXIT --&gt; (waitForElement)
+15:04:56,798 INFO  [BrowserSelenium] EXIT --&gt; (_waitForElement)
+15:04:56,808 INFO  [BrowserSelenium] ENTER --&gt; (_getByLocator)
+15:04:56,808 INFO  [BrowserSelenium] (_getByLocator) -&gt; Getting locator for null
+15:04:56,808 INFO  [BrowserSelenium] (_getByLocator) -&gt; Locator info found for ID attribute as: filters.ORDER-LIKE_U_userName.stringValue
+15:04:56,808 INFO  [BrowserSelenium] EXIT --&gt; (_getByLocator)
+15:04:56,848 INFO  [BrowserSelenium] ENTER --&gt; (_getByLocator)
+15:04:56,848 INFO  [BrowserSelenium] (_getByLocator) -&gt; Getting locator for null
+15:04:56,848 INFO  [BrowserSelenium] (_getByLocator) -&gt; Locator info found for ID attribute as: filters.ORDER-LIKE_U_userName.stringValue
+15:04:56,848 INFO  [BrowserSelenium] EXIT --&gt; (_getByLocator)
+15:04:56,928 INFO  [BrowserSelenium] ENTER --&gt; (_getByLocator)
+15:04:56,928 INFO  [BrowserSelenium] (_getByLocator) -&gt; Getting locator for null
+15:04:56,928 INFO  [BrowserSelenium] (_getByLocator) -&gt; Locator info found for ID attribute as: filters.ORDER-LIKE_U_userName.stringValue
+15:04:56,928 INFO  [BrowserSelenium] EXIT --&gt; (_getByLocator)
+15:04:57,998 INFO  [BrowserSelenium] ENTER --&gt; (_waitForElement) --&gt; Waiting for element: null
+15:04:57,998 INFO  [BrowserSelenium] ENTER --&gt; (waitForElement)
+15:04:58,008 INFO  [BrowserSelenium] ENTER --&gt; (_getByLocator)
+15:04:58,008 INFO  [BrowserSelenium] (_getByLocator) -&gt; Getting locator for null
+15:04:58,008 INFO  [BrowserSelenium] (_getByLocator) -&gt; Locator info found for ID attribute as: filters.ORDER-LIKE_U_userName.stringValue
+15:04:58,008 INFO  [BrowserSelenium] EXIT --&gt; (_getByLocator)
+15:04:58,028 INFO  [BrowserSelenium] ENTER --&gt; (_getByLocator)
+15:04:58,028 INFO  [BrowserSelenium] (_getByLocator) -&gt; Getting locator for null
+15:04:58,028 INFO  [BrowserSelenium] (_getByLocator) -&gt; Locator info found for ID attribute as: filters.ORDER-LIKE_U_userName.stringValue
+15:04:58,028 INFO  [BrowserSelenium] EXIT --&gt; (_getByLocator)
+15:04:58,068 INFO  [BrowserSelenium] (waitForElement) -&gt; element wait eligibility found: true
+15:04:58,068 INFO  [BrowserSelenium] ENTER --&gt; (_waitForJStoLoad)
+15:04:58,098 INFO  [BrowserSelenium] EXIT --&gt; (_waitForJStoLoad) --&gt; DOM load wait done: true
+15:04:58,098 INFO  [BrowserSelenium] (waitForElement) -&gt; element wait eligibility set: true
+15:04:58,098 INFO  [BrowserSelenium] EXIT --&gt; (waitForElement)
+15:04:58,098 INFO  [BrowserSelenium] EXIT --&gt; (_waitForElement)
+15:04:58,108 INFO  [BrowserSelenium] ENTER --&gt; (_getByLocator)
+15:04:58,108 INFO  [BrowserSelenium] (_getByLocator) -&gt; Getting locator for null
+15:04:58,108 INFO  [BrowserSelenium] (_getByLocator) -&gt; Locator info found for ID attribute as: filters.ORDER-LIKE_U_userName.stringValue
+15:04:58,108 INFO  [BrowserSelenium] EXIT --&gt; (_getByLocator)
+15:04:58,118 INFO  [BrowserSelenium] ENTER --&gt; (_waitForElement) --&gt; Waiting for element: null
+15:04:58,118 INFO  [BrowserSelenium] ENTER --&gt; (waitForElement)
+15:04:58,128 INFO  [BrowserSelenium] ENTER --&gt; (_getByLocator)
+15:04:58,128 INFO  [BrowserSelenium] (_getByLocator) -&gt; Getting locator for null
+15:04:58,128 INFO  [BrowserSelenium] (_getByLocator) -&gt; Locator info found for ID attribute as: filters.ORDER-LIKE_U_userName.stringValue
+15:04:58,128 INFO  [BrowserSelenium] EXIT --&gt; (_getByLocator)
+15:04:58,148 INFO  [BrowserSelenium] ENTER --&gt; (_getByLocator)
+15:04:58,148 INFO  [BrowserSelenium] (_getByLocator) -&gt; Getting locator for null
+15:04:58,148 INFO  [BrowserSelenium] (_getByLocator) -&gt; Locator info found for ID attribute as: filters.ORDER-LIKE_U_userName.stringValue
+15:04:58,148 INFO  [BrowserSelenium] EXIT --&gt; (_getByLocator)
+15:04:58,188 INFO  [BrowserSelenium] (waitForElement) -&gt; element wait eligibility found: true
+15:04:58,188 INFO  [BrowserSelenium] ENTER --&gt; (_waitForJStoLoad)
+15:04:58,218 INFO  [BrowserSelenium] EXIT --&gt; (_waitForJStoLoad) --&gt; DOM load wait done: true
+15:04:58,218 INFO  [BrowserSelenium] (waitForElement) -&gt; element wait eligibility set: true
+15:04:58,218 INFO  [BrowserSelenium] EXIT --&gt; (waitForElement)
+15:04:58,218 INFO  [BrowserSelenium] EXIT --&gt; (_waitForElement)
+15:04:58,228 INFO  [BrowserSelenium] ENTER --&gt; (_getByLocator)
+15:04:58,228 INFO  [BrowserSelenium] (_getByLocator) -&gt; Getting locator for null
+15:04:58,228 INFO  [BrowserSelenium] (_getByLocator) -&gt; Locator info found for ID attribute as: filters.ORDER-LIKE_U_userName.stringValue
+15:04:58,228 INFO  [BrowserSelenium] EXIT --&gt; (_getByLocator)
+15:04:58,248 INFO  [BrowserSelenium] ENTER --&gt; (clickLinkText)
+15:04:58,248 INFO  [BrowserSelenium] ENTER --&gt; (_waitForElement) --&gt; Waiting for element: null
+15:04:58,248 INFO  [BrowserSelenium] ENTER --&gt; (waitForElement)
+15:04:58,248 INFO  [BrowserSelenium] ENTER --&gt; (_getByLocator)
+15:04:58,248 INFO  [BrowserSelenium] (_getByLocator) -&gt; Getting locator for null
+15:04:58,248 INFO  [BrowserSelenium] (_getByLocator) -&gt; Locator info found for XPATH attribute as: //div[@id='filters']/div[@class='btn-hold']/a[@class='submit apply']/span
+15:04:58,248 INFO  [BrowserSelenium] ENTER --&gt; (_parseElementOnXpath)
+15:04:58,248 INFO  [BrowserSelenium] (_parseElementOnXpath) -&gt; //div[@id='filters']/div[@class='btn-hold']/a[@class='submit apply']/span is used
+15:04:58,248 INFO  [BrowserSelenium] EXIT --&gt; (_parseElementOnXpath)
+15:04:58,248 INFO  [BrowserSelenium] EXIT --&gt; (_getByLocator)
+15:04:58,278 INFO  [BrowserSelenium] ENTER --&gt; (_getByLocator)
+15:04:58,278 INFO  [BrowserSelenium] (_getByLocator) -&gt; Getting locator for null
+15:04:58,278 INFO  [BrowserSelenium] (_getByLocator) -&gt; Locator info found for XPATH attribute as: //div[@id='filters']/div[@class='btn-hold']/a[@class='submit apply']/span
+15:04:58,278 INFO  [BrowserSelenium] ENTER --&gt; (_parseElementOnXpath)
+15:04:58,278 INFO  [BrowserSelenium] (_parseElementOnXpath) -&gt; //div[@id='filters']/div[@class='btn-hold']/a[@class='submit apply']/span is used
+15:04:58,278 INFO  [BrowserSelenium] EXIT --&gt; (_parseElementOnXpath)
+15:04:58,278 INFO  [BrowserSelenium] EXIT --&gt; (_getByLocator)
+15:04:58,318 INFO  [BrowserSelenium] (waitForElement) -&gt; element wait eligibility found: true
+15:04:58,318 INFO  [BrowserSelenium] ENTER --&gt; (_waitForJStoLoad)
+15:04:58,338 INFO  [BrowserSelenium] EXIT --&gt; (_waitForJStoLoad) --&gt; DOM load wait done: true
+15:04:58,338 INFO  [BrowserSelenium] (waitForElement) -&gt; element wait eligibility set: true
+15:04:58,338 INFO  [BrowserSelenium] EXIT --&gt; (waitForElement)
+15:04:58,338 INFO  [BrowserSelenium] EXIT --&gt; (_waitForElement)
+15:04:58,348 INFO  [BrowserSelenium] ENTER --&gt; (_getByLocator)
+15:04:58,348 INFO  [BrowserSelenium] (_getByLocator) -&gt; Getting locator for null
+15:04:58,348 INFO  [BrowserSelenium] (_getByLocator) -&gt; Locator info found for XPATH attribute as: //div[@id='filters']/div[@class='btn-hold']/a[@class='submit apply']/span
+15:04:58,348 INFO  [BrowserSelenium] ENTER --&gt; (_parseElementOnXpath)
+15:04:58,348 INFO  [BrowserSelenium] (_parseElementOnXpath) -&gt; //div[@id='filters']/div[@class='btn-hold']/a[@class='submit apply']/span is used
+15:04:58,348 INFO  [BrowserSelenium] EXIT --&gt; (_parseElementOnXpath)
+15:04:58,348 INFO  [BrowserSelenium] EXIT --&gt; (_getByLocator)
+15:04:58,358 INFO  [BrowserSelenium] ENTER --&gt; (_clickUsingJavaScript)
+15:04:58,438 INFO  [BrowserSelenium] EXIT --&gt; (_clickUsingJavaScript)
+15:04:58,438 INFO  [BrowserSelenium] EXIT --&gt; (clickLinkText)
+SYSO Customer Name For Target:::::Sarah WilsonXYZXQPOF
+15:04:58,438 INFO  [OrdersPage] ENTER --&gt; (clickTextOnOrdersTable)
+15:04:58,438 INFO  [BrowserSelenium] ENTER --&gt; (selectListItem)
+15:04:58,438 INFO  [BrowserSelenium] (selectListItem) -&gt; Sarah WilsonXYZXQPOF to find
+15:04:58,438 INFO  [BrowserSelenium] ENTER --&gt; (_waitForJStoLoad)
+15:04:59,500 INFO  [BrowserSelenium] EXIT --&gt; (_waitForJStoLoad) --&gt; DOM load wait done: true
+15:04:59,500 INFO  [BrowserSelenium] ENTER --&gt; (_getListItem)
+15:04:59,500 INFO  [BrowserSelenium] (_setExtendedTextToXPath) -&gt;  value set
+15:04:59,510 INFO  [BrowserSelenium] ENTER --&gt; (_getByLocator)
+15:04:59,510 INFO  [BrowserSelenium] (_getByLocator) -&gt; Getting locator for null
+15:04:59,510 INFO  [BrowserSelenium] (_getByLocator) -&gt; Locator info found for XPATH attribute as: //table[@id='orders']/tbody/tr//td[2]/a/strong
+15:04:59,510 INFO  [BrowserSelenium] ENTER --&gt; (_parseElementOnXpath)
+15:04:59,510 INFO  [BrowserSelenium] (_parseElementOnXpath) -&gt; //table[@id='orders']/tbody/tr//td[2]/a/strong is used
+15:04:59,510 INFO  [BrowserSelenium] EXIT --&gt; (_parseElementOnXpath)
+15:04:59,510 INFO  [BrowserSelenium] EXIT --&gt; (_getByLocator)
+15:04:59,520 INFO  [BrowserSelenium] (_getListItem) -&gt; targetValue to find in listbox: &quot;Sarah WilsonXYZXQPOF&quot;
+15:04:59,540 INFO  [BrowserSelenium] (_getListItem) -&gt; current element text by we.getText(): &quot;Sarah WilsonXYZXQPOF&quot;
+15:04:59,550 INFO  [BrowserSelenium] (_getListItem) -&gt; targetValue found at index: 0
+15:04:59,560 INFO  [BrowserSelenium] (_getListItem) -&gt; Sarah WilsonXYZXQPOF
+15:04:59,560 INFO  [BrowserSelenium] EXIT --&gt; (_getListItem)
+15:04:59,720 INFO  [BrowserSelenium] EXIT --&gt; (selectListItem)
+15:04:59,720 INFO  [OrdersPage] EXIT --&gt; (clickTextOnOrdersTable)
+15:04:59,720 INFO  [BrowserSelenium] ENTER --&gt; (initElements)
+15:04:59,720 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:59,720 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:59,720 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:59,720 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //table[@id='orders']//strong[contains(text(),'customera')]
+15:04:59,720 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:59,720 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:59,720 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:59,720 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //span[text()='Delete']
+15:04:59,720 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:59,720 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:59,720 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:59,720 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //span[text()='Yes']
+15:04:59,720 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:59,720 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:59,720 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:59,720 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //table[@id='orders']/tbody/tr
+15:04:59,720 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:59,720 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:59,720 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:59,720 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //a[@class='submit order']/span[text()='Generate Invoice']
+15:04:59,720 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:59,720 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:59,720 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:59,720 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //label[text()='Active Since']/../div/input
+15:04:59,730 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:59,730 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:59,730 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:59,730 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //div[@class = 'btn-box']/div/a/span
+15:04:59,730 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:59,730 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:59,730 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:59,730 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //label[text()='Effective Date']/../div/input
+15:04:59,730 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:59,730 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:59,730 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:59,730 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //select[@id='orderPeriod']
+15:04:59,730 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:59,730 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:59,730 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:59,730 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //select[@id='billingTypeId']
+15:04:59,730 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:59,730 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:59,730 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:59,730 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //li[@aria-controls='ui-tabs-products']/a
+15:04:59,730 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:59,730 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:59,730 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:59,730 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //input[@id='filterBy']
+15:04:59,730 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:59,730 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:59,730 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:59,730 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //table[@id='products']
+15:04:59,730 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:59,730 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:59,730 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:59,730 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //table[@id='products']/tbody//td/a/strong
+15:04:59,730 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:59,730 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:59,730 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:59,730 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //table[@id='orders']/tbody//td/a/strong
+15:04:59,730 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:59,730 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:59,730 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:59,730 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //strong[text()='Billing Graduated']
+15:04:59,730 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:59,730 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:59,730 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:59,730 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //strong[text()='Billing Flat']
+15:04:59,730 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:59,730 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:59,730 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:59,730 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //label[text()='Quantity']/../div/input
+15:04:59,730 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:59,730 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:59,730 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:59,730 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //div[@id='messages']/div/ul/li
+15:04:59,730 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:59,730 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:59,730 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:59,730 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //span[text()='Dependency']
+15:04:59,740 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:59,740 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:59,740 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:59,740 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //div[@id='breadcrumbs']
+15:04:59,740 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:59,740 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:59,740 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:59,740 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //strong[text()='Installation Fee']
+15:04:59,740 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:59,740 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:59,740 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:59,740 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //span[text()='Current order']
+15:04:59,740 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:59,740 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:59,740 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:59,740 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //span[text()='Update']
+15:04:59,740 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:59,740 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:59,740 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:59,740 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //li[@aria-controls='ui-tabs-discounts']/a
+15:04:59,740 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:59,740 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:59,740 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:59,740 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //select[@id='discount.0.id']
+15:04:59,740 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:59,740 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:59,740 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:59,740 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //select[@id='discountableItem.0.lineLevelDetails']
+15:04:59,740 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:59,740 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:59,740 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:59,740 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //a[text()='Review']
+15:04:59,740 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:59,740 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:59,740 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:59,740 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //span[text()='Save Changes']
+15:04:59,740 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:59,740 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:59,740 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:59,740 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //select[@id = 'billingTypeId']
+15:04:59,740 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:59,740 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: asset.select.0
+15:04:59,740 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:59,740 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: 
+15:04:59,740 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:59,740 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: //a[text()='Add Selected']
+15:04:59,740 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:59,740 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: 
+15:04:59,740 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:59,740 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: //a[text()='Add to Order']
+15:04:59,740 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:59,740 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: 
+15:04:59,740 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:59,750 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: //li[@aria-controls='ui-tabs-Provisioning']/a
+15:04:59,750 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:59,750 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: 
+15:04:59,750 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:59,750 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: //a[text()='Provisioning']
+15:04:59,750 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:59,750 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: 
+15:04:59,750 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:59,750 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: //span[text()='Generate Invoice']
+15:04:59,750 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:59,750 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: 
+15:04:59,750 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:59,750 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:59,750 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:59,750 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //table[@id='orders']/tbody/tr//td[2]/a/strong
+15:04:59,750 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:59,750 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:59,750 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:59,750 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //div[@class='row']/a[contains(@href,'downloadPdf')]
+15:04:59,750 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:59,750 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:59,750 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:59,750 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //table[@id='orders']/tbody/tr/td/a/strong
+15:04:59,750 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:59,750 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:59,750 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:59,750 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //span[text()='Edit this Order']
+15:04:59,750 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:59,750 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:59,750 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:59,750 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //ul[@id='review-lines']/form
+15:04:59,750 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:59,750 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:59,750 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:59,750 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //span[text()='Change']
+15:04:59,750 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:59,750 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:59,750 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:59,750 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //span[text()='Add Asset']
+15:04:59,750 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:59,750 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:59,750 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:59,750 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //input[@id='identifier']
+15:04:59,750 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:59,750 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:59,750 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:59,750 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //span[text()='Create Asset']
+15:04:59,750 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:59,750 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:59,750 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:59,750 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //ul[@class='top-nav']/li[1]
+15:04:59,750 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:59,750 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:59,750 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:59,750 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //select[@id='company-select']
+15:04:59,750 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:59,750 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:59,750 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:59,750 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //form[@id='save-asset-form']/fieldset//div[@class='buttons']/ul/li//a[@class='submit save']
+15:04:59,750 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:59,750 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: //span[text()='Add to Order']
+15:04:59,750 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:59,750 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: 
+15:04:59,750 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:59,760 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:59,760 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:59,760 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //div[@id = 'review-messages']/div/ul/li
+15:04:59,760 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:59,760 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:59,760 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:59,760 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //a[text()='Line Changes']
+15:04:59,760 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:59,760 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:59,760 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:59,760 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //table[contains(@id,'dependencies-products-change')']/tbody//td/a/strong
+15:04:59,760 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:59,760 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: //span[text()='New SubOrder']
+15:04:59,760 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:59,760 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: 
+15:04:59,760 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:04:59,760 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:04:59,760 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:04:59,760 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //input[@id = 'change--3.appliedManually']
+15:04:59,760 INFO  [BrowserSelenium] EXIT --&gt; (initElements)
+15:04:59,760 INFO  [BrowserSelenium] ENTER --&gt; (clickLinkText)
+15:04:59,760 INFO  [BrowserSelenium] ENTER --&gt; (_waitForElement) --&gt; Waiting for element: null
+15:04:59,760 INFO  [BrowserSelenium] ENTER --&gt; (waitForElement)
+15:04:59,770 INFO  [BrowserSelenium] ENTER --&gt; (_getByLocator)
+15:04:59,770 INFO  [BrowserSelenium] (_getByLocator) -&gt; Getting locator for null
+15:04:59,770 INFO  [BrowserSelenium] (_getByLocator) -&gt; Locator info found for XPATH attribute as: //a[@class='submit order']/span[text()='Generate Invoice']
+15:04:59,770 INFO  [BrowserSelenium] ENTER --&gt; (_parseElementOnXpath)
+15:04:59,770 INFO  [BrowserSelenium] (_parseElementOnXpath) -&gt; //a[@class='submit order']/span[text()='Generate Invoice'] is used
+15:04:59,770 INFO  [BrowserSelenium] EXIT --&gt; (_parseElementOnXpath)
+15:04:59,770 INFO  [BrowserSelenium] EXIT --&gt; (_getByLocator)
+15:05:00,811 INFO  [BrowserSelenium] ENTER --&gt; (_getByLocator)
+15:05:00,811 INFO  [BrowserSelenium] (_getByLocator) -&gt; Getting locator for null
+15:05:00,811 INFO  [BrowserSelenium] (_getByLocator) -&gt; Locator info found for XPATH attribute as: //a[@class='submit order']/span[text()='Generate Invoice']
+15:05:00,811 INFO  [BrowserSelenium] ENTER --&gt; (_parseElementOnXpath)
+15:05:00,811 INFO  [BrowserSelenium] (_parseElementOnXpath) -&gt; //a[@class='submit order']/span[text()='Generate Invoice'] is used
+15:05:00,811 INFO  [BrowserSelenium] EXIT --&gt; (_parseElementOnXpath)
+15:05:00,811 INFO  [BrowserSelenium] EXIT --&gt; (_getByLocator)
+15:05:00,921 INFO  [BrowserSelenium] (waitForElement) -&gt; element wait eligibility found: true
+15:05:00,921 INFO  [BrowserSelenium] ENTER --&gt; (_waitForJStoLoad)
+15:05:00,971 INFO  [BrowserSelenium] EXIT --&gt; (_waitForJStoLoad) --&gt; DOM load wait done: true
+15:05:00,971 INFO  [BrowserSelenium] (waitForElement) -&gt; element wait eligibility set: true
+15:05:00,971 INFO  [BrowserSelenium] EXIT --&gt; (waitForElement)
+15:05:00,971 INFO  [BrowserSelenium] EXIT --&gt; (_waitForElement)
+15:05:00,981 INFO  [BrowserSelenium] ENTER --&gt; (_getByLocator)
+15:05:00,981 INFO  [BrowserSelenium] (_getByLocator) -&gt; Getting locator for null
+15:05:00,981 INFO  [BrowserSelenium] (_getByLocator) -&gt; Locator info found for XPATH attribute as: //a[@class='submit order']/span[text()='Generate Invoice']
+15:05:00,981 INFO  [BrowserSelenium] ENTER --&gt; (_parseElementOnXpath)
+15:05:00,981 INFO  [BrowserSelenium] (_parseElementOnXpath) -&gt; //a[@class='submit order']/span[text()='Generate Invoice'] is used
+15:05:00,981 INFO  [BrowserSelenium] EXIT --&gt; (_parseElementOnXpath)
+15:05:00,981 INFO  [BrowserSelenium] EXIT --&gt; (_getByLocator)
+15:05:00,991 INFO  [BrowserSelenium] ENTER --&gt; (_clickUsingJavaScript)
+15:05:01,051 INFO  [BrowserSelenium] EXIT --&gt; (_clickUsingJavaScript)
+15:05:01,051 INFO  [BrowserSelenium] EXIT --&gt; (clickLinkText)
+15:05:01,051 INFO  [BrowserSelenium] ENTER --&gt; (initElements)
+15:05:01,051 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:05:01,051 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:05:01,051 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:05:01,051 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //table[@id='orders']//strong[contains(text(),'customera')]
+15:05:01,051 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:05:01,051 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:05:01,051 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:05:01,051 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //span[text()='Delete']
+15:05:01,051 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:05:01,051 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:05:01,051 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:05:01,051 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //span[text()='Yes']
+15:05:01,051 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:05:01,051 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:05:01,051 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:05:01,051 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //table[@id='orders']/tbody/tr
+15:05:01,051 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:05:01,051 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:05:01,051 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:05:01,061 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //a[@class='submit order']/span[text()='Generate Invoice']
+15:05:01,061 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:05:01,061 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:05:01,061 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:05:01,061 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //label[text()='Active Since']/../div/input
+15:05:01,061 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:05:01,061 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:05:01,061 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:05:01,061 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //div[@class = 'btn-box']/div/a/span
+15:05:01,061 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:05:01,061 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:05:01,061 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:05:01,061 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //label[text()='Effective Date']/../div/input
+15:05:01,061 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:05:01,061 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:05:01,061 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:05:01,061 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //select[@id='orderPeriod']
+15:05:01,061 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:05:01,061 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:05:01,061 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:05:01,061 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //select[@id='billingTypeId']
+15:05:01,061 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:05:01,061 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:05:01,061 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:05:01,061 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //li[@aria-controls='ui-tabs-products']/a
+15:05:01,061 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:05:01,061 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:05:01,061 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:05:01,061 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //input[@id='filterBy']
+15:05:01,061 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:05:01,061 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:05:01,061 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:05:01,061 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //table[@id='products']
+15:05:01,061 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:05:01,061 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:05:01,061 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:05:01,061 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //table[@id='products']/tbody//td/a/strong
+15:05:01,061 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:05:01,061 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:05:01,061 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:05:01,061 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //table[@id='orders']/tbody//td/a/strong
+15:05:01,061 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:05:01,061 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:05:01,061 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:05:01,061 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //strong[text()='Billing Graduated']
+15:05:01,061 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:05:01,061 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:05:01,061 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:05:01,061 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //strong[text()='Billing Flat']
+15:05:01,071 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:05:01,071 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:05:01,071 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:05:01,071 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //label[text()='Quantity']/../div/input
+15:05:01,071 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:05:01,071 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:05:01,071 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:05:01,071 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //div[@id='messages']/div/ul/li
+15:05:01,071 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:05:01,071 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:05:01,071 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:05:01,071 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //span[text()='Dependency']
+15:05:01,071 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:05:01,071 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:05:01,071 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:05:01,071 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //div[@id='breadcrumbs']
+15:05:01,071 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:05:01,071 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:05:01,071 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:05:01,071 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //strong[text()='Installation Fee']
+15:05:01,071 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:05:01,071 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:05:01,071 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:05:01,071 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //span[text()='Current order']
+15:05:01,071 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:05:01,071 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:05:01,071 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:05:01,071 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //span[text()='Update']
+15:05:01,071 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:05:01,071 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:05:01,071 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:05:01,071 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //li[@aria-controls='ui-tabs-discounts']/a
+15:05:01,071 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:05:01,071 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:05:01,071 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:05:01,071 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //select[@id='discount.0.id']
+15:05:01,071 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:05:01,071 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:05:01,071 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:05:01,071 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //select[@id='discountableItem.0.lineLevelDetails']
+15:05:01,071 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:05:01,071 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:05:01,071 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:05:01,071 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //a[text()='Review']
+15:05:01,071 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:05:01,071 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:05:01,071 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:05:01,071 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //span[text()='Save Changes']
+15:05:01,071 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:05:01,071 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:05:01,071 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:05:01,071 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //select[@id = 'billingTypeId']
+15:05:01,071 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:05:01,071 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: asset.select.0
+15:05:01,081 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:05:01,081 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: 
+15:05:01,081 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:05:01,081 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: //a[text()='Add Selected']
+15:05:01,081 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:05:01,081 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: 
+15:05:01,081 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:05:01,081 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: //a[text()='Add to Order']
+15:05:01,081 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:05:01,081 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: 
+15:05:01,081 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:05:01,081 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: //li[@aria-controls='ui-tabs-Provisioning']/a
+15:05:01,081 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:05:01,081 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: 
+15:05:01,081 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:05:01,081 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: //a[text()='Provisioning']
+15:05:01,081 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:05:01,081 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: 
+15:05:01,081 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:05:01,081 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: //span[text()='Generate Invoice']
+15:05:01,081 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:05:01,081 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: 
+15:05:01,081 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:05:01,081 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:05:01,081 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:05:01,081 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //table[@id='orders']/tbody/tr//td[2]/a/strong
+15:05:01,081 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:05:01,081 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:05:01,081 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:05:01,081 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //div[@class='row']/a[contains(@href,'downloadPdf')]
+15:05:01,081 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:05:01,081 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:05:01,081 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:05:01,081 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //table[@id='orders']/tbody/tr/td/a/strong
+15:05:01,081 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:05:01,081 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:05:01,081 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:05:01,081 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //span[text()='Edit this Order']
+15:05:01,081 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:05:01,081 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:05:01,081 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:05:01,081 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //ul[@id='review-lines']/form
+15:05:01,081 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:05:01,081 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:05:01,081 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:05:01,081 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //span[text()='Change']
+15:05:01,081 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:05:01,081 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:05:01,081 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:05:01,081 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //span[text()='Add Asset']
+15:05:01,081 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:05:01,081 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:05:01,081 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:05:01,081 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //input[@id='identifier']
+15:05:01,081 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:05:01,081 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:05:01,091 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:05:01,091 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //span[text()='Create Asset']
+15:05:01,091 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:05:01,091 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:05:01,091 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:05:01,091 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //ul[@class='top-nav']/li[1]
+15:05:01,091 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:05:01,091 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:05:01,091 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:05:01,091 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //select[@id='company-select']
+15:05:01,091 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:05:01,091 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:05:01,091 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:05:01,091 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //form[@id='save-asset-form']/fieldset//div[@class='buttons']/ul/li//a[@class='submit save']
+15:05:01,091 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:05:01,091 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: //span[text()='Add to Order']
+15:05:01,091 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:05:01,091 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: 
+15:05:01,091 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:05:01,091 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:05:01,091 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:05:01,091 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //div[@id = 'review-messages']/div/ul/li
+15:05:01,091 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:05:01,091 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:05:01,091 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:05:01,091 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //a[text()='Line Changes']
+15:05:01,091 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:05:01,091 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:05:01,091 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:05:01,091 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //table[contains(@id,'dependencies-products-change')']/tbody//td/a/strong
+15:05:01,091 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:05:01,091 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: //span[text()='New SubOrder']
+15:05:01,091 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:05:01,091 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: 
+15:05:01,091 INFO  [BrowserSelenium] (initElements) -&gt; ID set to field: 
+15:05:01,091 INFO  [BrowserSelenium] (initElements) -&gt; Name set to field: 
+15:05:01,091 INFO  [BrowserSelenium] (initElements) -&gt; CSS set to field: 
+15:05:01,091 INFO  [BrowserSelenium] (initElements) -&gt; XPath set to field: //input[@id = 'change--3.appliedManually']
+15:05:01,091 INFO  [BrowserSelenium] EXIT --&gt; (initElements)
+15:05:01,091 INFO  [BrowserSelenium] ENTER --&gt; (_waitForElement) --&gt; Waiting for element: null
+15:05:01,091 INFO  [BrowserSelenium] ENTER --&gt; (waitForElement)
+15:05:02,851 INFO  [BrowserSelenium] ENTER --&gt; (_getByLocator)
+15:05:02,851 INFO  [BrowserSelenium] (_getByLocator) -&gt; Getting locator for null
+15:05:02,851 INFO  [BrowserSelenium] (_getByLocator) -&gt; Locator info found for XPATH attribute as: //div[@id='messages']/div/p
+15:05:02,851 INFO  [BrowserSelenium] ENTER --&gt; (_parseElementOnXpath)
+15:05:02,851 INFO  [BrowserSelenium] (_parseElementOnXpath) -&gt; //div[@id='messages']/div/p is used
+15:05:02,851 INFO  [BrowserSelenium] EXIT --&gt; (_parseElementOnXpath)
+15:05:02,851 INFO  [BrowserSelenium] EXIT --&gt; (_getByLocator)
+15:05:03,241 INFO  [BrowserSelenium] ENTER --&gt; (_getByLocator)
+15:05:03,241 INFO  [BrowserSelenium] (_getByLocator) -&gt; Getting locator for null
+15:05:03,241 INFO  [BrowserSelenium] (_getByLocator) -&gt; Locator info found for XPATH attribute as: //div[@id='messages']/div/p
+15:05:03,241 INFO  [BrowserSelenium] ENTER --&gt; (_parseElementOnXpath)
+15:05:03,241 INFO  [BrowserSelenium] (_parseElementOnXpath) -&gt; //div[@id='messages']/div/p is used
+15:05:03,241 INFO  [BrowserSelenium] EXIT --&gt; (_parseElementOnXpath)
+15:05:03,241 INFO  [BrowserSelenium] EXIT --&gt; (_getByLocator)
+15:05:03,321 INFO  [BrowserSelenium] (waitForElement) -&gt; element wait eligibility found: true
+15:05:03,321 INFO  [BrowserSelenium] ENTER --&gt; (_waitForJStoLoad)
+15:05:03,391 INFO  [BrowserSelenium] EXIT --&gt; (_waitForJStoLoad) --&gt; DOM load wait done: true
+15:05:03,391 INFO  [BrowserSelenium] (waitForElement) -&gt; element wait eligibility set: true
+15:05:03,391 INFO  [BrowserSelenium] EXIT --&gt; (waitForElement)
+15:05:03,391 INFO  [BrowserSelenium] EXIT --&gt; (_waitForElement)
+15:05:03,411 INFO  [BrowserSelenium] ENTER --&gt; (_getByLocator)
+15:05:03,411 INFO  [BrowserSelenium] (_getByLocator) -&gt; Getting locator for null
+15:05:03,421 INFO  [BrowserSelenium] (_getByLocator) -&gt; Locator info found for XPATH attribute as: //div[@id='messages']/div/p
+15:05:03,421 INFO  [BrowserSelenium] ENTER --&gt; (_parseElementOnXpath)
+15:05:03,421 INFO  [BrowserSelenium] (_parseElementOnXpath) -&gt; //div[@id='messages']/div/p is used
+15:05:03,421 INFO  [BrowserSelenium] EXIT --&gt; (_parseElementOnXpath)
+15:05:03,421 INFO  [BrowserSelenium] EXIT --&gt; (_getByLocator)
+15:05:03,461 INFO  [MessagesPage] (isOperationSuccessfulOnMessage) -&gt; Message on UI:An Invoice could not be generated. The purchase order does not have any applicable periods to be invoiced.
+Verify the data of the purchase order or contact customer service to review your business rules.
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 2.13</a> at Aug 8, 2016 3:05:04 PM</p>
+</div>
+</div>
+</body>
+</html>

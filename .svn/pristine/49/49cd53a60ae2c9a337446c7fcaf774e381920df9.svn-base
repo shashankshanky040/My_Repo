@@ -1,0 +1,38 @@
+<testdata>
+	<testdataset name="addplan" category="ap" testenv="develop|lab3">
+		<productCode>PLANA{RANDOM}</productCode>
+		<description>English</description>
+		<englishDescription>Plan A{RANDOM}</englishDescription>
+		<rate>100</rate>
+		<category>New Test Category</category>
+		<bundleQuantity>1</bundleQuantity>
+		<rateProduct>15</rateProduct>
+	</testdataset>
+	<testdataset name="editPlan" category="ap" testenv="develop|lab3">
+		<pricing>Zero</pricing>
+	</testdataset>
+	<testdataset name="addplan62.2" category="ap" testenv="develop|lab3">
+		<productCode>PLANA{RANDOM}</productCode>
+		<description>English</description>
+		<englishDescription>Plan A{RANDOM}</englishDescription>
+		<rate>8</rate>
+		<bundleQuantity>1</bundleQuantity>
+		<rateProduct>15</rateProduct>
+	</testdataset>
+	<testdataset name="addplan62.3" category="ap" testenv="develop|lab3">
+		<productCode>PLANA{RANDOM}</productCode>
+		<description>English</description>
+		<englishDescription>Plan A{RANDOM}</englishDescription>
+		<rate>8</rate>
+		<bundleQuantity>1</bundleQuantity>
+	</testdataset>
+	<testdataset name="addplan62.3.1" category="ap" testenv="develop|lab3">
+		<productCode>PLANA{RANDOM}</productCode>
+		<description>English</description>
+		<englishDescription>Plan A{RANDOM}</englishDescription>
+		<rate>10</rate>
+		<bundleQuantity>5</bundleQuantity>
+		<rateProduct>8</rateProduct>
+		<bundledPeriod>Monthly</bundledPeriod>
+	</testdataset>
+</testdata>

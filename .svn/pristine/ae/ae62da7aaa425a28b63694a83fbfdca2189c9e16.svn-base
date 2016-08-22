@@ -1,0 +1,4 @@
+Test Case Id, Test Case Method Name, Test Case Objective, RESULT, Error Message
+10909932|testUserTearDownCreatedData|Test Case 18.1 : Verify user tear down the created data.|FAIL|Window not found. The browser window may have been closed.
+Command duration or timeout: 280 milliseconds
+Build info: version: '2.53.0'

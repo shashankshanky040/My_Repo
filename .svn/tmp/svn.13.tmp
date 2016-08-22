@@ -1,0 +1,348 @@
+<testdata>
+	<testdataset name="addPlugin" category="ap" testenv="develop|lab">
+
+		<pluginType>com.sapienter.jbilling.server.user.tasks.UserAgeingNotificationTask
+		</pluginType>
+
+		<!--<pluginType>com.sapienter.jbilling.server.user.tasks.UserAgeingNotificationTask</pluginType> -->
+		<pluginType>com.sapienter.jbilling.server.item.tasks.AssetUpdatedTask
+		</pluginType>
+		<order>8{RANDOMNUM}</order>
+		<leftAttribute>3</leftAttribute>
+	</testdataset>
+	<testdataset name="BillingProcess" category="cbp" testenv="develop|lab">
+		<nextRunDate>01/01/2001</nextRunDate>
+		<generateReport>true</generateReport>
+		<billingPeriod>Month</billingPeriod>
+		<enableProrating>true</enableProrating>
+		<maxPeriodInvoice>1</maxPeriodInvoice>
+	</testdataset>
+	<testdataset name="collectionsStepOne" category="ccd"
+		testenv="develop|lab3">
+		<step>Payment Due</step>
+		<days>0</days>
+		<notification>false</notification>
+		<payment>true</payment>
+		<suspend>false</suspend>
+	</testdataset>
+	<testdataset name="collectionsStepTwo" category="ccd"
+		testenv="develop|lab3">
+		<step>Grace period</step>
+		<days>2</days>
+		<notification>true</notification>
+		<payment>false</payment>
+		<suspend>false</suspend>
+	</testdataset>
+	<testdataset name="collectionsStepThree" category="ccd"
+		testenv="develop|lab3">
+		<step>First Retry</step>
+		<days>3</days>
+		<notification>false</notification>
+		<payment>true</payment>
+		<suspend>false</suspend>
+	</testdataset>
+	<testdataset name="collectionsStepFour" category="ccd"
+		testenv="develop|lab3">
+		<step>Suspended</step>
+		<days>7</days>
+		<notification>false</notification>
+		<payment>false</payment>
+		<suspend>true</suspend>
+	</testdataset>
+	<testdataset name="addMediation" category="am" testenv="develop|lab3">
+		<mediationName>Test Mediation 3.0</mediationName>
+		<orderValue>1</orderValue>
+		<jobLauncher>sampleMediationJob</jobLauncher>
+		<global>true</global>
+	</testdataset>
+	<testdataset name="firstOrderPeriod" category="op"
+		testenv="develop|lab3">
+		<description>Semi-Monthly{RANDOM}</description>
+		<unit>Semi-Monthly</unit>
+		<value>1</value>
+	</testdataset>
+	<testdataset name="secondOrderPeriod" category="op"
+		testenv="develop|lab3">
+		<description>Weekly{RANDOM}</description>
+		<unit>Week</unit>
+		<value>1</value>
+	</testdataset>
+	<testdataset name="thirdOrderPeriod" category="op"
+		testenv="develop|lab3">
+		<description>Daily{RANDOM}</description>
+		<unit>Day</unit>
+		<value>1</value>
+	</testdataset>
+	<testdataset name="addAccountType" category="aat" testenv="develop|lab3">
+		<accountName>Direct Customer{RANDOM}</accountName>
+		<billingCycle>1</billingCycle>
+		<invoiceDesign>invoice_design</invoiceDesign>
+	</testdataset>
+	<testdataset name="addSecondAccountType" category="aat"
+		testenv="develop|lab3">
+		<accountName>Distributor{RANDOM}</accountName>
+		<billingCycle>1</billingCycle>
+		<invoiceDesign>invoice_design</invoiceDesign>
+	</testdataset>
+	<testdataset name="editSecondAccountType" category="aat"
+		testenv="develop|lab3">
+		<accountName>Distributor Account{RANDOM}</accountName>
+	</testdataset>
+	<testdataset name="AddInfoToAccountType" category="aitac"
+		testenv="develop|lab">
+		<name>Email{RANDOM}</name>
+		<metaFieldType>EMAIL</metaFieldType>
+	</testdataset>
+	<testdataset name="addPrice" category="ap" testenv="develop|lab">
+		<productCategory>All</productCategory>
+		<rate>300</rate>
+	</testdataset>
+	<testdataset name="editPrice" category="ap" testenv="develop|lab">
+		<rate>200</rate>
+	</testdataset>
+	<testdataset name="testPaymentType" category="pt" testenv="develop|lab">
+		<methodName>Debit card{RANDOM}</methodName>
+		<cardErrorMsg>Invalid Card Number</cardErrorMsg>
+		<dateErrorMsg>Invalid Expiry Date</dateErrorMsg>
+		<paymentCard>Payment Card</paymentCard>
+		<distributorAccount>Distributor Account</distributorAccount>
+		<isRecurring>true</isRecurring>
+		<allAccountTypes>true</allAccountTypes>
+	</testdataset>
+	<testdataset name="secondTestPaymentType" category="pt"
+		testenv="develop|lab">
+		<methodName>Credit card{RANDOM}</methodName>
+		<paymentCard>Payment Card</paymentCard>
+		<cardErrorMsg>Invalid Card Number</cardErrorMsg>
+		<dateErrorMsg>Invalid Expiry Date</dateErrorMsg>
+		<distributorAccount>Distributor Account</distributorAccount>
+		<isRecurring>true</isRecurring>
+		<allAccountTypes>true</allAccountTypes>
+	</testdataset>
+	<testdataset name="setPreferenceValue" category="pc"
+		testenv="develop|lab">
+		<notification>ITG invoice notification</notification>
+		<preferenceValue>0</preferenceValue>
+	</testdataset>
+	<testdataset name="configurePaymentMethod" category="pm"
+		testenv="develop|lab">
+		<paymentTemplate>Payment Card</paymentTemplate>
+	</testdataset>
+	<testdataset name="selectPluginCategory" category="pc"
+		testenv="develop|lab">
+		<pluginCategory>Generic internal events listener</pluginCategory>
+	</testdataset>
+	<testdataset name="updatePreference" category="up" testenv="develop|lab">
+		<preference>Agent Commission Type</preference>
+		<preferenceVal>INVOICE</preferenceVal>
+	</testdataset>
+	<testdataset name="pluginPermissions" category="pp"
+		testenv="develop|lab">
+		<userName>admin</userName>
+		<pluginMessage>Sorry, you're not authorized to view this page
+		</pluginMessage>
+	</testdataset>
+	<testdataset name="pluginAndAgentPermissions" category="pap"
+		testenv="develop|lab">
+		<userName>admin</userName>
+		<role>Agent</role>
+	</testdataset>
+	<testdataset name="mandatoryFieldAccountType" category="mfat"
+		testenv="develop|lab">
+		<message>The Account Type has an error in the Name field</message>
+	</testdataset>
+	<testdataset name="accountWithAllAccountType" category="awaat"
+		testenv="develop|lab">
+		<paymentTemplate>Cheque</paymentTemplate>
+		<methodName>To all accounts{RANDOM}</methodName>
+		<allAccountTypes>true</allAccountTypes>
+	</testdataset>
+	<testdataset name="set63Preference" category="sp" testenv="develop|lab">
+		<preference>Should use JQGrid for tables</preference>
+		<preferenceVal>1</preferenceVal>
+	</testdataset>
+	<testdataset name="reSet63Preference" category="sp"
+		testenv="develop|lab">
+		<preferenceVal>0</preferenceVal>
+	</testdataset>
+	<testdataset name="addPaypalPaymentPlugin" category="appp"
+		testenv="develop|lab">
+		<pluginType>com.sapienter.jbilling.server.payment.tasks.PaymentPaypalExternalTask
+		</pluginType>
+		<order>{RANDOMNUM}</order>
+		<paypaluserName>paypal-tester_api1.jbilling.com</paypaluserName>
+		<paypalPassword>VZHXL68NM6VTE8NZ /</paypalPassword>
+		<paypalSignature>ApkmQoRr9u7smCAyIA9.cvkucgZiA.AQzjfkztC-ev-O8o3SUknJBSC
+		</paypalSignature>
+	</testdataset>
+	<testdataset name="TC02_EditCompanyDetails" category="cd"
+		testenv="develop|lab">
+		<companyDescription>jBilling {RANDOM}</companyDescription>
+		<companyAddress>H-50</companyAddress>
+		<companyCity>Noida</companyCity>
+		<companyState>UP</companyState>
+	</testdataset>
+	<testdataset name="TC07_AddCardPaymentMethod" category="apm"
+		testenv="develop|lab">
+		<paymentTemplate>Payment Card</paymentTemplate>
+		<methodName>Card Pay{RANDOM}</methodName>
+		<cardErrorMsg>Invalid card Detail</cardErrorMsg>
+		<dateErrorMsg>Invalid Expiry Detail</dateErrorMsg>
+		<isRecurring>true</isRecurring>
+		<allAccountTypes>true</allAccountTypes>
+	</testdataset>
+	<testdataset name="TC08_CreatePaymentMethodACH" category="apm"
+		testenv="develop|lab">
+		<paymentTemplate>ACH</paymentTemplate>
+		<methodName>ACH{RANDOM}</methodName>
+		<isRecurring>true</isRecurring>
+	</testdataset>
+	<testdataset name="TC09_addChequePaymentMethod" category="apm"
+		testenv="develop|lab">
+		<paymentTemplate>Cheque</paymentTemplate>
+		<methodName>Cheque{RANDOM}</methodName>
+		<isRecurring>true</isRecurring>
+	</testdataset>
+	<testdataset name="TC10_AddEditDeletePaymentMethod"
+		category="aedpm" testenv="develop|lab">
+		<paymentTemplate>Cheque</paymentTemplate>
+		<methodName>Cheque1{RANDOM}</methodName>
+		<newMethodName>cheque2{RANDOM}</newMethodName>
+		<isRecurring>true</isRecurring>
+	</testdataset>
+	<testdataset name="TC11_AccountTypeWithCreditLimit"
+		category="atcl" testenv="develop|lab">
+		<accountName>test account{RANDOM}</accountName>
+		<billingCycle>1</billingCycle>
+		<invoiceDesign>Invoice Design</invoiceDesign>
+		<creditLimit>200</creditLimit>
+		<creditLimitOne>10</creditLimitOne>
+		<creditLimitTwo>20</creditLimitTwo>
+	</testdataset>
+	<testdataset name="TC13_EditAccountTypeName" category="ea"
+		testenv="develop|lab">
+		<accountName>Account Type new{RANDOM}</accountName>
+	</testdataset>
+	<testdataset name="TC14_AccountTypeWithCreditLimit"
+		category="atcl" testenv="develop|lab">
+		<accountName>test_14{RANDOM}</accountName>
+		<billingCycle>1</billingCycle>
+		<invoiceDesign>simple_design</invoiceDesign>
+		<creditLimit>500</creditLimit>
+		<creditLimitOne>100</creditLimitOne>
+		<creditLimitTwo>100</creditLimitTwo>
+	</testdataset>
+	<testdataset name="TC15_AddPaymentMethodwithACH" category="apm"
+		testenv="develop|lab">
+		<accountName>ACH2{RANDOM}</accountName>
+		<billingCycle>1</billingCycle>
+		<invoiceDesign>Invoice Design</invoiceDesign>
+		<creditLimit>200</creditLimit>
+		<creditLimitOne>100</creditLimitOne>
+		<creditLimitTwo>100</creditLimitTwo>
+	</testdataset>
+	<testdataset name="TC16_addPaymentMethodwithCheque"
+		category="apm" testenv="develop|lab">
+		<accountName>Cheque{RANDOM}</accountName>
+		<billingCycle>1</billingCycle>
+		<invoiceDesign>Invoice Design</invoiceDesign>
+		<creditLimit>200</creditLimit>
+		<creditLimitOne>{RANDOMNUM}</creditLimitOne>
+		<creditLimitTwo>{RANDOMNUM}</creditLimitTwo>
+	</testdataset>
+	<testdataset name="TC17_addChequePaymentMethod" category="apm"
+		testenv="develop|lab">
+		<paymentTemplate>Cheque</paymentTemplate>
+		<methodName>To All Accounts{RANDOM}</methodName>
+		<allAccountTypes>true</allAccountTypes>
+		<isRecurring>true</isRecurring>
+	</testdataset>
+	<testdataset name="TC18_AddAccountType" category="aat"
+		testenv="develop|lab">
+		<accountName>Test Account{RANDOM}</accountName>
+	</testdataset>
+	<testdataset name="TC20_EditPaymentMethodForAllAcount"
+		category="epmaa" testenv="develop|lab">
+		<allAccountTypes>true</allAccountTypes>
+	</testdataset>
+	<testdataset name="setCompany" category="name" testenv="develop|lab">
+		<childCompanyName>jBilling</childCompanyName>
+	</testdataset>
+	<testdataset name="yearlyOrderPeriod" category="op"
+		testenv="develop|lab3">
+		<description>Yearly{RANDOM}</description>
+		<unit>Year</unit>
+		<value>1</value>
+	</testdataset>
+	<testdataset name="TC36_AddInfoToAccType" category="aiat"
+		testenv="develop|lab3">
+		<name>Salary{RANDOM}</name>
+		<metaFieldName>Detail{RANDOM}</metaFieldName>
+		<metaFieldDayaType>STRING</metaFieldDayaType>
+	</testdataset>
+	<testdataset name="secondRowInfo" category="ai" testenv="develop|lab3">
+		<secondRowNameTestData>Test Data</secondRowNameTestData>
+		<secondRowOrderTestData>2</secondRowOrderTestData>
+	</testdataset>
+	<testdataset name="OrderPluginPageInfo" category="oi"
+		testenv="develop|lab3">
+		<AddNewPluginOrderValue>8{RANDOMNUM}</AddNewPluginOrderValue>
+	</testdataset>
+	<testdataset name="addNewMetaField" category="anmf"
+		testenv="develop|lab">
+		<Name>Str1{RANDOM}</Name>
+		<Value>1</Value>
+		<permission>true</permission>
+	</testdataset>
+	<testdataset name="addSecondMetaField" category="asmf"
+		testenv="develop|lab">
+		<Name>int1{RANDOM}</Name>
+		<Value>2</Value>
+		<dataTypeValue>INTEGER</dataTypeValue>
+	</testdataset>
+	<testdataset name="addthirdMetaField" category="atmf"
+		testenv="develop|lab">
+		<Name>Bol1{RANDOM}</Name>
+		<Value>2</Value>
+	</testdataset>
+	<testdataset name="addMetaGroupName" category="amdg"
+		testenv="develop|lab">
+		<Name1>Meta Group1{RANDOM}</Name1>
+		<Name2>Meta Group2{RANDOM}</Name2>
+	</testdataset>
+	<!-- Sayed -->
+	<testdataset name="addPluginValue" category="apv" testenv="develop|lab">
+		<pluginValue>com.sapienter.jbilling.server.item.tasks.AssetUpdatedTask
+		</pluginValue>
+		<order>8{RANDOMNUM}</order>
+	</testdataset>
+	<testdataset name="MetadataName" category="MDN" testenv="develop|lab3">
+		<Metadata>Salary</Metadata>
+		<MetDataType>INTEGER</MetDataType>
+	</testdataset>
+	<testdataset name="VerifyOrderStatuses" category="OS"
+		testenv="develop|lab">
+		<FlagField1>INVOICE</FlagField1>
+		<FlagField2>FINISHED</FlagField2>
+		<FlagField3>NOT_INVOICE</FlagField3>
+		<FlagField4>SUSPENDED_AGEING</FlagField4>
+		<Description1>Active</Description1>
+		<Description2>Finished</Description2>
+		<Description3>Suspended</Description3>
+		<Description4>Suspended ageing(auto)</Description4>
+		<newDescription>Active Now</newDescription>
+		<newDescription1>New Finished</newDescription1>
+		<Flag>FINISHED</Flag>
+	</testdataset>
+	<testdataset name="TC84_EnumValidateMessage" category="evm"
+		testenv="develop|lab3">
+		<NameMessage>Enumeration name is empty or missing</NameMessage>
+		<ValueMessage>
+			Enumeration value cannot be blank
+		</ValueMessage>
+		<enumerationName>NewEnum{RANDOM}</enumerationName>
+		<enumerationValue>value1 {RANDOMNUM}</enumerationValue>
+		<editEnumerationValue>value2 {RANDOMNUM}</editEnumerationValue>
+	</testdataset>
+
+</testdata>

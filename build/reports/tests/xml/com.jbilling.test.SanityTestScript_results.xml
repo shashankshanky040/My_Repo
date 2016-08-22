@@ -1,0 +1,1548 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="SanityTestScript"
+           tests="44"
+           failures="23"
+           errors="0"
+           skipped="9"
+           time="2058.247">
+  <properties />
+            <testcase name="testUserTearDownCreatedData" time="113.627" classname="com.jbilling.test.SanityTestScript">
+                <failure type="java.lang.Exception"
+                  message="Element not found for provided element field"
+              >
+<![CDATA[java.lang.Exception: Element not found for provided element field
+  com.jbilling.framework.interfaces.impl.selenium.BrowserSelenium._findElement(BrowserSelenium.java:123)
+  com.jbilling.framework.interfaces.impl.selenium.BrowserSelenium.waitForElement(BrowserSelenium.java:922)
+  com.jbilling.framework.interfaces.impl.selenium.BrowserSelenium._waitForElement(BrowserSelenium.java:429)
+  com.jbilling.framework.interfaces.impl.selenium.BrowserSelenium.clickLinkText(BrowserSelenium.java:551)
+  com.jbilling.framework.interfaces.impl.selenium.BrowserSelenium.clickLinkText(BrowserSelenium.java:539)
+  com.jbilling.framework.pageclasses.PaymentsPage.selectSuccessfulPayment(PaymentsPage.java:160)
+  com.jbilling.framework.pageclasses.PaymentsPage.deletePayment(PaymentsPage.java:125)
+  com.jbilling.test.SanityTestScript.testUserTearDownCreatedData(SanityTestScript.java:1900)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+  org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+  org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+  org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+  org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+  org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+  org.testng.TestRunner.privateRun(TestRunner.java:782)
+  org.testng.TestRunner.run(TestRunner.java:632)
+  org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+  org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+  org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+  org.testng.SuiteRunner.run(SuiteRunner.java:268)
+  org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+  org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+  org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+  org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+  org.testng.TestNG.run(TestNG.java:1064)
+  org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:133)
+  org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:83)
+  org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+  org.gradle.messaging.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+  org.gradle.messaging.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+  com.sun.proxy.$Proxy2.stop(Unknown Source)
+  org.gradle.api.internal.tasks.testing.worker.TestWorker.stop(TestWorker.java:120)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+  org.gradle.messaging.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:364)
+  org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:54)
+  org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:40)
+  java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+  java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  java.lang.Thread.run(Thread.java:745)
+]]>
+      </failure>
+
+          </testcase>
+            <testcase name="testConfigureCollectionPlugins" time="96.879" classname="com.jbilling.test.SanityTestScript">
+                <failure type="java.lang.Exception"
+                  message="Element not found for provided element field"
+              >
+<![CDATA[java.lang.Exception: Element not found for provided element field
+  com.jbilling.framework.interfaces.impl.selenium.BrowserSelenium._findElement(BrowserSelenium.java:123)
+  com.jbilling.framework.interfaces.impl.selenium.BrowserSelenium.waitForElement(BrowserSelenium.java:922)
+  com.jbilling.framework.pageclasses.ConfigurationPage.setStepOne(ConfigurationPage.java:1989)
+  com.jbilling.framework.pageclasses.ConfigurationPage.addCollectionsAgeingStep(ConfigurationPage.java:567)
+  com.jbilling.test.SanityTestScript.testConfigureCollection(SanityTestScript.java:510)
+  com.jbilling.test.SanityTestScript.testConfigureCollectionPlugins(SanityTestScript.java:561)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+  org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+  org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+  org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+  org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+  org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+  org.testng.TestRunner.privateRun(TestRunner.java:782)
+  org.testng.TestRunner.run(TestRunner.java:632)
+  org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+  org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+  org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+  org.testng.SuiteRunner.run(SuiteRunner.java:268)
+  org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+  org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+  org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+  org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+  org.testng.TestNG.run(TestNG.java:1064)
+  org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:133)
+  org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:83)
+  org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+  org.gradle.messaging.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+  org.gradle.messaging.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+  com.sun.proxy.$Proxy2.stop(Unknown Source)
+  org.gradle.api.internal.tasks.testing.worker.TestWorker.stop(TestWorker.java:120)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+  org.gradle.messaging.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:364)
+  org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:54)
+  org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:40)
+  java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+  java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  java.lang.Thread.run(Thread.java:745)
+]]>
+      </failure>
+
+          </testcase>
+            <testcase name="testAssignAccountToProduct" time="36.929" classname="com.jbilling.test.SanityTestScript">
+                <failure type="org.openqa.selenium.NoSuchElementException"
+                  message="Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//strong[contains(text(), &apos;Direct CustomerIVQ&apos;)]&quot;}
+Command duration or timeout: 30.08 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;360LP&apos;, ip: &apos;192.168.0.102&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 97035204-885b-42fa-9224-0e07b9db3483
+*** Element info: {Using=xpath, value=//strong[contains(text(), &apos;Direct CustomerIVQ&apos;)]}"
+              >
+<![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"//strong[contains(text(), 'Direct CustomerIVQ')]"}
+Command duration or timeout: 30.08 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: '360LP', ip: '192.168.0.102', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_91'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 97035204-885b-42fa-9224-0e07b9db3483
+*** Element info: {Using=xpath, value=//strong[contains(text(), 'Direct CustomerIVQ')]}
+  sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+  sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+  sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+  java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+  org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+  org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+  org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+  org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:327)
+  org.openqa.selenium.remote.RemoteWebElement.findElement(RemoteWebElement.java:198)
+  org.openqa.selenium.remote.RemoteWebElement.findElementByXPath(RemoteWebElement.java:295)
+  org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+  org.openqa.selenium.remote.RemoteWebElement.findElement(RemoteWebElement.java:194)
+  com.jbilling.framework.interfaces.impl.selenium.BrowserSelenium.clickTableCellWithText(BrowserSelenium.java:610)
+  com.jbilling.framework.interfaces.impl.selenium.BrowserSelenium.clickTableCellWithText(BrowserSelenium.java:590)
+  com.jbilling.framework.pageclasses.ConfigurationPage.selectAccountTypeName(ConfigurationPage.java:1564)
+  com.jbilling.test.SanityTestScript.testAssignAccountToProduct(SanityTestScript.java:860)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+  org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+  org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+  org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+  org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+  org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+  org.testng.TestRunner.privateRun(TestRunner.java:782)
+  org.testng.TestRunner.run(TestRunner.java:632)
+  org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+  org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+  org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+  org.testng.SuiteRunner.run(SuiteRunner.java:268)
+  org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+  org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+  org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+  org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+  org.testng.TestNG.run(TestNG.java:1064)
+  org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:133)
+  org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:83)
+  org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+  org.gradle.messaging.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+  org.gradle.messaging.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+  com.sun.proxy.$Proxy2.stop(Unknown Source)
+  org.gradle.api.internal.tasks.testing.worker.TestWorker.stop(TestWorker.java:120)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+  org.gradle.messaging.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:364)
+  org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:54)
+  org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:40)
+  java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+  java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  java.lang.Thread.run(Thread.java:745)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"//strong[contains(text(), 'Direct CustomerIVQ')]"}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: '360LP', ip: '192.168.0.102', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_91'
+Driver info: driver.version: unknown
+  <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/admin/AppData/Local/Temp/anonymous6609916864532699919webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
+  <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/admin/AppData/Local/Temp/anonymous6609916864532699919webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
+]]>
+      </failure>
+
+          </testcase>
+            <testcase name="testConfigureBillingProcess" time="39.057" classname="com.jbilling.test.SanityTestScript">
+                <failure type="org.openqa.selenium.StaleElementReferenceException"
+                  message="Element not found in the cache - perhaps the page has changed since it was looked up
+Command duration or timeout: 30.13 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;360LP&apos;, ip: &apos;192.168.0.102&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 97035204-885b-42fa-9224-0e07b9db3483"
+              >
+<![CDATA[org.openqa.selenium.StaleElementReferenceException: Element not found in the cache - perhaps the page has changed since it was looked up
+Command duration or timeout: 30.13 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: '360LP', ip: '192.168.0.102', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_91'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 97035204-885b-42fa-9224-0e07b9db3483
+  sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+  sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+  sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+  java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+  org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+  org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+  org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+  org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:327)
+  org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:368)
+  com.jbilling.framework.interfaces.impl.selenium.BrowserSelenium.waitForElement(BrowserSelenium.java:924)
+  com.jbilling.framework.interfaces.impl.selenium.BrowserSelenium._waitForElement(BrowserSelenium.java:429)
+  com.jbilling.framework.interfaces.impl.selenium.BrowserSelenium.verifyUIComponent(BrowserSelenium.java:975)
+  com.jbilling.framework.pageclasses.ConfigurationPage.verifyUIComponent(ConfigurationPage.java:2167)
+  com.jbilling.test.SanityTestScript.testConfigureBillingProcess(SanityTestScript.java:638)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+  org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+  org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+  org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+  org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+  org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+  org.testng.TestRunner.privateRun(TestRunner.java:782)
+  org.testng.TestRunner.run(TestRunner.java:632)
+  org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+  org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+  org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+  org.testng.SuiteRunner.run(SuiteRunner.java:268)
+  org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+  org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+  org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+  org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+  org.testng.TestNG.run(TestNG.java:1064)
+  org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:133)
+  org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:83)
+  org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+  org.gradle.messaging.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+  org.gradle.messaging.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+  com.sun.proxy.$Proxy2.stop(Unknown Source)
+  org.gradle.api.internal.tasks.testing.worker.TestWorker.stop(TestWorker.java:120)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+  org.gradle.messaging.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:364)
+  org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:54)
+  org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:40)
+  java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+  java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  java.lang.Thread.run(Thread.java:745)
+Caused by: org.openqa.selenium.StaleElementReferenceException: Element not found in the cache - perhaps the page has changed since it was looked up
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: '360LP', ip: '192.168.0.102', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_91'
+Driver info: driver.version: unknown
+  <anonymous class>.fxdriver.cache.getElementAt(resource://fxdriver/modules/web-element-cache.js:9454)
+  <anonymous class>.Utils.getElementAt(file:///C:/Users/admin/AppData/Local/Temp/anonymous6609916864532699919webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:9039)
+  <anonymous class>.WebElement.isElementDisplayed(file:///C:/Users/admin/AppData/Local/Temp/anonymous6609916864532699919webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12189)
+  <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/admin/AppData/Local/Temp/anonymous6609916864532699919webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12661)
+  <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/admin/AppData/Local/Temp/anonymous6609916864532699919webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:625)
+]]>
+      </failure>
+
+          </testcase>
+            <testcase name="testMediationRunSuccessfully" time="95.400" classname="com.jbilling.test.SanityTestScript">
+                <failure type="java.lang.Exception"
+                  message="Element not found for provided element field"
+              >
+<![CDATA[java.lang.Exception: Element not found for provided element field
+  com.jbilling.framework.interfaces.impl.selenium.BrowserSelenium._findElement(BrowserSelenium.java:123)
+  com.jbilling.framework.interfaces.impl.selenium.BrowserSelenium.waitForElement(BrowserSelenium.java:922)
+  com.jbilling.framework.interfaces.impl.selenium.BrowserSelenium._waitForElement(BrowserSelenium.java:429)
+  com.jbilling.framework.interfaces.impl.selenium.BrowserSelenium.clickLinkText(BrowserSelenium.java:551)
+  com.jbilling.framework.interfaces.impl.selenium.BrowserSelenium.clickLinkText(BrowserSelenium.java:539)
+  com.jbilling.framework.pageclasses.ConfigurationPage.clickAddNewButton(ConfigurationPage.java:1016)
+  com.jbilling.framework.pageclasses.ConfigurationPage.addAndRunMediationConfiguration(ConfigurationPage.java:475)
+  com.jbilling.test.SanityTestScript.testMediationRunSuccessfully(SanityTestScript.java:1206)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+  org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+  org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+  org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+  org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+  org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+  org.testng.TestRunner.privateRun(TestRunner.java:782)
+  org.testng.TestRunner.run(TestRunner.java:632)
+  org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+  org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+  org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+  org.testng.SuiteRunner.run(SuiteRunner.java:268)
+  org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+  org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+  org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+  org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+  org.testng.TestNG.run(TestNG.java:1064)
+  org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:133)
+  org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:83)
+  org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+  org.gradle.messaging.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+  org.gradle.messaging.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+  com.sun.proxy.$Proxy2.stop(Unknown Source)
+  org.gradle.api.internal.tasks.testing.worker.TestWorker.stop(TestWorker.java:120)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+  org.gradle.messaging.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:364)
+  org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:54)
+  org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:40)
+  java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+  java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  java.lang.Thread.run(Thread.java:745)
+]]>
+      </failure>
+
+          </testcase>
+            <testcase name="testCreateAndEditCustomer" time="124.889" classname="com.jbilling.test.SanityTestScript">
+                <failure type="org.openqa.selenium.NoSuchElementException"
+                  message="Cannot locate element with text: Direct CustomerIVQ
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;360LP&apos;, ip: &apos;192.168.0.102&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: driver.version: unknown"
+              >
+<![CDATA[org.openqa.selenium.NoSuchElementException: Cannot locate element with text: Direct CustomerIVQ
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: '360LP', ip: '192.168.0.102', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_91'
+Driver info: driver.version: unknown
+  org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:150)
+  com.jbilling.framework.interfaces.impl.selenium.BrowserSelenium.selectDropDown(BrowserSelenium.java:783)
+  com.jbilling.framework.pageclasses.CustomersPage.selectAccountType(CustomersPage.java:1102)
+  com.jbilling.framework.pageclasses.CustomersPage.addCustomer(CustomersPage.java:686)
+  com.jbilling.test.SanityTestScript.testCreateAndEditCustomer(SanityTestScript.java:968)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+  org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+  org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+  org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+  org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+  org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+  org.testng.TestRunner.privateRun(TestRunner.java:782)
+  org.testng.TestRunner.run(TestRunner.java:632)
+  org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+  org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+  org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+  org.testng.SuiteRunner.run(SuiteRunner.java:268)
+  org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+  org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+  org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+  org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+  org.testng.TestNG.run(TestNG.java:1064)
+  org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:133)
+  org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:83)
+  org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+  org.gradle.messaging.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+  org.gradle.messaging.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+  com.sun.proxy.$Proxy2.stop(Unknown Source)
+  org.gradle.api.internal.tasks.testing.worker.TestWorker.stop(TestWorker.java:120)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+  org.gradle.messaging.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:364)
+  org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:54)
+  org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:40)
+  java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+  java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  java.lang.Thread.run(Thread.java:745)
+]]>
+      </failure>
+
+          </testcase>
+            <testcase name="testMediationUndoFunction" time="0.000" classname="com.jbilling.test.SanityTestScript">
+                <failure type="java.lang.Exception"
+                  message="TC 9.2 Not created by now"
+              >
+<![CDATA[java.lang.Exception: TC 9.2 Not created by now
+  com.jbilling.test.SanityTestScript.testMediationUndoFunction(SanityTestScript.java:1229)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+  org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+  org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+  org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+  org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+  org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+  org.testng.TestRunner.privateRun(TestRunner.java:782)
+  org.testng.TestRunner.run(TestRunner.java:632)
+  org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+  org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+  org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+  org.testng.SuiteRunner.run(SuiteRunner.java:268)
+  org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+  org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+  org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+  org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+  org.testng.TestNG.run(TestNG.java:1064)
+  org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:133)
+  org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:83)
+  org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+  org.gradle.messaging.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+  org.gradle.messaging.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+  com.sun.proxy.$Proxy2.stop(Unknown Source)
+  org.gradle.api.internal.tasks.testing.worker.TestWorker.stop(TestWorker.java:120)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+  org.gradle.messaging.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:364)
+  org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:54)
+  org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:40)
+  java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+  java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  java.lang.Thread.run(Thread.java:745)
+]]>
+      </failure>
+
+          </testcase>
+            <testcase name="testCreateProductWithAsset" time="96.248" classname="com.jbilling.test.SanityTestScript">
+                <failure type="java.lang.Exception"
+                  message="No list item found with value &quot;Plug-ins&quot; in its list element"
+              >
+<![CDATA[java.lang.Exception: No list item found with value "Plug-ins" in its list element
+  com.jbilling.framework.interfaces.impl.selenium.BrowserSelenium._getListItem(BrowserSelenium.java:253)
+  com.jbilling.framework.interfaces.impl.selenium.BrowserSelenium.selectListItem(BrowserSelenium.java:811)
+  com.jbilling.framework.pageclasses.ProductsPage.selectPluginsInConfiguration(ProductsPage.java:510)
+  com.jbilling.framework.pageclasses.ProductsPage.addPlugin(ProductsPage.java:937)
+  com.jbilling.test.SanityTestScript.testCreateProductWithAsset(SanityTestScript.java:795)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+  org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+  org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+  org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+  org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+  org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+  org.testng.TestRunner.privateRun(TestRunner.java:782)
+  org.testng.TestRunner.run(TestRunner.java:632)
+  org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+  org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+  org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+  org.testng.SuiteRunner.run(SuiteRunner.java:268)
+  org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+  org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+  org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+  org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+  org.testng.TestNG.run(TestNG.java:1064)
+  org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:133)
+  org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:83)
+  org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+  org.gradle.messaging.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+  org.gradle.messaging.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+  com.sun.proxy.$Proxy2.stop(Unknown Source)
+  org.gradle.api.internal.tasks.testing.worker.TestWorker.stop(TestWorker.java:120)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+  org.gradle.messaging.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:364)
+  org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:54)
+  org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:40)
+  java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+  java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  java.lang.Thread.run(Thread.java:745)
+]]>
+      </failure>
+
+          </testcase>
+            <testcase name="testAgentsLinkedToCustomer" time="133.734" classname="com.jbilling.test.SanityTestScript">
+                <failure type="org.openqa.selenium.NoSuchElementException"
+                  message="Cannot locate element with text: Direct CustomerIVQ
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;360LP&apos;, ip: &apos;192.168.0.102&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: driver.version: unknown"
+              >
+<![CDATA[org.openqa.selenium.NoSuchElementException: Cannot locate element with text: Direct CustomerIVQ
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: '360LP', ip: '192.168.0.102', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_91'
+Driver info: driver.version: unknown
+  org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:150)
+  com.jbilling.framework.interfaces.impl.selenium.BrowserSelenium.selectDropDown(BrowserSelenium.java:783)
+  com.jbilling.framework.pageclasses.CustomersPage.selectAccountType(CustomersPage.java:1102)
+  com.jbilling.framework.pageclasses.CustomersPage.addCustomer(CustomersPage.java:686)
+  com.jbilling.test.SanityTestScript.testAgentsLinkedToCustomer(SanityTestScript.java:1697)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+  org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+  org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+  org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+  org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+  org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+  org.testng.TestRunner.privateRun(TestRunner.java:782)
+  org.testng.TestRunner.run(TestRunner.java:632)
+  org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+  org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+  org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+  org.testng.SuiteRunner.run(SuiteRunner.java:268)
+  org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+  org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+  org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+  org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+  org.testng.TestNG.run(TestNG.java:1064)
+  org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:133)
+  org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:83)
+  org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+  org.gradle.messaging.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+  org.gradle.messaging.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+  com.sun.proxy.$Proxy2.stop(Unknown Source)
+  org.gradle.api.internal.tasks.testing.worker.TestWorker.stop(TestWorker.java:120)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+  org.gradle.messaging.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:364)
+  org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:54)
+  org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:40)
+  java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+  java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  java.lang.Thread.run(Thread.java:745)
+]]>
+      </failure>
+
+          </testcase>
+            <testcase name="testVerifyInvoiceGeneration" time="5.090" classname="com.jbilling.test.SanityTestScript">
+                <failure type="java.lang.Exception"
+                  message="No field information provided"
+              >
+<![CDATA[java.lang.Exception: No field information provided
+  com.jbilling.framework.interfaces.impl.selenium.BrowserSelenium._getByLocator(BrowserSelenium.java:204)
+  com.jbilling.framework.interfaces.impl.selenium.BrowserSelenium._findElement(BrowserSelenium.java:121)
+  com.jbilling.framework.interfaces.impl.selenium.BrowserSelenium.waitForElement(BrowserSelenium.java:922)
+  com.jbilling.framework.interfaces.impl.selenium.BrowserSelenium._waitForElement(BrowserSelenium.java:429)
+  com.jbilling.framework.interfaces.impl.selenium.BrowserSelenium._getTable(BrowserSelenium.java:264)
+  com.jbilling.framework.interfaces.impl.selenium.BrowserSelenium._getTableCells(BrowserSelenium.java:293)
+  com.jbilling.framework.interfaces.impl.selenium.BrowserSelenium.clickTableCellWithText(BrowserSelenium.java:602)
+  com.jbilling.framework.interfaces.impl.selenium.BrowserSelenium.clickTableCellWithText(BrowserSelenium.java:590)
+  com.jbilling.framework.pageclasses.OrdersPage.clickTextOnOrdersTable(OrdersPage.java:177)
+  com.jbilling.framework.pageclasses.OrdersPage.verifyInvoiceGenerationForChoosenCustomer(OrdersPage.java:535)
+  com.jbilling.test.SanityTestScript.testVerifyInvoiceGeneration(SanityTestScript.java:1255)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+  org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+  org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+  org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+  org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+  org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+  org.testng.TestRunner.privateRun(TestRunner.java:782)
+  org.testng.TestRunner.run(TestRunner.java:632)
+  org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+  org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+  org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+  org.testng.SuiteRunner.run(SuiteRunner.java:268)
+  org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+  org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+  org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+  org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+  org.testng.TestNG.run(TestNG.java:1064)
+  org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:133)
+  org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:83)
+  org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+  org.gradle.messaging.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+  org.gradle.messaging.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+  com.sun.proxy.$Proxy2.stop(Unknown Source)
+  org.gradle.api.internal.tasks.testing.worker.TestWorker.stop(TestWorker.java:120)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+  org.gradle.messaging.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:364)
+  org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:54)
+  org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:40)
+  java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+  java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  java.lang.Thread.run(Thread.java:745)
+]]>
+      </failure>
+
+          </testcase>
+            <testcase name="testInvoicePeriodAndDueDateOnInvoice" time="0.000" classname="com.jbilling.test.SanityTestScript">
+                <failure type="java.lang.Exception"
+                  message="TC 11.3.1 Not created by now"
+              >
+<![CDATA[java.lang.Exception: TC 11.3.1 Not created by now
+  com.jbilling.test.SanityTestScript.testInvoicePeriodAndDueDateOnInvoice(SanityTestScript.java:1433)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+  org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+  org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+  org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+  org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+  org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+  org.testng.TestRunner.privateRun(TestRunner.java:782)
+  org.testng.TestRunner.run(TestRunner.java:632)
+  org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+  org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+  org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+  org.testng.SuiteRunner.run(SuiteRunner.java:268)
+  org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+  org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+  org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+  org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+  org.testng.TestNG.run(TestNG.java:1064)
+  org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:133)
+  org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:83)
+  org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+  org.gradle.messaging.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+  org.gradle.messaging.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+  com.sun.proxy.$Proxy2.stop(Unknown Source)
+  org.gradle.api.internal.tasks.testing.worker.TestWorker.stop(TestWorker.java:120)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+  org.gradle.messaging.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:364)
+  org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:54)
+  org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:40)
+  java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+  java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  java.lang.Thread.run(Thread.java:745)
+]]>
+      </failure>
+
+          </testcase>
+            <testcase name="testAddAndEditProduct" time="31.425" classname="com.jbilling.test.SanityTestScript">
+                <failure type="java.lang.Exception"
+                  message="Element not found for provided element field"
+              >
+<![CDATA[java.lang.Exception: Element not found for provided element field
+  com.jbilling.framework.interfaces.impl.selenium.BrowserSelenium._findElement(BrowserSelenium.java:123)
+  com.jbilling.framework.interfaces.impl.selenium.BrowserSelenium.waitForElement(BrowserSelenium.java:922)
+  com.jbilling.framework.interfaces.impl.selenium.BrowserSelenium._waitForElement(BrowserSelenium.java:429)
+  com.jbilling.framework.interfaces.impl.selenium.BrowserSelenium.clickLinkText(BrowserSelenium.java:551)
+  com.jbilling.framework.interfaces.impl.selenium.BrowserSelenium.clickLinkText(BrowserSelenium.java:539)
+  com.jbilling.framework.pageclasses.ProductsPage.addProductCategory(ProductsPage.java:378)
+  com.jbilling.framework.pageclasses.ProductsPage.addProduct(ProductsPage.java:854)
+  com.jbilling.test.SanityTestScript.testAddAndEditProduct(SanityTestScript.java:745)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+  org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+  org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+  org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+  org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+  org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+  org.testng.TestRunner.privateRun(TestRunner.java:782)
+  org.testng.TestRunner.run(TestRunner.java:632)
+  org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+  org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+  org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+  org.testng.SuiteRunner.run(SuiteRunner.java:268)
+  org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+  org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+  org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+  org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+  org.testng.TestNG.run(TestNG.java:1064)
+  org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:133)
+  org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:83)
+  org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+  org.gradle.messaging.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+  org.gradle.messaging.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+  com.sun.proxy.$Proxy2.stop(Unknown Source)
+  org.gradle.api.internal.tasks.testing.worker.TestWorker.stop(TestWorker.java:120)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+  org.gradle.messaging.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:364)
+  org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:54)
+  org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:40)
+  java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+  java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  java.lang.Thread.run(Thread.java:745)
+]]>
+      </failure>
+
+          </testcase>
+            <testcase name="testAddInfoToAccountType" time="95.743" classname="com.jbilling.test.SanityTestScript">
+                <failure type="org.openqa.selenium.NoSuchElementException"
+                  message="Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//strong[contains(text(), &apos;Direct CustomerIVQ&apos;)]&quot;}
+Command duration or timeout: 30.02 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;360LP&apos;, ip: &apos;192.168.0.102&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 97035204-885b-42fa-9224-0e07b9db3483
+*** Element info: {Using=xpath, value=//strong[contains(text(), &apos;Direct CustomerIVQ&apos;)]}"
+              >
+<![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"//strong[contains(text(), 'Direct CustomerIVQ')]"}
+Command duration or timeout: 30.02 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: '360LP', ip: '192.168.0.102', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_91'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 97035204-885b-42fa-9224-0e07b9db3483
+*** Element info: {Using=xpath, value=//strong[contains(text(), 'Direct CustomerIVQ')]}
+  sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+  sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+  sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+  java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+  org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+  org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+  org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+  org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:327)
+  org.openqa.selenium.remote.RemoteWebElement.findElement(RemoteWebElement.java:198)
+  org.openqa.selenium.remote.RemoteWebElement.findElementByXPath(RemoteWebElement.java:295)
+  org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+  org.openqa.selenium.remote.RemoteWebElement.findElement(RemoteWebElement.java:194)
+  com.jbilling.framework.interfaces.impl.selenium.BrowserSelenium.clickTableCellWithText(BrowserSelenium.java:610)
+  com.jbilling.framework.interfaces.impl.selenium.BrowserSelenium.clickTableCellWithText(BrowserSelenium.java:590)
+  com.jbilling.framework.pageclasses.ConfigurationPage.selectAccountTypeName(ConfigurationPage.java:1564)
+  com.jbilling.test.SanityTestScript.testAddInfoToAccountType(SanityTestScript.java:327)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+  org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+  org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+  org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+  org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+  org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+  org.testng.TestRunner.privateRun(TestRunner.java:782)
+  org.testng.TestRunner.run(TestRunner.java:632)
+  org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+  org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+  org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+  org.testng.SuiteRunner.run(SuiteRunner.java:268)
+  org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+  org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+  org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+  org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+  org.testng.TestNG.run(TestNG.java:1064)
+  org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:133)
+  org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:83)
+  org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+  org.gradle.messaging.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+  org.gradle.messaging.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+  com.sun.proxy.$Proxy2.stop(Unknown Source)
+  org.gradle.api.internal.tasks.testing.worker.TestWorker.stop(TestWorker.java:120)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+  org.gradle.messaging.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:364)
+  org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:54)
+  org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:40)
+  java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+  java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  java.lang.Thread.run(Thread.java:745)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"//strong[contains(text(), 'Direct CustomerIVQ')]"}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: '360LP', ip: '192.168.0.102', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_91'
+Driver info: driver.version: unknown
+  <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/admin/AppData/Local/Temp/anonymous6609916864532699919webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
+  <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/admin/AppData/Local/Temp/anonymous6609916864532699919webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
+]]>
+      </failure>
+
+          </testcase>
+            <testcase name="testAssetTransitionAndAssignmentUponRemovalFromOrder" time="0.000" classname="com.jbilling.test.SanityTestScript">
+                <failure type="java.lang.Exception"
+                  message="TC 8.2 Not created by now"
+              >
+<![CDATA[java.lang.Exception: TC 8.2 Not created by now
+  com.jbilling.test.SanityTestScript.testAssetTransitionAndAssignmentUponRemovalFromOrder(SanityTestScript.java:1185)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+  org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+  org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+  org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+  org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+  org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+  org.testng.TestRunner.privateRun(TestRunner.java:782)
+  org.testng.TestRunner.run(TestRunner.java:632)
+  org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+  org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+  org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+  org.testng.SuiteRunner.run(SuiteRunner.java:268)
+  org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+  org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+  org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+  org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+  org.testng.TestNG.run(TestNG.java:1064)
+  org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:133)
+  org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:83)
+  org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+  org.gradle.messaging.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+  org.gradle.messaging.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+  com.sun.proxy.$Proxy2.stop(Unknown Source)
+  org.gradle.api.internal.tasks.testing.worker.TestWorker.stop(TestWorker.java:120)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+  org.gradle.messaging.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:364)
+  org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:54)
+  org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:40)
+  java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+  java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  java.lang.Thread.run(Thread.java:745)
+]]>
+      </failure>
+
+          </testcase>
+            <testcase name="testRunBillingProcess" time="0.000" classname="com.jbilling.test.SanityTestScript">
+                <failure type="java.lang.Exception"
+                  message="TC 11.3 Not created by now"
+              >
+<![CDATA[java.lang.Exception: TC 11.3 Not created by now
+  com.jbilling.test.SanityTestScript.testRunBillingProcess(SanityTestScript.java:1418)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+  org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+  org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+  org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+  org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+  org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+  org.testng.TestRunner.privateRun(TestRunner.java:782)
+  org.testng.TestRunner.run(TestRunner.java:632)
+  org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+  org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+  org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+  org.testng.SuiteRunner.run(SuiteRunner.java:268)
+  org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+  org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+  org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+  org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+  org.testng.TestNG.run(TestNG.java:1064)
+  org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:133)
+  org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:83)
+  org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+  org.gradle.messaging.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+  org.gradle.messaging.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+  com.sun.proxy.$Proxy2.stop(Unknown Source)
+  org.gradle.api.internal.tasks.testing.worker.TestWorker.stop(TestWorker.java:120)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+  org.gradle.messaging.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:364)
+  org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:54)
+  org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:40)
+  java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+  java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  java.lang.Thread.run(Thread.java:745)
+]]>
+      </failure>
+
+          </testcase>
+            <testcase name="testInvoiceDueAndGeneratedDatesOnInvoice" time="0.000" classname="com.jbilling.test.SanityTestScript">
+                <failure type="java.lang.Exception"
+                  message="TC 10.1.1 Not created by now"
+              >
+<![CDATA[java.lang.Exception: TC 10.1.1 Not created by now
+  com.jbilling.test.SanityTestScript.testInvoiceDueAndGeneratedDatesOnInvoice(SanityTestScript.java:1279)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+  org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+  org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+  org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+  org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+  org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+  org.testng.TestRunner.privateRun(TestRunner.java:782)
+  org.testng.TestRunner.run(TestRunner.java:632)
+  org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+  org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+  org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+  org.testng.SuiteRunner.run(SuiteRunner.java:268)
+  org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+  org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+  org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+  org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+  org.testng.TestNG.run(TestNG.java:1064)
+  org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:133)
+  org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:83)
+  org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+  org.gradle.messaging.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+  org.gradle.messaging.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+  com.sun.proxy.$Proxy2.stop(Unknown Source)
+  org.gradle.api.internal.tasks.testing.worker.TestWorker.stop(TestWorker.java:120)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+  org.gradle.messaging.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:364)
+  org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:54)
+  org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:40)
+  java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+  java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  java.lang.Thread.run(Thread.java:745)
+]]>
+      </failure>
+
+          </testcase>
+            <testcase name="testConfigurePluginPreferencesForCommission" time="95.965" classname="com.jbilling.test.SanityTestScript">
+                <failure type="java.lang.Exception"
+                  message="Element not found for provided element field"
+              >
+<![CDATA[java.lang.Exception: Element not found for provided element field
+  com.jbilling.framework.interfaces.impl.selenium.BrowserSelenium._findElement(BrowserSelenium.java:123)
+  com.jbilling.framework.interfaces.impl.selenium.BrowserSelenium.waitForElement(BrowserSelenium.java:922)
+  com.jbilling.framework.interfaces.impl.selenium.BrowserSelenium._waitForElement(BrowserSelenium.java:429)
+  com.jbilling.framework.interfaces.impl.selenium.BrowserSelenium.clickLinkText(BrowserSelenium.java:551)
+  com.jbilling.framework.interfaces.impl.selenium.BrowserSelenium.clickLinkText(BrowserSelenium.java:539)
+  com.jbilling.framework.pageclasses.ProductsPage.clickPluginGeneric(ProductsPage.java:516)
+  com.jbilling.framework.pageclasses.ProductsPage.addPlugin(ProductsPage.java:938)
+  com.jbilling.test.SanityTestScript.testConfigurePluginPreferencesForCommission(SanityTestScript.java:1766)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+  org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+  org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+  org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+  org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+  org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+  org.testng.TestRunner.privateRun(TestRunner.java:782)
+  org.testng.TestRunner.run(TestRunner.java:632)
+  org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+  org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+  org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+  org.testng.SuiteRunner.run(SuiteRunner.java:268)
+  org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+  org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+  org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+  org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+  org.testng.TestNG.run(TestNG.java:1064)
+  org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:133)
+  org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:83)
+  org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+  org.gradle.messaging.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+  org.gradle.messaging.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+  com.sun.proxy.$Proxy2.stop(Unknown Source)
+  org.gradle.api.internal.tasks.testing.worker.TestWorker.stop(TestWorker.java:120)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+  org.gradle.messaging.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:364)
+  org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:54)
+  org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:40)
+  java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+  java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  java.lang.Thread.run(Thread.java:745)
+]]>
+      </failure>
+
+          </testcase>
+            <testcase name="testInvoiceGenerationToParentOnOrderCreationInChild" time="0.000" classname="com.jbilling.test.SanityTestScript">
+                <failure type="java.lang.Exception"
+                  message="TC 10.2 Not created by now"
+              >
+<![CDATA[java.lang.Exception: TC 10.2 Not created by now
+  com.jbilling.test.SanityTestScript.testInvoiceGenerationToParentOnOrderCreationInChild(SanityTestScript.java:1295)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+  org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+  org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+  org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+  org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+  org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+  org.testng.TestRunner.privateRun(TestRunner.java:782)
+  org.testng.TestRunner.run(TestRunner.java:632)
+  org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+  org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+  org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+  org.testng.SuiteRunner.run(SuiteRunner.java:268)
+  org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+  org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+  org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+  org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+  org.testng.TestNG.run(TestNG.java:1064)
+  org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:133)
+  org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:83)
+  org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+  org.gradle.messaging.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+  org.gradle.messaging.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+  com.sun.proxy.$Proxy2.stop(Unknown Source)
+  org.gradle.api.internal.tasks.testing.worker.TestWorker.stop(TestWorker.java:120)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+  org.gradle.messaging.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:364)
+  org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:54)
+  org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:40)
+  java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+  java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  java.lang.Thread.run(Thread.java:745)
+]]>
+      </failure>
+
+          </testcase>
+            <testcase name="testUsageAndReviewReport" time="0.000" classname="com.jbilling.test.SanityTestScript">
+                <failure type="java.lang.Exception"
+                  message="TC 11.2 Not created by now"
+              >
+<![CDATA[java.lang.Exception: TC 11.2 Not created by now
+  com.jbilling.test.SanityTestScript.testUsageAndReviewReport(SanityTestScript.java:1403)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+  org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+  org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+  org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+  org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+  org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+  org.testng.TestRunner.privateRun(TestRunner.java:782)
+  org.testng.TestRunner.run(TestRunner.java:632)
+  org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+  org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+  org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+  org.testng.SuiteRunner.run(SuiteRunner.java:268)
+  org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+  org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+  org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+  org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+  org.testng.TestNG.run(TestNG.java:1064)
+  org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:133)
+  org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:83)
+  org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+  org.gradle.messaging.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+  org.gradle.messaging.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+  com.sun.proxy.$Proxy2.stop(Unknown Source)
+  org.gradle.api.internal.tasks.testing.worker.TestWorker.stop(TestWorker.java:120)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+  org.gradle.messaging.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:364)
+  org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:54)
+  org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:40)
+  java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+  java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  java.lang.Thread.run(Thread.java:745)
+]]>
+      </failure>
+
+          </testcase>
+            <testcase name="testUserCanPayInvoiceOnGeneratedInvoice" time="31.340" classname="com.jbilling.test.SanityTestScript">
+                <failure type="java.lang.Exception"
+                  message="Element not found for provided element field"
+              >
+<![CDATA[java.lang.Exception: Element not found for provided element field
+  com.jbilling.framework.interfaces.impl.selenium.BrowserSelenium._findElement(BrowserSelenium.java:123)
+  com.jbilling.framework.interfaces.impl.selenium.BrowserSelenium.waitForElement(BrowserSelenium.java:922)
+  com.jbilling.framework.interfaces.impl.selenium.BrowserSelenium._waitForElement(BrowserSelenium.java:429)
+  com.jbilling.framework.interfaces.impl.selenium.BrowserSelenium._getTable(BrowserSelenium.java:264)
+  com.jbilling.framework.interfaces.impl.selenium.BrowserSelenium.clickRowWithText(BrowserSelenium.java:570)
+  com.jbilling.framework.pageclasses.InvoicePage.selectRowItem(InvoicePage.java:119)
+  com.jbilling.framework.pageclasses.InvoicePage.payInvoice(InvoicePage.java:286)
+  com.jbilling.test.SanityTestScript.testUserCanPayInvoiceOnGeneratedInvoice(SanityTestScript.java:1541)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+  org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+  org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+  org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+  org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+  org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+  org.testng.TestRunner.privateRun(TestRunner.java:782)
+  org.testng.TestRunner.run(TestRunner.java:632)
+  org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+  org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+  org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+  org.testng.SuiteRunner.run(SuiteRunner.java:268)
+  org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+  org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+  org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+  org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+  org.testng.TestNG.run(TestNG.java:1064)
+  org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:133)
+  org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:83)
+  org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+  org.gradle.messaging.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+  org.gradle.messaging.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+  com.sun.proxy.$Proxy2.stop(Unknown Source)
+  org.gradle.api.internal.tasks.testing.worker.TestWorker.stop(TestWorker.java:120)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+  org.gradle.messaging.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:364)
+  org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:54)
+  org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:40)
+  java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+  java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  java.lang.Thread.run(Thread.java:745)
+]]>
+      </failure>
+
+          </testcase>
+            <testcase name="testRootCompanyImpersonationOnChildCompany" time="30.600" classname="com.jbilling.test.SanityTestScript">
+                <failure type="java.lang.Exception"
+                  message="Element not found for provided element field"
+              >
+<![CDATA[java.lang.Exception: Element not found for provided element field
+  com.jbilling.framework.interfaces.impl.selenium.BrowserSelenium._findElement(BrowserSelenium.java:123)
+  com.jbilling.framework.interfaces.impl.selenium.BrowserSelenium.waitForElement(BrowserSelenium.java:922)
+  com.jbilling.framework.interfaces.impl.selenium.BrowserSelenium._waitForElement(BrowserSelenium.java:429)
+  com.jbilling.framework.interfaces.impl.selenium.BrowserSelenium.selectDropDown(BrowserSelenium.java:775)
+  com.jbilling.framework.pageclasses.NavigatorPage.switchToChildCompany(NavigatorPage.java:208)
+  com.jbilling.test.SanityTestScript.testRootCompanyImpersonationOnChildCompany(SanityTestScript.java:924)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+  org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+  org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+  org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+  org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+  org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+  org.testng.TestRunner.privateRun(TestRunner.java:782)
+  org.testng.TestRunner.run(TestRunner.java:632)
+  org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+  org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+  org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+  org.testng.SuiteRunner.run(SuiteRunner.java:268)
+  org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+  org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+  org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+  org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+  org.testng.TestNG.run(TestNG.java:1064)
+  org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:133)
+  org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:83)
+  org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+  org.gradle.messaging.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+  org.gradle.messaging.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+  com.sun.proxy.$Proxy2.stop(Unknown Source)
+  org.gradle.api.internal.tasks.testing.worker.TestWorker.stop(TestWorker.java:120)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+  org.gradle.messaging.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:364)
+  org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:54)
+  org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:40)
+  java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+  java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  java.lang.Thread.run(Thread.java:745)
+]]>
+      </failure>
+
+          </testcase>
+            <testcase name="testCreationOfChildCompany" time="38.052" classname="com.jbilling.test.SanityTestScript">
+                <failure type="java.lang.Exception"
+                  message="Element not found for provided element field"
+              >
+<![CDATA[java.lang.Exception: Element not found for provided element field
+  com.jbilling.framework.interfaces.impl.selenium.BrowserSelenium._findElement(BrowserSelenium.java:123)
+  com.jbilling.framework.interfaces.impl.selenium.BrowserSelenium.waitForElement(BrowserSelenium.java:922)
+  com.jbilling.framework.interfaces.impl.selenium.BrowserSelenium._waitForElement(BrowserSelenium.java:429)
+  com.jbilling.framework.interfaces.impl.selenium.BrowserSelenium.getText(BrowserSelenium.java:656)
+  com.jbilling.framework.pageclasses.ConfigurationPage.getNewCompanyCredentials(ConfigurationPage.java:1456)
+  com.jbilling.framework.pageclasses.ConfigurationPage.extractUserNameFromCompanyCreationMessage(ConfigurationPage.java:1439)
+  com.jbilling.test.SanityTestScript.testCreationOfChildCompany(SanityTestScript.java:145)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+  org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+  org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+  org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+  org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+  org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+  org.testng.TestRunner.privateRun(TestRunner.java:782)
+  org.testng.TestRunner.run(TestRunner.java:632)
+  org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+  org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+  org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+  org.testng.SuiteRunner.run(SuiteRunner.java:268)
+  org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+  org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+  org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+  org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+  org.testng.TestNG.run(TestNG.java:1064)
+  org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:133)
+  org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:83)
+  org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+  org.gradle.messaging.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+  org.gradle.messaging.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+  com.sun.proxy.$Proxy2.stop(Unknown Source)
+  org.gradle.api.internal.tasks.testing.worker.TestWorker.stop(TestWorker.java:120)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+  org.gradle.messaging.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:364)
+  org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:54)
+  org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:40)
+  java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+  java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  java.lang.Thread.run(Thread.java:745)
+]]>
+      </failure>
+
+          </testcase>
+            <testcase name="testCreateProductWithDependencyOnOther" time="37.419" classname="com.jbilling.test.SanityTestScript">
+                <failure type="java.lang.Exception"
+                  message="Element not found for provided element field"
+              >
+<![CDATA[java.lang.Exception: Element not found for provided element field
+  com.jbilling.framework.interfaces.impl.selenium.BrowserSelenium._findElement(BrowserSelenium.java:123)
+  com.jbilling.framework.interfaces.impl.selenium.BrowserSelenium.waitForElement(BrowserSelenium.java:922)
+  com.jbilling.framework.interfaces.impl.selenium.BrowserSelenium._waitForElement(BrowserSelenium.java:429)
+  com.jbilling.framework.interfaces.impl.selenium.BrowserSelenium.clickLinkText(BrowserSelenium.java:551)
+  com.jbilling.framework.interfaces.impl.selenium.BrowserSelenium.clickLinkText(BrowserSelenium.java:539)
+  com.jbilling.framework.pageclasses.ProductsPage.addProductCategory(ProductsPage.java:378)
+  com.jbilling.framework.pageclasses.ProductsPage.addProductOnDependency(ProductsPage.java:1012)
+  com.jbilling.test.SanityTestScript.testCreateProductWithDependencyOnOther(SanityTestScript.java:1624)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+  org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+  org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+  org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+  org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+  org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+  org.testng.TestRunner.privateRun(TestRunner.java:782)
+  org.testng.TestRunner.run(TestRunner.java:632)
+  org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+  org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+  org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+  org.testng.SuiteRunner.run(SuiteRunner.java:268)
+  org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+  org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+  org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+  org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+  org.testng.TestNG.run(TestNG.java:1064)
+  org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:133)
+  org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:83)
+  org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+  org.gradle.messaging.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+  org.gradle.messaging.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+  com.sun.proxy.$Proxy2.stop(Unknown Source)
+  org.gradle.api.internal.tasks.testing.worker.TestWorker.stop(TestWorker.java:120)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+  org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+  org.gradle.messaging.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:364)
+  org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:54)
+  org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:40)
+  java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+  java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  java.lang.Thread.run(Thread.java:745)
+]]>
+      </failure>
+
+          </testcase>
+  
+            <testcase name="testCreateParentChildRelationInCustomersTab" time="0.0" classname="com.jbilling.test.SanityTestScript">
+          <skipped />
+    </testcase>
+            <testcase name="testVerifyOrderProvisioningTaskTriggersEvent" time="0.0" classname="com.jbilling.test.SanityTestScript">
+          <skipped />
+    </testcase>
+            <testcase name="testGeneratedCommissionPostInvoiceGeneration" time="0.0" classname="com.jbilling.test.SanityTestScript">
+          <skipped />
+    </testcase>
+            <testcase name="testOrderProductWithDependencyOnOther" time="0.0" classname="com.jbilling.test.SanityTestScript">
+          <skipped />
+    </testcase>
+            <testcase name="testCreateAndEditPlan" time="0.0" classname="com.jbilling.test.SanityTestScript">
+          <skipped />
+    </testcase>
+            <testcase name="testReportForInvoice" time="0.0" classname="com.jbilling.test.SanityTestScript">
+          <skipped />
+    </testcase>
+            <testcase name="testChangeOrderFeature" time="0.0" classname="com.jbilling.test.SanityTestScript">
+          <skipped />
+    </testcase>
+            <testcase name="testCreateOrderWithDifferentTypedandPeriods" time="0.0" classname="com.jbilling.test.SanityTestScript">
+          <skipped />
+    </testcase>
+            <testcase name="testCreateDiscount" time="0.0" classname="com.jbilling.test.SanityTestScript">
+          <skipped />
+    </testcase>
+  
+            <testcase name="testAddAccountType" time="35.742" classname="com.jbilling.test.SanityTestScript" />
+                <testcase name="testConfigurePaymentMethod" time="95.674" classname="com.jbilling.test.SanityTestScript" />
+                <testcase name="testAttachPaymentType" time="94.821" classname="com.jbilling.test.SanityTestScript" />
+                <testcase name="testCreateCategoryWithAssetManagement" time="12.460" classname="com.jbilling.test.SanityTestScript" />
+                <testcase name="testLoginIntoCompany" time="7.184" classname="com.jbilling.test.SanityTestScript" />
+                <testcase name="testCreateProductCategory" time="14.393" classname="com.jbilling.test.SanityTestScript" />
+                <testcase name="testCreateProductWithCommissions" time="29.340" classname="com.jbilling.test.SanityTestScript" />
+                <testcase name="testCreationOfChildCompanyInvoiceAsReseller" time="0.000" classname="com.jbilling.test.SanityTestScript" />
+                <testcase name="testConfigureCollection" time="83.970" classname="com.jbilling.test.SanityTestScript" />
+                <testcase name="testCustomerStatusChangeAsCollection" time="384.688" classname="com.jbilling.test.SanityTestScript" />
+                <testcase name="testCreateNewCompanyUsingCopyCompany" time="112.749" classname="com.jbilling.test.SanityTestScript" />
+                <testcase name="testConfigureOrderPeriod" time="84.829" classname="com.jbilling.test.SanityTestScript" />
+      
+</testsuite>

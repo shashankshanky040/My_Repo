@@ -1,0 +1,163 @@
+package com.jbilling.framework.pageclasses;
+
+import com.jbilling.framework.globals.GlobalController;
+import com.jbilling.framework.globals.Logger;
+import com.jbilling.framework.interfaces.ElementField;
+import com.jbilling.framework.interfaces.LocateBy;
+
+public class PaymentsPage {
+	// Initialize private logger object
+	private static Logger logger = new Logger().getLogger(Thread.currentThread().getStackTrace()[1].getClassName());
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//input[@id='refund_cb']")
+	private ElementField CHK_RefundPayment;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//select[@id='payment.currencyId']")
+	private ElementField Dropdown_Currency;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//a[@onclick='addPaymentInstrument()']")
+	private ElementField LT_AddInstrument;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//a[@class='submit cancel']")
+	private ElementField LT_Cancel;
+
+	@LocateBy(xpath = "//button/span[text()='Yes']")
+	private ElementField LT_CONFIRM_YES;
+
+	@LocateBy(xpath = "//span[text()='Delete']")
+	private ElementField LT_DELETE;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//span[text()='Make Payment']")
+	private ElementField LT_MakePayment;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//input[@id='processNow']")
+	private ElementField LT_ProcesPayment;
+
+	@LocateBy(xpath = "//span[text()='Review Payment']")
+	private ElementField LT_ReviewPayment;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//div[@class='heading']/strong")
+	private ElementField PageHeader_NewPayment;
+
+	@LocateBy(xpath = "//table[@id='orders']//strong[contains(text(),'customera')]")
+	private ElementField TAB_ORDER;
+
+	@LocateBy(xpath = "//table[@id='payments']/tbody//strong[contains(text(),'Cutomer_B')]")
+	private ElementField TAB_PAYMENT;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//label[text()='cc.cardholder.name']/following::div/input")
+	private ElementField TB_CardholderName;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//label[text()='cc.number']/following::div/input")
+	private ElementField TB_CCNumber;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//label[text()='cc.expiry.date']/following::div/input")
+	private ElementField TB_ExpiryDate;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//input[@id='payment_amountAsDecimal']")
+	private ElementField TB_InputID;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//input[@id='payment.paymentDate']")
+	private ElementField TB_PaymentDate;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//select[@id='paymentMethod_0.paymentMethodTypeId']")
+	private ElementField TB_PaymentMethod;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//a[@id='payment.paymentNotes']")
+	private ElementField TB_PaymentNote;
+
+	@SuppressWarnings("unused")
+	@LocateBy(xpath = "//input[@id='paymentMethod_0.processingOrder']")
+	private ElementField TB_ProcessingOrder;
+
+	@LocateBy(xpath = "//table[@id='payments']/tbody/tr/td/a/strong")
+	private ElementField TAB_LIST_CUSTOMER_NAME;
+
+	/**
+	 * This method will click on Delete Button
+	 * 
+	 * @throws Exception
+	 */
+	PaymentsPage clickConfirmYes() throws Exception {
+		PaymentsPage.logger.enterMethod();
+		GlobalController.brw.clickLinkText(this.LT_CONFIRM_YES);
+
+		PaymentsPage.logger.exitMethod();
+		return GlobalController.brw.initElements(PaymentsPage.class);
+	}
+
+	/**
+	 * This method will click on Delete Button
+	 * 
+	 * @throws Exception
+	 */
+	PaymentsPage clickDelete() throws Exception {
+		PaymentsPage.logger.enterMethod();
+
+		GlobalController.brw.clickLinkText(this.LT_DELETE);
+
+		PaymentsPage.logger.exitMethod();
+		return GlobalController.brw.initElements(PaymentsPage.class);
+	}
+
+	public OrdersPage deleteOrders() throws Exception {
+		this.selectSuccessfulOrders();
+		this.clickDelete();
+		this.clickConfirmYes();
+		return GlobalController.brw.initElements(OrdersPage.class);
+	}
+
+	public PaymentsPage deletePayment() throws Exception {
+		this.selectSuccessfulPayment();
+		this.clickDelete();
+		// this.clickConfirmYes();
+		return GlobalController.brw.initElements(PaymentsPage.class);
+	}
+
+	/**
+	 * This method will click on customer
+	 * 
+	 * @throws Exception
+	 */
+	public PaymentsPage selectcustomer(String user) throws Exception {
+		GlobalController.brw.selectListItem(this.TAB_LIST_CUSTOMER_NAME, user);
+		return GlobalController.brw.initElements(PaymentsPage.class);
+	}
+
+	public boolean isReviewPaymentButtonAppeared() throws Exception {
+		PaymentsPage.logger.enterMethod();
+		boolean isLoaded = GlobalController.brw.isElementPresent(this.LT_ReviewPayment);
+		PaymentsPage.logger.exitMethod();
+		return isLoaded;
+	}
+
+	/**
+	 * This method will select Successful payment
+	 */
+	OrdersPage selectSuccessfulOrders() throws Exception {
+		GlobalController.brw.clickLinkText(this.TAB_ORDER);
+		return GlobalController.brw.initElements(OrdersPage.class);
+	}
+
+	/**
+	 * This method will select Successful payment
+	 */
+	PaymentsPage selectSuccessfulPayment() throws Exception {
+		GlobalController.brw.clickLinkText(this.TAB_LIST_CUSTOMER_NAME);
+		return GlobalController.brw.initElements(PaymentsPage.class);
+	}
+}

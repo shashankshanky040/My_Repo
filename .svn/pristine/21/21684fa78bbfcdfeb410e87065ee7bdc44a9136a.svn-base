@@ -1,0 +1,38 @@
+<h2>Methods run, sorted chronologically</h2><h3>&gt;&gt; means before, &lt;&lt; means after</h3><p/><br/><em>jbilling_gradle by groups</em><p/><small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table border="1">
+<tr><th>Time</th><th>Delta (ms)</th><th>Suite<br>configuration</th><th>Test<br>configuration</th><th>Class<br>configuration</th><th>Groups<br>configuration</th><th>Method<br>configuration</th><th>Test<br>method</th><th>Thread</th><th>Instances</th></tr>
+<tr bgcolor="70a1bf">  <td>16/07/07 18:36:42</td>   <td>0</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="&gt;&gt;BrowserApp.Starter()[pri:0, instance:com.jbilling.test.VerifyUserAbleToPrepareDataForAllSections@74439682]">&gt;&gt;Starter</td> 
+<td>&nbsp;</td><td>&nbsp;</td>  <td>main@1762794433</td>   <td></td> </tr>
+<tr bgcolor="bc778b">  <td>16/07/07 18:36:55</td>   <td>13784</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="VerifyUserAbleToPrepareDataForAllSections.dataPreprationForAllSections()[pri:0, instance:com.jbilling.test.VerifyUserAbleToPrepareDataForAllSections@74439682]">dataPreprationForAllSections</td> 
+  <td>main@1762794433</td>   <td></td> </tr>
+<tr bgcolor="70a1bf">  <td>16/07/07 18:38:39</td>   <td>117659</td> <td>&nbsp;</td><td>&nbsp;</td><td title="&lt;&lt;BrowserApp.tearDownPrintRunTimeValues()[pri:0, instance:com.jbilling.test.VerifyUserAbleToPrepareDataForAllSections@74439682]">&lt;&lt;tearDownPrintRunTimeValues</td> 
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>  <td>main@1762794433</td>   <td></td> </tr>
+<tr bgcolor="91cfec">  <td>16/07/07 18:38:40</td>   <td>118158</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="VerifyPluginsNotVisibleWithoutPermissions.editViewPluginPermissionForUser()[pri:0, instance:com.jbilling.test.VerifyPluginsNotVisibleWithoutPermissions@14e6c70]">editViewPluginPermissionForUser</td> 
+  <td>main@1762794433</td>   <td></td> </tr>
+<tr bgcolor="70a1bf">  <td>16/07/07 18:38:40</td>   <td>118158</td> <td>&nbsp;</td><td>&nbsp;</td><td title="&lt;&lt;BrowserApp.tearDownPrintRunTimeValues()[pri:0, instance:com.jbilling.test.VerifyPluginsNotVisibleWithoutPermissions@14e6c70]">&lt;&lt;tearDownPrintRunTimeValues</td> 
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>  <td>main@1762794433</td>   <td></td> </tr>
+<tr bgcolor="a9919e">  <td>16/07/07 18:38:40</td>   <td>118274</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="VerifyUserAbleGetMandatoryFieldMessageForAccountType.verifyMandatoryFieldMessageForAccountType()[pri:0, instance:com.jbilling.test.VerifyUserAbleGetMandatoryFieldMessageForAccountType@43b12dbb]">verifyMandatoryFieldMessageForAccountType</td> 
+  <td>main@1762794433</td>   <td></td> </tr>
+<tr bgcolor="70a1bf">  <td>16/07/07 18:38:40</td>   <td>118280</td> <td>&nbsp;</td><td>&nbsp;</td><td title="&lt;&lt;BrowserApp.tearDownPrintRunTimeValues()[pri:0, instance:com.jbilling.test.VerifyUserAbleGetMandatoryFieldMessageForAccountType@43b12dbb]">&lt;&lt;tearDownPrintRunTimeValues</td> 
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>  <td>main@1762794433</td>   <td></td> </tr>
+<tr bgcolor="f780d5">  <td>16/07/07 18:38:40</td>   <td>118376</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="VerifyUserAbleToEditCompanyDetails.editCompanyDetails()[pri:0, instance:com.jbilling.test.VerifyUserAbleToEditCompanyDetails@253172b5]">editCompanyDetails</td> 
+  <td>main@1762794433</td>   <td></td> </tr>
+<tr bgcolor="70a1bf">  <td>16/07/07 18:38:40</td>   <td>118386</td> <td>&nbsp;</td><td>&nbsp;</td><td title="&lt;&lt;BrowserApp.tearDownPrintRunTimeValues()[pri:0, instance:com.jbilling.test.VerifyUserAbleToEditCompanyDetails@253172b5]">&lt;&lt;tearDownPrintRunTimeValues</td> 
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>  <td>main@1762794433</td>   <td></td> </tr>
+<tr bgcolor="8c9f98">  <td>16/07/07 18:38:40</td>   <td>118466</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="VerifyUserAbleToLoginUsingValidCred.loginWithInvalidCredentials()[pri:0, instance:com.jbilling.test.VerifyUserAbleToLoginUsingValidCred@5161dc26]">loginWithInvalidCredentials</td> 
+  <td>main@1762794433</td>   <td></td> </tr>
+<tr bgcolor="70a1bf">  <td>16/07/07 18:38:40</td>   <td>118473</td> <td>&nbsp;</td><td>&nbsp;</td><td title="&lt;&lt;BrowserApp.tearDownPrintRunTimeValues()[pri:0, instance:com.jbilling.test.VerifyUserAbleToLoginUsingValidCred@5161dc26]">&lt;&lt;tearDownPrintRunTimeValues</td> 
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>  <td>main@1762794433</td>   <td></td> </tr>
+<tr bgcolor="8977dd">  <td>16/07/07 18:38:40</td>   <td>118560</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="VerifyUserAbleToAddPaymentMethod.addPaymentMethod()[pri:0, instance:com.jbilling.test.VerifyUserAbleToAddPaymentMethod@6fbc6c87]">addPaymentMethod</td> 
+  <td>main@1762794433</td>   <td></td> </tr>
+<tr bgcolor="70a1bf">  <td>16/07/07 18:38:40</td>   <td>118568</td> <td>&nbsp;</td><td>&nbsp;</td><td title="&lt;&lt;BrowserApp.tearDownPrintRunTimeValues()[pri:0, instance:com.jbilling.test.VerifyUserAbleToAddPaymentMethod@6fbc6c87]">&lt;&lt;tearDownPrintRunTimeValues</td> 
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>  <td>main@1762794433</td>   <td></td> </tr>
+<tr bgcolor="ddc4d1">  <td>16/07/07 18:38:40</td>   <td>118645</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="VerifyUserAbleToEditDeletePaymentMethod.editDeletePaymentMethod()[pri:0, instance:com.jbilling.test.VerifyUserAbleToEditDeletePaymentMethod@3b794c60]">editDeletePaymentMethod</td> 
+  <td>main@1762794433</td>   <td></td> </tr>
+<tr bgcolor="70a1bf">  <td>16/07/07 18:38:40</td>   <td>118653</td> <td>&nbsp;</td><td>&nbsp;</td><td title="&lt;&lt;BrowserApp.tearDownPrintRunTimeValues()[pri:0, instance:com.jbilling.test.VerifyUserAbleToEditDeletePaymentMethod@3b794c60]">&lt;&lt;tearDownPrintRunTimeValues</td> 
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>  <td>main@1762794433</td>   <td></td> </tr>
+<tr bgcolor="a49572">  <td>16/07/07 18:38:40</td>   <td>118730</td> <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td title="VerifyUserAbleToCreatePaymentWithAllAccount.createPaymentMethodWithAllAccountType()[pri:0, instance:com.jbilling.test.VerifyUserAbleToCreatePaymentWithAllAccount@18855121]">createPaymentMethodWithAllAccountType</td> 
+  <td>main@1762794433</td>   <td></td> </tr>
+<tr bgcolor="70a1bf">  <td>16/07/07 18:38:40</td>   <td>118730</td> <td>&nbsp;</td><td>&nbsp;</td><td title="&lt;&lt;BrowserApp.tearDownPrintRunTimeValues()[pri:0, instance:com.jbilling.test.VerifyUserAbleToCreatePaymentWithAllAccount@18855121]">&lt;&lt;tearDownPrintRunTimeValues</td> 
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>  <td>main@1762794433</td>   <td></td> </tr>
+</table>

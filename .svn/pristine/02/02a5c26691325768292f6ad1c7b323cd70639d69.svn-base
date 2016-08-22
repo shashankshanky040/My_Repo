@@ -1,0 +1,6 @@
+Test Case Id, Test Case Method Name, Test Case Objective, RESULT, Error Message
+11047249|testCreateProductCategory|Test Case 3.1 : Verify user is able to create/edit a Category 'New Test Category' is only available to Root Company (jBilling).|PASS
+11047252|testCreateProductWithAsset|Test Case 3.4 : Verify that a user can create a product with an asset|PASS
+10909925|testCreateProductWithDependencyOnOther|Test Case 15.1 :  Verify that Products with dependencies on other products can be created.|FAIL|Element not found in the cache - perhaps the page has changed since it was looked up
+Command duration or timeout: 30.09 seconds
+For documentation on this error

@@ -1,0 +1,259 @@
+package com.jbilling.test;
+
+import java.util.HashMap;
+
+import org.testng.ITestResult;
+import org.testng.Reporter;
+import org.testng.annotations.Test;
+
+import com.jbilling.framework.globals.GlobalEnumerations.TextComparators;
+import com.jbilling.framework.globals.Logger;
+import com.jbilling.framework.pageclasses.GlobalEnumsPage.AddPlanField;
+import com.jbilling.framework.pageclasses.GlobalEnumsPage.AddProductField;
+import com.jbilling.framework.pageclasses.GlobalEnumsPage.PageConfigurationItems;
+import com.jbilling.framework.utilities.browserutils.BrowserApp;
+import com.jbilling.framework.utilities.xmlutils.ConfigPropertiesReader;
+
+public class VerifyUserIsAbleToAddlDependenciesOnProduct extends BrowserApp {
+
+	private static Logger logger = new Logger().getLogger(Thread.currentThread().getStackTrace()[1].getClassName());
+	ConfigPropertiesReader pr = new ConfigPropertiesReader();
+	String graceId = null;
+	ITestResult result;
+	static String category = "";
+	static String description2 = "";
+
+	HashMap<String, String> runTimeVariables = new HashMap<String, String>();
+
+	/**
+	 * Current Application Page Stack || LoginPage--> loginPage;
+	 * NavigatorPage--> navPage; HomePage--> homePage; ConfigurationPage-->
+	 * confPage; AgentsPage--> agentsPage; CustomersPage--> customerPage;
+	 * ProductsPage--> productsPage; PlansPage--> plansPage; OrdersPage-->
+	 * ordersPage; InvoicePage--> invoicePage; ReportsPage--> reportsPage;
+	 * DiscountsPage--> discountsPage; FiltersPage--> filtersPage;
+	 * PaymentsPage--> paymentsPage; MessagesPage--> msgsPage;
+	 * 
+	 * @author Aishwarya Dwivedi
+	 * @since 1.0
+	 * @version 1.0
+	 */
+
+	@Test(description = "TC 43 : Verify user is able to add mandatory and optional dependencies on product.")
+	public void tc_43_verifyUserAbleToAddDependencies() throws Exception {
+
+		VerifyUserIsAbleToAddlDependenciesOnProduct.logger.enterMethod();
+		Reporter.log("<br> Test Begins");
+
+		this.result = Reporter.getCurrentTestResult();
+		this.result.setAttribute("tcid", "");
+
+		// Login Into Application And Navigate to Products Tab
+		this.productsPage = this.navPage.navigateToProductsPage();
+		VerifyUserIsAbleToAddlDependenciesOnProduct.logger.debug("Login Into Application And Navigate to Products Tab");
+
+		// Initiate And Complete The Process To Create A Product Category
+		VerifyUserIsAbleToAddlDependenciesOnProduct.category = this.productsPage.addCategory("productCategory", "pcat");
+		this.runTimeVariables.put("TC_43_CATEGORY_NAME", VerifyUserIsAbleToAddlDependenciesOnProduct.category);
+		VerifyUserIsAbleToAddlDependenciesOnProduct.logger.debug("Create A Product Category");
+
+		// Validate Saved New Product successfully
+		this.confPage = this.confPage.validateCategoriesSavedTestData(this.runTimeVariables.get("TC_43_CATEGORY_NAME"));
+		VerifyUserIsAbleToAddlDependenciesOnProduct.logger.debug("Validate Saved New Product successfully");
+
+		// Initiate And Complete The Process To Add The Product
+		String description = this.productsPage.addProduct(AddProductField.GRADUATED, "addProductOneToAddDependencies", "ap");
+		VerifyUserIsAbleToAddlDependenciesOnProduct.logger.debug("Add The Product");
+
+		// Get Product ID
+		String id = this.productsPage.getIDOfAddedProduct();
+		VerifyUserIsAbleToAddlDependenciesOnProduct.logger.debug("Get Product ID");
+
+		// Navigate to Products Tab
+		this.productsPage = this.navPage.navigateToProductsPage();
+		VerifyUserIsAbleToAddlDependenciesOnProduct.logger.debug("Navigate to Products Tab");
+
+		// Initiate And Complete The Process To Create Second Product Category
+		String secondCategory = this.productsPage.addCategory("NewProductCategoryData", "pcd");
+		this.runTimeVariables.put("TC_43.1_CATEGORY_NAME", secondCategory);
+		VerifyUserIsAbleToAddlDependenciesOnProduct.logger.debug("Create Second Product Category");
+
+		// Validate Saved New Product successfully
+		this.confPage = this.confPage.validateCategoriesSavedTestData(this.runTimeVariables.get("TC_43.1_CATEGORY_NAME"));
+		VerifyUserIsAbleToAddlDependenciesOnProduct.logger.debug("Validate Saved New Product successfully");
+
+		// Initiate And Complete The Process To Add Different Product From
+		// Existing
+		String description1 = this.productsPage.addProduct(AddProductField.FLAT, "addProductTwoToAddDependencies", "ap");
+		VerifyUserIsAbleToAddlDependenciesOnProduct.logger.debug("Add Different Product From Existing");
+
+		// Get Product ID
+		String id1 = this.productsPage.getIDOfAddedProduct();
+		VerifyUserIsAbleToAddlDependenciesOnProduct.logger.debug("Get Product ID");
+
+		// Navigate to Products Tab
+		this.productsPage = this.navPage.navigateToProductsPage();
+		VerifyUserIsAbleToAddlDependenciesOnProduct.logger.debug("Navigate to Products Tab");
+
+		// Initiate And Complete The Process To Add Different Product From
+		// Existing
+		VerifyUserIsAbleToAddlDependenciesOnProduct.description2 = this.productsPage.addProduct(AddProductField.FLAT,
+				"addProductThreeToAddDependencies", "ap");
+		VerifyUserIsAbleToAddlDependenciesOnProduct.logger.debug("Add Different Product From Existing");
+
+		// Get Product ID
+		String id2 = this.productsPage.getIDOfAddedProduct();
+		VerifyUserIsAbleToAddlDependenciesOnProduct.logger.debug("Get Product ID");
+
+		// Navigate to Products Tab
+		this.productsPage = this.navPage.navigateToProductsPage();
+		VerifyUserIsAbleToAddlDependenciesOnProduct.logger.debug("Navigate to Products Tab");
+
+		String productToSelect1 = id1 + " : " + description1;
+		String productToSelect = id + " : " + description;
+
+		// Edit Created Product and Add dependency
+		this.productsPage = this.productsPage.editDependencyInProduct("editFirstDependency", "efd", secondCategory,
+				VerifyUserIsAbleToAddlDependenciesOnProduct.description2, secondCategory, productToSelect1,
+				VerifyUserIsAbleToAddlDependenciesOnProduct.category, productToSelect);
+		VerifyUserIsAbleToAddlDependenciesOnProduct.logger.debug("Edit Created Product And Add Dependency");
+
+		// Verify Added Dependency
+		this.productsPage.validateDependencySavedTestData(description1);
+		this.productsPage.validateDependencySavedTestData(description);
+		VerifyUserIsAbleToAddlDependenciesOnProduct.logger.debug("Verified that dependencies are added in the product");
+
+		// The Product from second category on which dependency is applied
+		// should not appear in drop down.
+		if (this.productsPage.isProductPresentInTheDropdownForDependency(secondCategory, productToSelect1) == true) {
+			throw new Exception("Test 43 failed as Product on which dependency is applied is still Present ");
+		}
+		VerifyUserIsAbleToAddlDependenciesOnProduct.logger
+				.debug("Verified that Product on which Dependency applied is not present anymore");
+
+		// The Product from first category on which dependency is applied should
+		// not appear in drop down.
+		if (this.productsPage.isProductPresentInTheDropdownForDependency(VerifyUserIsAbleToAddlDependenciesOnProduct.category,
+				productToSelect) == true) {
+			throw new Exception("Test 43 failed as Product on which dependency is applied is still Present ");
+		}
+		VerifyUserIsAbleToAddlDependenciesOnProduct.logger
+				.debug("Verified that Product on which Dependency applied is not present anymore");
+
+		Reporter.log("<br> Test Passed");
+		VerifyUserIsAbleToAddlDependenciesOnProduct.logger.exitMethod();
+	}
+
+	@Test(description = "TC 62.1 : Create/Edit Plans in System")
+	public void tc_62_1_addOrderPeriods() throws Exception {
+
+		VerifyUserIsAbleToAddlDependenciesOnProduct.logger.enterMethod();
+		Reporter.log("<br> Test Begins");
+
+		this.result = Reporter.getCurrentTestResult();
+		this.result.setAttribute("tcid", "");
+
+		// Login Into Application And Navigate to Configuration Tab
+		this.confPage = this.navPage.navigateToConfigurationPage();
+		VerifyUserIsAbleToAddlDependenciesOnProduct.logger.debug("Login Into Application And Navigate to Configuration Page");
+
+		// Select Configuration
+		this.confPage = this.confPage.selectConfiguration(PageConfigurationItems.OrderPeriods);
+		VerifyUserIsAbleToAddlDependenciesOnProduct.logger.debug("Select Configuration");
+
+		// Configuring First Order period
+		String orderPeriod1 = this.confPage.createNewOrderPeriod("yearlyOrderPeriod", "op");
+		this.runTimeVariables.put("TC_62.1_ORDER_PERIOD1", orderPeriod1);
+		VerifyUserIsAbleToAddlDependenciesOnProduct.logger.debug("Configuring First Order period");
+
+		// Verify Text:Order Period Is Created Successfully
+		this.msgsPage = this.msgsPage.verifyDisplayedMessageText("Order Period", "created successfully", TextComparators.contains);
+		VerifyUserIsAbleToAddlDependenciesOnProduct.logger.debug("Verify Text:Order Period Is Created Successfully");
+
+		Reporter.log("<br> Test Passed");
+		VerifyUserIsAbleToAddlDependenciesOnProduct.logger.exitMethod();
+	}
+
+	@Test(description = "TC 62.2 : Create/Edit Plans in System", dependsOnMethods = { "tc_43_verifyUserAbleToAddDependencies" })
+	public void tc_62_2_addPlans() throws Exception {
+
+		VerifyUserIsAbleToAddlDependenciesOnProduct.logger.enterMethod();
+		Reporter.log("<br> Test Begins");
+
+		this.result = Reporter.getCurrentTestResult();
+		this.result.setAttribute("tcid", "");
+
+		// Login Into Application And Navigate to Plans Tab
+		this.plansPage = this.navPage.navigateToPlanPage();
+		VerifyUserIsAbleToAddlDependenciesOnProduct.logger.debug("Login Into Application And Navigate to Plans Page");
+
+		// Initiate And Complete The Process To Add Plans
+		this.plansPage = this.plansPage.addPlan(AddPlanField.ALL, VerifyUserIsAbleToAddlDependenciesOnProduct.category,
+				VerifyUserIsAbleToAddlDependenciesOnProduct.description2, "addplan62.2", "ap");
+		VerifyUserIsAbleToAddlDependenciesOnProduct.logger.debug("Processing To Add Plans");
+
+		// Verify Text:Saved new plan Successfully
+		this.msgsPage = this.msgsPage.verifyDisplayedMessageText("Saved new plan", "successfully", TextComparators.contains);
+		VerifyUserIsAbleToAddlDependenciesOnProduct.logger.debug("Verify Text:Saved new plan Successfully");
+
+		Reporter.log("<br> Test Passed");
+		VerifyUserIsAbleToAddlDependenciesOnProduct.logger.exitMethod();
+	}
+
+	@Test(description = "TC 62.3 : Create/Edit Plans in System", dependsOnMethods = { "tc_43_verifyUserAbleToAddDependencies" })
+	public void tc_62_3_addPlans() throws Exception {
+
+		VerifyUserIsAbleToAddlDependenciesOnProduct.logger.enterMethod();
+		Reporter.log("<br> Test Begins");
+
+		this.result = Reporter.getCurrentTestResult();
+		this.result.setAttribute("tcid", "");
+
+		// Login Into Application And Navigate to Plans Tab
+		this.plansPage = this.navPage.navigateToPlanPage();
+		VerifyUserIsAbleToAddlDependenciesOnProduct.logger.debug("Login Into Application And Navigate to Plans Page");
+
+		// Initiate And Complete The Process To Add Plans
+		this.plansPage = this.plansPage.addPlan(AddPlanField.PRODUCT, VerifyUserIsAbleToAddlDependenciesOnProduct.category,
+				VerifyUserIsAbleToAddlDependenciesOnProduct.description2, "addplan62.3", "ap");
+		VerifyUserIsAbleToAddlDependenciesOnProduct.logger.debug("Processing To Add Plans");
+
+		// Verify Text:Saved new plan Successfully
+		this.msgsPage = this.msgsPage.verifyDisplayedMessageText("Saved new plan", "successfully", TextComparators.contains);
+		VerifyUserIsAbleToAddlDependenciesOnProduct.logger.debug("Verify Text:Saved new plan Successfully");
+
+		Reporter.log("<br> Test Passed");
+		VerifyUserIsAbleToAddlDependenciesOnProduct.logger.exitMethod();
+	}
+
+	@Test(description = "TC 62.3.i : Create/Edit Plans in System", dependsOnMethods = { "tc_43_verifyUserAbleToAddDependencies" })
+	public void tc_62_3_1_addPlans() throws Exception {
+
+		VerifyUserIsAbleToAddlDependenciesOnProduct.logger.enterMethod();
+		Reporter.log("<br> Test Begins");
+
+		this.result = Reporter.getCurrentTestResult();
+		this.result.setAttribute("tcid", "");
+
+		// Login Into Application And Navigate to Plans Tab
+		this.plansPage = this.navPage.navigateToPlanPage();
+		VerifyUserIsAbleToAddlDependenciesOnProduct.logger.debug("Login Into Application And Navigate to Plans Page");
+
+		// Initiate And Complete The Process To Add Plans
+		this.plansPage = this.plansPage.addPlan(AddPlanField.BUNDLEDPERIOD, VerifyUserIsAbleToAddlDependenciesOnProduct.category,
+				VerifyUserIsAbleToAddlDependenciesOnProduct.description2, "addplan62.3.1", "ap");
+		VerifyUserIsAbleToAddlDependenciesOnProduct.logger.debug("Processing To Add Plans");
+
+		// Verify Text:Saved new plan Successfully
+		this.msgsPage = this.msgsPage.verifyDisplayedMessageText("Saved new plan", "successfully", TextComparators.contains);
+		VerifyUserIsAbleToAddlDependenciesOnProduct.logger.debug("Verify Text:Saved new plan Successfully");
+
+		// Logout From The Application
+		this.loginPage = this.navPage.logoutApplication();
+		VerifyUserIsAbleToAddlDependenciesOnProduct.logger.debug("Logout From The Application");
+
+		Reporter.log("<br> Test Passed");
+		VerifyUserIsAbleToAddlDependenciesOnProduct.logger.exitMethod();
+	}
+
+}

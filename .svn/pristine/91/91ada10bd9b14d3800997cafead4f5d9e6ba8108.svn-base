@@ -1,0 +1,3 @@
+Test Case Id, Test Case Method Name, Test Case Objective, RESULT, Error Message
+11047249|testCreateProductCategory|Test Case 3.1 : Verify user is able to create/edit a Category 'New Test Category' is only available to Root Company (jBilling).|PASS
+10909925|testCreateProductWithDependencyOnOther|Test Case 15.1 :  Verify that Products with dependencies on other products can be created.|PASS

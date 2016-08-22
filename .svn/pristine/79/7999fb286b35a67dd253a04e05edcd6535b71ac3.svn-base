@@ -1,0 +1,4 @@
+Test Case Id, Test Case Method Name, Test Case Objective, RESULT, Error Message
+11047236|testCreateNewCompanyUsingCopyCompany|Test Case 1.1:  testCreateNewCompanyUsingCopyCompany|PASS
+11047238|testCreationOfChildCompany|Test Case 1.3: Verify ability to create a Child Company within Root Company|FAIL|Element not found for provided element fiel
+11047239|testCreationOfChildCompanyInvoiceAsReseller|Test Case 1.4: Verify ability to create Child Company (Invoice as Reseller) within Root Company|PASS

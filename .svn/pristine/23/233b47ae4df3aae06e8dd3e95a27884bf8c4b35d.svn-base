@@ -1,0 +1,4 @@
+Test Case Id, Test Case Method Name, Test Case Objective, RESULT, Error Message
+10909932|testUserTearDownCreatedData|Test Case 18.1 : Verify user tear down the created data.|FAIL|No alert is present (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 2.32 seconds
+Build info: version: '2.53.0'

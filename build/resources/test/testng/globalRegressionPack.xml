@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="globalRegressionPack" parallel="methods">
+	<suite-files>
+		<suite-file path="VerifyUserAbleGetMandatoryFieldMessageForAccountType.xml"></suite-file>
+		<suite-file path="VerifyUserAbleToAddPaymentMethod.xml"></suite-file>
+		<suite-file path="VerifyUserAbleToEditCompanyDetails.xml" />
+		<suite-file path="VerifyUserAbleToEditDeletePaymentMethod.xml"></suite-file>
+		<suite-file path="VerifyUserAbleToLoginUsingValidCred.xml"></suite-file>
+		<!-- <suite-file path="VerifyAddProductwithDifferentPricingModel.xml"></suite-file> -->
+		<!-- <suite-file path="VerifyPluginsNotVisibleWithoutPermissions.xml"></suite-file> -->
+		<!-- <suite-file path="VerifyStatusofPreExistingandNewOrder.xml"></suite-file> -->
+		<!-- <suite-file path="VerifyUserAbleToConfigureOrderChangeStatuses.xml"></suite-file> -->
+		<!-- <suite-file path="VerifyUserAbleToCreateInvoiceTemplates.xml"></suite-file> -->
+		<!-- <suite-file path="VerifyUserAbleToCreateMetafields.xml"></suite-file> -->
+		<!-- <suite-file -->
+		<!-- path="VerifyUserAbleToCreateOrderChangesStatusesAndOrderChangeTypePlugins.xml"></suite-file> -->
+		<!-- <suite-file path="VerifyUserAbleToPrepareDataForAllSections.xml"></suite-file> -->
+		<!-- <suite-file path="VerifyUserIsAbleToAddlDependenciesOnProduct.xml"></suite-file> -->
+		<!-- <suite-file -->
+		<!-- path="VerifyUserIsAbleToSetUpFeeProductAndRelatedPlugInToBeUsedAsCancellationFee.xml"></suite-file> -->
+	</suite-files>
+</suite>

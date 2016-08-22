@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.1.9" icons="true" automaticImage="PNG" always-add-relationships="true" generalizations="true" 
+  realizations="true" associations="true" dependencies="true" nesting-relationships="true" router="FAN">  
+  <class id="1" language="java" name="com.jbilling.framework.pageclasses.AgentsPage" project="jbilling_gradle" 
+    file="/jbilling_gradle/src/main/java/com/jbilling/framework/pageclasses/AgentsPage.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="135" width="202" x="56" y="86"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="false" private="false" static="true"/>      
+      <operations public="true" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="com.jbilling.framework.pageclasses.ConfigurationPage" project="jbilling_gradle" 
+    file="/jbilling_gradle/src/main/java/com/jbilling/framework/pageclasses/ConfigurationPage.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="335" width="424" x="340" y="85"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="false" private="false" static="true"/>      
+      <operations public="true" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="com.jbilling.framework.pageclasses.BillingPage" project="jbilling_gradle" 
+    file="/jbilling_gradle/src/main/java/com/jbilling/framework/pageclasses/BillingPage.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="83" width="204" x="54" y="251"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="false" private="false" static="true"/>      
+      <operations public="true" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="com.jbilling.framework.pageclasses.CustomersPage" project="jbilling_gradle" 
+    file="/jbilling_gradle/src/main/java/com/jbilling/framework/pageclasses/CustomersPage.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="1305" width="338" x="-16" y="-356"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="false" private="false" static="true"/>      
+      <operations public="true" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="false" private="false" static="true"/>    
+    <operations public="true" package="false" protected="false" private="false" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

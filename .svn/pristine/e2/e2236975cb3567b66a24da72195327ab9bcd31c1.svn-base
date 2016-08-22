@@ -1,0 +1,7 @@
+Test Case Id, Test Case Method Name, Test Case Objective, RESULT, Error Message
+11047241|testAddAccountType|Test Case 2.1 : Verify ability to successfully configure and edit Account Types "Direct Customer" & "Distributor Account" >> Verify the ability to set Jasper invoice design as default for invoice download|FAIL|No list item found with value "ITG invoice notification" in its list elemen
+11047242|testAttachPaymentType|Test Case 2.1.1 : Verify ability to attach a Payment Method to an Account Type|FAIL|Error communicating with the remote browser. It may have died.
+Build info: version: '2.53.0'
+null|testCreateAndEditCustomer|Test Case 6.1 : Verify if user is able to create/Edit a new customer into the system.|SKIPPED|Method SanityTestScript.testCreateAndEditCustomer()[pri:0
+null|testCreateParentChildRelationInCustomersTab|Test Case 6.2 : Verify user can create a Parent/Child relationship	within the Customer tab|SKIPPED|Method SanityTestScript.testCreateParentChildRelationInCustomersTab()[pri:0
+null|testReportForInvoice|Test Case 14.1 : Verify correct report is displayed.|SKIPPED|Method SanityTestScript.testReportForInvoice()[pri:0

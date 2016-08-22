@@ -1,0 +1,10 @@
+<h2>Reporter output</h2><table><tr><td><br> BeforeClass Begins</td></tr>
+<tr><td><br> BeforeClass Ends</td></tr>
+<tr><td><br> Test Begins</td></tr>
+<tr><td><br> Test Passed</td></tr>
+<tr><td><br> Test Begins</td></tr>
+<tr><td><br> Test Passed</td></tr>
+<tr><td><br>Test Begins</td></tr>
+<tr><td><br> Enter information type name for account type Direct CustomerLHXYE</td></tr>
+<tr><td><br> Test Passed</td></tr>
+</table>

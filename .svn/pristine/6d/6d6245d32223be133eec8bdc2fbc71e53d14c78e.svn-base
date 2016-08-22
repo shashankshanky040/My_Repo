@@ -1,0 +1,2 @@
+Test Case Id, Test Case Method Name, Test Case Objective, RESULT, Error Message
+10909929|testConfigurePluginPreferencesForCommission|Test Case 16.3 : Verify that user can configure the plug-in and preference required for running a comission process|PASS

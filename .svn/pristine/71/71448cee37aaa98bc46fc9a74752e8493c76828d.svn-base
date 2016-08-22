@@ -1,0 +1,84 @@
+package com.jbilling.test;
+
+import java.util.HashMap;
+
+import org.testng.ITestResult;
+import org.testng.Reporter;
+import org.testng.annotations.Test;
+
+import com.jbilling.framework.globals.GlobalEnumerations.TextComparators;
+import com.jbilling.framework.globals.Logger;
+import com.jbilling.framework.pageclasses.GlobalEnumsPage.LoginField;
+import com.jbilling.framework.utilities.browserutils.BrowserApp;
+import com.jbilling.framework.utilities.xmlutils.ConfigPropertiesReader;
+
+public class VerifyUserAbleToLoginUsingValidCred extends BrowserApp {
+
+	private static Logger logger = new Logger().getLogger(Thread.currentThread().getStackTrace()[1].getClassName());
+	ConfigPropertiesReader pr = new ConfigPropertiesReader();
+	String graceId = null;
+	ITestResult result;
+
+	HashMap<String, String> runTimeVariables = new HashMap<String, String>();
+
+	/**
+	 * Current Application Page Stack || LoginPage--> loginPage;
+	 * NavigatorPage--> navPage; HomePage--> homePage; ConfigurationPage-->
+	 * confPage; AgentsPage--> agentsPage; CustomersPage--> customerPage;
+	 * ProductsPage--> productsPage; PlansPage--> plansPage; OrdersPage-->
+	 * ordersPage; InvoicePage--> invoicePage; ReportsPage--> reportsPage;
+	 * DiscountsPage--> discountsPage; FiltersPage--> filtersPage;
+	 * PaymentsPage--> paymentsPage; MessagesPage--> msgsPage;
+	 * 
+	 * @author Aishwarya Dwivedi
+	 * @since 1.0
+	 * @version 1.0
+	 */
+
+	@Test(description = "Test Case 1.1: Verify that users can login into the JBilling System using valid credential")
+	public void TC01_1_loginWithInvalidCredentials() throws Exception {
+
+		VerifyUserAbleToLoginUsingValidCred.logger.enterMethod();
+		Reporter.log("<br> Test Begins");
+
+		this.result = Reporter.getCurrentTestResult();
+		this.result.setAttribute("tcid", "");
+
+		// Logout From The Application
+		this.loginPage = this.navPage.logoutApplication();
+		VerifyUserAbleToLoginUsingValidCred.logger.debug("Logout From The Application");
+
+		// Invalid Credentials Entered
+		this.loginPage = this.loginPage.invalidLogin(LoginField.ALL, "InvalidCredentials", "ul");
+		VerifyUserAbleToLoginUsingValidCred.logger.debug("Invalid Credentials Entered");
+
+		// Verify Message For Login With Invalid Credentials
+		this.msgsPage = this.msgsPage.verifyDisplayedMessageText("Sorry, we were not able to find a user",
+				"that login id and password for the selected company", TextComparators.contains);
+		VerifyUserAbleToLoginUsingValidCred.logger.debug("Verify Message For Login With Invalid Credentials");
+
+		Reporter.log("<br> Test Passed");
+		VerifyUserAbleToLoginUsingValidCred.logger.exitMethod();
+	}
+
+	@Test(description = "Test Case 1.2: Verify that users can login into the JBilling System using valid credential")
+	public void TC01_2_loginWithValidCredentials() throws Exception {
+		VerifyUserAbleToLoginUsingValidCred.logger.enterMethod();
+		Reporter.log("<br> Test Begins");
+
+		this.result = Reporter.getCurrentTestResult();
+		this.result.setAttribute("tcid", "");
+
+		this.runTimeVariables.put("ENVIRONMENT_UNDER_TEST", this.pr.readConfig("EnvironmentUnderTest"));
+		this.runTimeVariables.put("ENVIRONMENT_URL_UNDER_TEST",
+				this.pr.readConfig(this.runTimeVariables.get("ENVIRONMENT_UNDER_TEST") + "_URL"));
+
+		// Login Into Application
+		this.homePage = this.loginPage.login(this.runTimeVariables.get("ENVIRONMENT_UNDER_TEST"));
+		VerifyUserAbleToLoginUsingValidCred.logger.debug("Login Into Application");
+
+		Reporter.log("<br> Test Passed");
+		VerifyUserAbleToLoginUsingValidCred.logger.exitMethod();
+	}
+
+}

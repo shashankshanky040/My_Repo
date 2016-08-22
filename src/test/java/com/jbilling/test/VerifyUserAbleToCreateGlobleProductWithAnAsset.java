@@ -1,0 +1,80 @@
+package com.jbilling.test;
+
+import java.util.HashMap;
+
+import org.testng.ITestResult;
+import org.testng.annotations.Test;
+
+import com.jbilling.framework.globals.Logger;
+import com.jbilling.framework.pageclasses.GlobalEnumsPage.AddProductField;
+import com.jbilling.framework.pageclasses.GlobalEnumsPage.PageConfigurationItems;
+import com.jbilling.framework.utilities.browserutils.BrowserApp;
+import com.jbilling.framework.utilities.xmlutils.ConfigPropertiesReader;
+
+public class VerifyUserAbleToCreateGlobleProductWithAnAsset extends BrowserApp {
+	private static Logger logger = new Logger().getLogger(Thread.currentThread().getStackTrace()[1].getClassName());
+	ConfigPropertiesReader pr = new ConfigPropertiesReader();
+	String graceId = null;
+	ITestResult result;
+
+	HashMap<String, String> runTimeVariables = new HashMap<String, String>();
+
+	/**
+	 * Current Application Page Stack || LoginPage--> loginPage;
+	 * NavigatorPage--> navPage; HomePage--> homePage; ConfigurationPage-->
+	 * confPage; AgentsPage--> agentsPage; CustomersPage--> customerPage;
+	 * ProductsPage--> productsPage; PlansPage--> plansPage; OrdersPage-->
+	 * ordersPage; InvoicePage--> invoicePage; ReportsPage--> reportsPage;
+	 * DiscountsPage--> discountsPage; FiltersPage--> filtersPage;
+	 * PaymentsPage--> paymentsPage; MessagesPage--> msgsPage;
+	 * 
+	 * @author Aishwarya Dwivedi
+	 * @since 1.0
+	 * @version 1.0
+	 * @throws Exception
+	 */
+
+	@Test(description = "TC 48 : Verify that user can create a globle product with an asset")
+	private void createNewChileCompany() throws Exception {
+		// TODO Auto-generated method stub
+
+		// Login Into Application And Navigate to Configuration Tab
+		this.confPage = this.navPage.navigateToConfigurationPage();
+		VerifyUserAbleToCreateGlobleProductWithAnAsset.logger.debug("Login Into Application And Navigate to Configuration Page");
+
+		// Click on Company link on the left panel
+		this.confPage = this.confPage.selectConfiguration(PageConfigurationItems.Company);
+		VerifyUserAbleToCreateGlobleProductWithAnAsset.logger.debug("Click on the company link from the left panel");
+
+		// Set child Company Name
+		this.confPage = this.confPage.copyCompany("setCompanyName", "name");
+		VerifyUserAbleToCreateGlobleProductWithAnAsset.logger.debug("Set child Company Name");
+
+		// Click on Product Tab
+		this.productsPage = this.navPage.navigateToProductsPage();
+		VerifyUserAbleToCreateGlobleProductWithAnAsset.logger.debug("Click on the Product Tab");
+
+		// Add new category
+		String categoryName = this.productsPage.addNewCategory("assetName", "name");
+		VerifyUserAbleToCreateGlobleProductWithAnAsset.logger.debug("Add new category");
+
+		// Add a product in existing category
+		String description = this.productsPage.addProduct(AddProductField.FLAT, "addProductnew", "ap");
+
+		// Validate added product
+		this.productsPage = this.productsPage.validateAddedProduct(description);
+
+		// Add assert in a product
+		String identifier = this.productsPage.addAssetinProduct("assetDetail", "ad");
+
+		// Validate added product
+		this.productsPage = this.productsPage.validateUserTableSavedTestData(identifier);
+
+		// Add Child Asset in product
+		String childIdentifier = this.productsPage.addChildAsset("assetDetail", "ad");
+
+		// Validate added child product
+		this.productsPage = this.productsPage.validateUserTableSavedTestData(childIdentifier);
+
+	}
+}

@@ -1,0 +1,14 @@
+<testdata>
+	<testdataset name="addplan" category="ap" testenv="develop|lab3">
+		<productCode>PLANA{RANDOM}</productCode>
+		<description>English</description>
+		<englishDescription>Plan A{RANDOM}</englishDescription>
+		<rate>100</rate>
+		<category>New Test Category</category>
+		<bundleQuantity>1</bundleQuantity>
+		<rateProduct>15</rateProduct>
+	</testdataset>
+	<testdataset name="editPlan" category="ap" testenv="develop|lab3">
+		<pricing>Zero</pricing>
+	</testdataset>
+</testdata>
